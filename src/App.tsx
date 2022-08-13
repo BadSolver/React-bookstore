@@ -1,10 +1,10 @@
-import { Header } from "./components/Header/Header";
+import { AppRouter } from "./router/AppRouter";
 
 function App() {
 
   return (
     <>
-      <Header></Header>
+      <AppRouter></AppRouter>
     </>
   );
 }
