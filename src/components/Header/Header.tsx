@@ -1,18 +1,34 @@
-
-
-import { Search } from '../Search/Search'
-import { CartLogo, HeartLogo, Logo, Navbar, StyledHeader, UserLogo } from './style'
+import { Link } from "react-router-dom";
+import { routes } from "../../router/routes";
+import { Search } from "../Search/Search";
+import {
+  CartLogo,
+  HeartLogo,
+  Logo,
+  Navbar,
+  StyledHeader,
+  UserLogo,
+} from "./style";
 
 export const Header = () => {
   return (
     <StyledHeader>
-      <Logo></Logo>
+      <Link to={routes.HOME}>
+        <Logo />
+      </Link>
+
       <Search></Search>
       <Navbar>
-        <HeartLogo></HeartLogo>
-        <CartLogo></CartLogo>
-        <UserLogo></UserLogo>
+        <Link to={routes.FAVORITES}>
+          <HeartLogo />
+        </Link>
+        <Link to={routes.CART}>
+          <CartLogo />
+        </Link>
+        <Link to={routes.SIGNIN}>
+          <UserLogo />
+        </Link>
       </Navbar>
     </StyledHeader>
-  )
-}
+  );
+};

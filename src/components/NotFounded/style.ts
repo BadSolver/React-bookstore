@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NotFoundStyled = styled.div`
   margin: 0 auto;
-  width: 100%;
+  width: 1120px;
   height: 100vh;
   background-color: black;
 `;

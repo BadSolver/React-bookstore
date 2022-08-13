@@ -6,6 +6,7 @@ import user from "../../assets/user_header.svg";
 import { Colors } from "../../ui/colors";
 
 export const StyledHeader = styled.header`
+  max-width: 1120px;
   display: flex;
   justify-content: space-around;
   margin-top: 24px;
@@ -13,7 +14,8 @@ export const StyledHeader = styled.header`
   border-bottom: 1px solid ${Colors.Gray};
 `;
 export const Logo = styled.button`
-  width: 137px;
+  padding: 15px 70px;
+  margin-top: 18px;
   background: url(${bookstore}) no-repeat center;
   border: none;
   cursor: pointer;
@@ -24,19 +26,21 @@ export const Navbar = styled.nav`
   justify-content: space-around;
   align-items: center;
 `;
-export const HeartLogo = styled.a`
+export const HeartLogo = styled.div`
   background: url(${logo}) no-repeat;
   width: 24px;
   height: 24px;
   cursor: pointer;
 `;
-export const CartLogo = styled.a`
+export const CartLogo = styled.div`
   background: url(${cart}) no-repeat;
   width: 24px;
   height: 24px;
+  cursor: pointer;
 `;
-export const UserLogo = styled.a`
+export const UserLogo = styled.div`
   background: url(${user}) no-repeat;
   width: 24px;
   height: 24px;
+  cursor: pointer;
 `;
