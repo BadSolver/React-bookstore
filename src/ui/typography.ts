@@ -43,7 +43,7 @@ const Subline = css`
 
 const BodyRegular = css`
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
 `;
