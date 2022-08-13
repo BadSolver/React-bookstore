@@ -3,11 +3,14 @@ import bookstore from "../../assets/bookstore.svg";
 import logo from "../../assets/heart_header.svg";
 import cart from "../../assets/cart_header.svg";
 import user from "../../assets/user_header.svg";
+import { Colors } from "../../ui/colors";
 
 export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-around;
   margin-top: 24px;
+  padding-bottom: 33px;
+  border-bottom: 1px solid ${Colors.Gray};
 `;
 export const Logo = styled.button`
   width: 137px;
