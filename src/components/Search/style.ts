@@ -16,4 +16,8 @@ export const StyledSearch = styled.input`
     ${Colors.Gray}
     opacity: 1
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;

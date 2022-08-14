@@ -9,5 +9,5 @@ export enum Colors {
     Blue = '#D7E4FD',
     Green = '#CAEFF0',
     Orange = '#FEE9E2',
-    Purple = '#F4EEFD'
+    Purple = '#F4EEFD',
 }
