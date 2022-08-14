@@ -8,6 +8,10 @@ export const StyledFooter = styled.footer`
   display: flex;
   justify-content: space-between;
   border-top: 1px solid ${Colors.Gray};
+  @media (max-width: 768px) {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 `;
 export const Description = styled.p`
   padding: 36px 0;
