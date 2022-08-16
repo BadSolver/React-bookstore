@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Colors } from "../../ui/colors";
-import { fonts } from "../../ui/typography";
+import { fonts, Spaces } from "../../ui/typography";
 import { StyledSearch } from "../Search/style";
 
 interface IProps {
@@ -36,7 +36,7 @@ export const StyledList = styled.ul<IProps>`
 export const Hr = styled.span`
   display: none;
   position: relative;
-  top: 50px;
+  top: ${Spaces.superLarge};
   width: 288px;
   height: 1px;
   background: ${Colors.Gray};
@@ -59,7 +59,8 @@ export const Background = styled.div<IProps>`
 `;
 
 export const Search = styled(StyledSearch)<IProps>`
-display: none;
+  display: none;
+  flex: 50%;
   padding: 17px 60px 17px 30px;
   margin-top: 56px;
 
@@ -71,7 +72,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 48px;
+  gap: ${Spaces.superLarge};
   margin: 56px auto 0 auto;
   max-width: 287px;
 `;
@@ -87,8 +88,8 @@ export const Button = styled.button`
 display: none;
   border: none;
   text-align: center;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: ${Spaces.medium};
+  line-height: ${Spaces.medium};
   letter-spacing: 0.05em;
   color: ${Colors.White};
   padding: 16px 100px;

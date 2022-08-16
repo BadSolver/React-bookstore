@@ -6,7 +6,8 @@ import { fonts } from "../../ui/typography";
 
 export const StyledSearch = styled.input`
   background: url(${cartHeader}) no-repeat right 20px center;
-  padding: 14px 320px 20px 20px;
+  flex:0 0 48%;
+  padding: 5px 20px;
   color: ${Colors.Secondary};
   border: 1px solid ${Colors.Gray};
   ${fonts.BodyRegular}

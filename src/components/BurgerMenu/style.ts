@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Colors } from "../../ui/colors";
+import { Spaces } from "../../ui/typography";
 
 interface IProps {
   open?: boolean;
@@ -13,11 +14,11 @@ export const StyledBurger = styled.div<IProps>`
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
-    width: 24px;
-    height: 24px;
-    top: 46px;
+    width: ${Spaces.medium};
+    height: ${Spaces.medium};
+    top: ${Spaces.superLarge};
     right: 40px;
-    margin-left: 24px;
+    margin-left: ${Spaces.medium};
     z-index: 99;
   }
 

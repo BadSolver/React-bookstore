@@ -13,7 +13,6 @@ HTML {
     background-color: ${Colors.White};
 }
 body {
-    padding: 0;
     margin: 0 auto;
     font-family: 'Source Sans Pro', sans-serif;
     max-width: 1120px;
