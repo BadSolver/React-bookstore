@@ -4,17 +4,18 @@ import logo from "../../assets/heart_header.svg";
 import cart from "../../assets/cart_header.svg";
 import user from "../../assets/user_header.svg";
 import { Colors } from "../../ui/colors";
+import { Spaces } from "../../ui/typography";
 
 export const StyledHeader = styled.header`
   max-width: 1120px;
-  margin-top: 24px;
+  margin-top: ${Spaces.medium};
   padding-bottom: 33px;
   border-bottom: 1px solid ${Colors.Gray};
 
   @media (max-width: 768px) {
     justify-content: space-between;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: ${Spaces.large};
+    margin-right: ${Spaces.large};
   }
 `
 export const Logo = styled.button`
