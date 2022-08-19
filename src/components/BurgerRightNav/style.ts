@@ -5,6 +5,7 @@ import { StyledSearch } from "../Search/style";
 
 interface IProps {
   open?: boolean;
+  close?: boolean;
 }
 
 export const StyledList = styled.ul<IProps>`
@@ -85,7 +86,7 @@ export const Title = styled.h3`
   }
 `;
 export const Button = styled.button`
-display: none;
+  display: none;
   border: none;
   text-align: center;
   font-size: ${Spaces.medium};
@@ -100,4 +101,4 @@ display: none;
   @media (max-width: 768px) {
     display: block;
   }
-`
+`;

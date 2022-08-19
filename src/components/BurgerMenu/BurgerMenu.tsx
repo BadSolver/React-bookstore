@@ -9,6 +9,9 @@ export const BurgerMenu = () => {
   const handleOpen = () => {
     setIsOpen(!isOpen)
   }
+  const handleClose =()=> {
+    setIsOpen(false)
+  }
 
   
   return (
@@ -18,7 +21,7 @@ export const BurgerMenu = () => {
       <div></div>
       <div></div>
       </StyledBurger>
-      <RightNav open={isOpen}/>
+      <RightNav open={isOpen} close={handleClose}/>
     </>
     
   );
