@@ -20,6 +20,7 @@ export const AppRouter = () => {
     <Routes>
       <Route path={routes.HOME} element={<MainTemplate />}>
         <Route index element={<Home />} />
+        <Route path={routes.HOME} element={<Home />}/>
         <Route path={routes.NOT_FOUND} element={<NotFound />} />
         <Route path={routes.SEARCH} element={<Search />} />
         <Route path={routes.BOOK} element={<Book />} />

@@ -1,6 +1,6 @@
 export enum routes {
     NOT_FOUND = '*',
-    HOME ='/',
+    HOME ='/book-store',
     SEARCH = 'search',
     BOOK = 'book',
     CART = 'cart',
