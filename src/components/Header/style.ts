@@ -14,8 +14,6 @@ export const StyledHeader = styled.header`
 
   @media (max-width: 768px) {
     justify-content: space-between;
-    margin-left: ${Spaces.large};
-    margin-right: ${Spaces.large};
   }
 `
 export const Logo = styled.button`
