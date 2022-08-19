@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { Colors } from "./colors";
+import { Spaces } from "./typography";
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -15,7 +16,15 @@ HTML {
 body {
     margin: 0 auto;
     font-family: 'Source Sans Pro', sans-serif;
-    max-width: 1120px;
+    max-width: 1200px;
     color: ${Colors.Primary};
+}
+#root {
+    margin-left: ${Spaces.large};
+    margin-right: ${Spaces.large};
+    @media (max-width: 768px) {
+        margin-left: ${Spaces.medium};
+        margin-right: ${Spaces.medium};
+    }
 }
 `

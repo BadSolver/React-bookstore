@@ -9,10 +9,9 @@ interface IProps {
 }
 
 export const StyledList = styled.ul<IProps>`
+display: none;
   list-style: none;
   margin: 0 auto;
-  display: flex;
-  flex-flow: row nowrap;
   z-index: 3;
 
   li {
@@ -20,6 +19,7 @@ export const StyledList = styled.ul<IProps>`
   }
 
   @media (max-width: 768px) {
+    display: flex;
     flex-flow: column nowrap;
     background-color: ${Colors.White};
     color: ${Colors.Primary};
