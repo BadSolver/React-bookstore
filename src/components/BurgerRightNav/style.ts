@@ -18,7 +18,7 @@ export const StyledList = styled.ul<IProps>`
     padding: 18px 10px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     display: flex;
     flex-flow: column nowrap;
     background-color: ${Colors.White};
@@ -65,7 +65,7 @@ export const Search = styled(StyledSearch)<IProps>`
   padding: 17px 60px 17px 30px;
   margin-top: 56px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     display: block;
   }
 `;
@@ -98,7 +98,7 @@ export const Button = styled.button`
   margin-top: 512px;
   background-color: ${Colors.Primary};
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     display: block;
   }
 `;

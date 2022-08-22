@@ -7,11 +7,21 @@ export const StyledSubscribe = styled.div`
   margin-left: 64px;
   margin-right: 64px;
   padding-bottom: 56px;
+
+  @media (max-width: 568px) {
+    text-align: left;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 `;
 
 export const Title = styled.h2`
   padding-top: 56px;
   ${fonts.H2}
+
+  @media (max-width: 568px) {
+    padding-top: 16px;
+  }
 `;
 export const Subtitle = styled.p`
   ${fonts.Subline}
@@ -41,4 +51,9 @@ export const Background = styled.div`
 export const InputContainer = styled.form`
   display: flex;
   padding-top: 32px;
+
+  @media (max-width: 568px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;

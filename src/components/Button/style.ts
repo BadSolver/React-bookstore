@@ -15,7 +15,7 @@ export const StyledButton = styled.button`
   margin-top: 512px;
   background-color: ${Colors.Primary};
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     display: block;
   }
 `;

@@ -22,9 +22,5 @@ body {
 #root {
     margin-left: ${Spaces.large};
     margin-right: ${Spaces.large};
-    @media (max-width: 768px) {
-        margin-left: ${Spaces.medium};
-        margin-right: ${Spaces.medium};
-    }
 }
 `

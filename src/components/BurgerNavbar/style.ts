@@ -9,13 +9,11 @@ export const StyledBurgerNavbar = styled.nav`
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 768px) {
-    align-items: flex-end;
+  @media (max-width: 768) {
   }
 `;
 export const Logo = styled.button`
   padding: 15px 70px;
-  margin-top: 18px;
   background: url(${bookstore}) no-repeat center;
   border: none;
   cursor: pointer;
@@ -32,7 +30,7 @@ export const HeartLogo = styled.div`
   height: 24px;
   cursor: pointer;
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     display: none;
   }
 `;
@@ -42,9 +40,13 @@ export const CartLogo = styled.div`
   height: 24px;
   cursor: pointer;
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     margin-left: 100px;
     margin-right: 31px;
+  }
+  @media (max-width: 568px) {
+    margin-left: 3px;
+    margin-right: 10;
   }
 `;
 export const UserLogo = styled.div`
@@ -53,7 +55,7 @@ export const UserLogo = styled.div`
   height: 24px;
   cursor: pointer;
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     display: none;
   }
 `;

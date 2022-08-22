@@ -10,8 +10,6 @@ export const ItemBackground = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 352px;
-  height: 264px;
   background-color: ${Colors.Blue};
   border-radius: 10px;
   margin-bottom: ${Spaces.small};
@@ -23,7 +21,7 @@ export const Image = styled.img`
   align-items: center;
   justify-content: center;
   width: 226px;
-`
+`;
 
 export const Title = styled.h3`
   ${fonts.H3}
@@ -35,8 +33,6 @@ export const SubTitle = styled.p`
   ${fonts.BodyRegular}
   ${Colors.Secondary}
     margin-bottom: ${Spaces.large};
-    flex-grow:1;
+  flex-grow: 1;
 `;
-export const Cost = styled(Title)`
-  
-`;
+export const Cost = styled(Title)``;

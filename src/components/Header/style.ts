@@ -8,7 +8,7 @@ export const StyledHeader = styled.header`
   padding-bottom: 33px;
   border-bottom: 1px solid ${Colors.Gray};
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     justify-content: space-between;
   }
-`
+`;
