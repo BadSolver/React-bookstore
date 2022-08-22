@@ -1,4 +1,11 @@
 import axios from "axios";
+import { INewBooksApi } from "../../types/newBooksApi";
+
+enum BookEndpoint {
+  NEW = 'new',
+  SEARCH = 'search/',
+  BOOKS = 'books/',
+}
 
 export class BookStoreAPI {
   private readonly BASE_URL = process.env.REACT_APP_BASE_URL_BOOKSTORE_API;
@@ -7,7 +14,7 @@ export class BookStoreAPI {
   });
 
   public async getNew(): Promise<any> {
-    const { data } = await this.API.get<any>("new");
+    const { data } = await this.API.get<INewBooksApi[]>(BookEndpoint.NEW);
     return data;
   }
 }

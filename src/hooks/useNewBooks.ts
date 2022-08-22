@@ -1,4 +1,4 @@
-import axios, { AxiosError } from "axios";
+import  { AxiosError } from "axios";
 import { useEffect, useState } from "react";
 import { bookStoreAPI } from "../services/bookStoreApi/bookStoreApi";
 import { INewBooksApi } from "../types/newBooksApi";

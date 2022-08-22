@@ -1,5 +1,5 @@
 import { INewBooksApi } from "../../types/newBooksApi";
-import { StyledBookItem } from "./style";
+import { Cost, ItemBackground, StyledBookItem, SubTitle, Title, Image } from "./style";
 
 interface IProps {
   book: INewBooksApi;
@@ -8,10 +8,12 @@ interface IProps {
 export const BookItem = ({ book }: IProps) => {
   return (
     <StyledBookItem>
-      <img src={book.image} alt={book.image} />
-      <h3>{book.title}</h3>
-      <p>{book.subtitle}</p>
-      <p>{book.price}</p>
+      <ItemBackground>
+        <Image src={book.image} alt={book.image} />
+      </ItemBackground>
+      <Title>{book.title}</Title>
+      <SubTitle>{book.subtitle}</SubTitle>
+      <Cost>{book.price}</Cost>
     </StyledBookItem>
   );
 };

@@ -9,14 +9,14 @@ interface IProps {
 export const StyledBurger = styled.div<IProps>`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     position: fixed;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-flow: column nowrap;
     width: ${Spaces.medium};
     height: ${Spaces.medium};
-    top: ${Spaces.superLarge};
+    top: 28px;
     right: 40px;
     margin-left: ${Spaces.medium};
     z-index: 99;
@@ -24,9 +24,10 @@ export const StyledBurger = styled.div<IProps>`
 
   div {
     display: flex;
-    width: 20px;
+    width: 29px;
     height: 2px;
-    background: ${({ open }) => (open ? `${Colors.Primary}` : `${Colors.Primary}`)};
+    background: ${({ open }) =>
+      open ? `${Colors.Primary}` : `${Colors.Primary}`};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.4s linear;

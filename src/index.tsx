@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <BrowserRouter>
-      <GlobalStyle />
-      <App />
+    <GlobalStyle />
+    <App />
   </BrowserRouter>
 );
