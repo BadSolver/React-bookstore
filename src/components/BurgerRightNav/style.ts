@@ -9,7 +9,7 @@ interface IProps {
 }
 
 export const StyledList = styled.ul<IProps>`
-display: none;
+  display: none;
   list-style: none;
   margin: 0 auto;
   z-index: 3;

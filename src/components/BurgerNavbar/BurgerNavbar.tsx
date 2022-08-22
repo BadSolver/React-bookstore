@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import { routes } from "../../router/routes";
 import { BurgerMenu } from "../BurgerMenu";
-import { CartLogo, HeartLogo, Logo, Navbar, UserLogo } from "../Header/style";
 import { Search } from "../Search/Search";
-import { StyledBurgerNavbar } from "./style";
+import { CartLogo, HeartLogo, Logo, Navbar, StyledBurgerNavbar, UserLogo } from "./style";
 
 export const BurgerNavbar = () => {
   return (

@@ -10,11 +10,20 @@ export const ItemBackground = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 352px;
+  height: 264px;
   background-color: ${Colors.Blue};
   border-radius: 10px;
   margin-bottom: ${Spaces.small};
 `;
+
+export const Image = styled.img`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 226px;
+`
 
 export const Title = styled.h3`
   ${fonts.H3}

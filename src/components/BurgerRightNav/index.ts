@@ -1,3 +1,3 @@
 import { RightNav } from "./BurgerRightNav";
 
-export {RightNav}
+export { RightNav };
