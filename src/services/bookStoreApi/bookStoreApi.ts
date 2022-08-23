@@ -2,9 +2,9 @@ import axios from "axios";
 import { INewBooksApi } from "../../types/newBooksApi";
 
 enum BookEndpoint {
-  NEW = 'new',
-  SEARCH = 'search/',
-  BOOKS = 'books/',
+  NEW = "new",
+  SEARCH = "search/",
+  BOOKS = "books/",
 }
 
 export class BookStoreAPI {

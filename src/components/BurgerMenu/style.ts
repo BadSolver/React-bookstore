@@ -44,15 +44,3 @@ export const StyledBurger = styled.div<IProps>`
     }
   }
 `;
-
-// export const BurgerSpan = styled.span`
-//     height: 2px;
-//     width: 20px;
-//     margin-bottom: 4px;
-//     background-color: black;
-//     display: none;
-
-//     @media (max-width: 768px) {
-//         display: block;
-//     }
-// `

@@ -2,7 +2,14 @@ import { Link } from "react-router-dom";
 import { routes } from "../../router";
 import { BurgerMenu } from "../BurgerMenu";
 import { Search } from "../Search";
-import { CartLogo, HeartLogo, Logo, Navbar, StyledBurgerNavbar, UserLogo } from "./style";
+import {
+  CartLogo,
+  HeartLogo,
+  Logo,
+  Navbar,
+  StyledBurgerNavbar,
+  UserLogo,
+} from "./style";
 
 export const BurgerNavbar = () => {
   return (
