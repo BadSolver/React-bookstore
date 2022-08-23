@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
 import { RingLoader } from "react-spinners";
-import { useNewBooks } from "../../hooks/useNewBooks";
+import { useNewBooks } from "../../hooks";
 
 const override: CSSProperties = {
   display: "block",

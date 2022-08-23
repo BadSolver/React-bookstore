@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { routes } from "../../router/routes";
-import { Button } from "../Button/Button";
+import { routes } from "../../router";
+import { Button } from "../Button";
 import { Background, Form, Hr, Search, StyledList, Title } from "./style";
 
 interface IProps {
