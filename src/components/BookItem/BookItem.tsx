@@ -1,4 +1,4 @@
-import { INewBooksApi } from "../../types/newBooksApi";
+import { INewBooksApi } from "../../types";
 import { Cost, ItemBackground, StyledBookItem, SubTitle, Title, Image } from "./style";
 
 interface IProps {
