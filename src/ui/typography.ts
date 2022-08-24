@@ -55,14 +55,14 @@ const BodyBold = css`
 `;
 
 export enum Spaces {
-  extraLarge = '72px',
-  superLarge = '48px',
-  large = '40px',
-  extraMedium = '32px',
-  medium = '24px',
-  small = '20px',
-  smaller = '16px',
-  extraSmall = '8px'
+  extraLarge = "72px",
+  superLarge = "48px",
+  large = "40px",
+  extraMedium = "32px",
+  medium = "24px",
+  small = "20px",
+  smaller = "16px",
+  extraSmall = "8px",
 }
 
 export const fonts = { H1, H2, H3, Subline, BodyBold, BodyRegular, Spaces };

@@ -1,4 +1,4 @@
-import  { AxiosError } from "axios";
+import { AxiosError } from "axios";
 import { useEffect, useState } from "react";
 import { bookStoreAPI } from "../services/bookStoreApi/bookStoreApi";
 import { INewBooksApi } from "../types/newBooksApi";
@@ -12,11 +12,11 @@ export const useNewBooks = () => {
     try {
       setError("");
       setLoading(true);
-      
-     await bookStoreAPI.getNew().then((book) => {
+
+      await bookStoreAPI.getNew().then((book) => {
         setBooks(book.books);
       });
-      
+
       setLoading(false);
     } catch (e) {
       const error = e as AxiosError;

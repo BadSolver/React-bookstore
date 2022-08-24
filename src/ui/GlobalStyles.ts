@@ -23,4 +23,4 @@ body {
     margin-left: ${Spaces.large};
     margin-right: ${Spaces.large};
 }
-`
+`;
