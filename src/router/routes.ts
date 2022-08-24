@@ -1,11 +1,12 @@
-export enum routes {
-  NOT_FOUND = "*",
-  HOME = "/",
-  SEARCH = "search",
-  BOOK = "book",
-  CART = "cart",
-  FAVORITES = "favorites",
-  ACCOUNT = "account",
-  SIGNIN = "sigh-in",
-  SIGNUP = "sign-up",
+export enum ROUTE {
+    NOT_FOUND = '*',
+    HOME ='/',
+    SEARCH = '/search',
+    BOOK = '/book/:name',
+    CART = '/cart',
+    FAVORITES = '/favorites',
+    ACCOUNT = '/account',
+    SIGNIN = '/sigh-in',
+    SIGNUP = '/sign-up',
+    HELLO_PAGE = '/react-bookstore'
 }

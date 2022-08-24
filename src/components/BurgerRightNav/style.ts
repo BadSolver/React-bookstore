@@ -48,7 +48,7 @@ export const Hr = styled.span`
   }
 `;
 export const Background = styled.div<IProps>`
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 100%;

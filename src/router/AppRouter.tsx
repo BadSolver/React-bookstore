@@ -12,23 +12,24 @@ import {
   SignIn,
   SignUp,
 } from "../pages";
+import { HelloPages } from "../pages/HelloPages";
 
-import { routes } from "./routes";
+import { ROUTE } from "./routes";
 
 export const AppRouter = () => {
   return (
     <Routes>
-      <Route path={routes.HOME} element={<MainTemplate />}>
-        <Route index element={<Home />} />
-        <Route path={routes.HOME} element={<Home />} />
-        <Route path={routes.NOT_FOUND} element={<NotFound />} />
-        <Route path={routes.SEARCH} element={<Search />} />
-        <Route path={routes.BOOK} element={<Book />} />
-        <Route path={routes.CART} element={<Cart />} />
-        <Route path={routes.FAVORITES} element={<Favorites />} />
-        <Route path={routes.ACCOUNT} element={<Account />} />
-        <Route path={routes.SIGNIN} element={<SignIn />} />
-        <Route path={routes.SIGNUP} element={<SignUp />} />
+      <Route path={ROUTE.HOME} element={<MainTemplate />}>
+        <Route path={ROUTE.HELLO_PAGE} element={<HelloPages />} />
+        <Route path={ROUTE.HOME} element={<Home />}/>
+        <Route path={ROUTE.NOT_FOUND} element={<NotFound />} />
+        <Route path={ROUTE.SEARCH} element={<Search />} />
+        <Route path={ROUTE.BOOK} element={<Book />} />
+        <Route path={ROUTE.CART} element={<Cart />} />
+        <Route path={ROUTE.FAVORITES} element={<Favorites />} />
+        <Route path={ROUTE.ACCOUNT} element={<Account />} />
+        <Route path={ROUTE.SIGNIN} element={<SignIn />} />
+        <Route path={ROUTE.SIGNUP} element={<SignUp />} />
       </Route>
     </Routes>
   );
