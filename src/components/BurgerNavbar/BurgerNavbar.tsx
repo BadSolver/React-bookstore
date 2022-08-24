@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Bookstore, CartHeader, HeartHeader, UserHeader } from "../../assets";
-import { routes } from "../../router/routes";
+import { ROUTE } from "../../router/routes";
 import { BurgerMenu } from "../BurgerMenu";
 import { Search } from "../Search/Search";
 import {
@@ -16,24 +16,24 @@ export const BurgerNavbar = () => {
   return (
     <>
       <StyledBurgerNavbar>
-        <Link to={routes.HOME}>
+        <Link to={ROUTE.HOME}>
           <Logo>
             <Bookstore></Bookstore>
           </Logo>
         </Link>
         <Search />
         <Navbar>
-          <Link to={routes.FAVORITES}>
+          <Link to={ROUTE.FAVORITES}>
             <HeartLogo>
               <HeartHeader />
             </HeartLogo>
           </Link>
-          <Link to={routes.CART}>
+          <Link to={ROUTE.CART}>
             <CartLogo>
               <CartHeader />
             </CartLogo>
           </Link>
-          <Link to={routes.SIGNIN}>
+          <Link to={ROUTE.SIGNIN}>
             <UserLogo>
               <UserHeader />
             </UserLogo>

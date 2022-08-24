@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { routes } from "../../router/routes";
+import { ROUTE } from "../../router/routes";
 import { Button } from "../Button/Button";
 import { Background, Form, Hr, Search, StyledList, Title } from "./style";
 
@@ -20,10 +20,10 @@ export const RightNav = ({ open, close }: IProps) => {
           <Hr />
           <Form>
             <Search placeholder="Search" open={open} />
-            <Link to={routes.FAVORITES} onClick={close}>
+            <Link to={ROUTE.FAVORITES} onClick={close}>
               <Title>FAVORITES</Title>
             </Link>
-            <Link to={routes.CART} onClick={close}>
+            <Link to={ROUTE.CART} onClick={close}>
               <Title>CART</Title>
             </Link>
           </Form>
