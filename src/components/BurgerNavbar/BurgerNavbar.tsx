@@ -1,26 +1,42 @@
 import { Link } from "react-router-dom";
+import { Bookstore, CartHeader, HeartHeader, UserHeader } from "../../assets";
 import { routes } from "../../router/routes";
 import { BurgerMenu } from "../BurgerMenu";
 import { Search } from "../Search/Search";
-import { CartLogo, HeartLogo, Logo, Navbar, StyledBurgerNavbar, UserLogo } from "./style";
+import {
+  CartLogo,
+  HeartLogo,
+  Logo,
+  Navbar,
+  StyledBurgerNavbar,
+  UserLogo,
+} from "./style";
 
 export const BurgerNavbar = () => {
   return (
     <>
       <StyledBurgerNavbar>
         <Link to={routes.HOME}>
-          <Logo />
+          <Logo>
+            <Bookstore></Bookstore>
+          </Logo>
         </Link>
         <Search />
         <Navbar>
           <Link to={routes.FAVORITES}>
-            <HeartLogo />
+            <HeartLogo>
+              <HeartHeader />
+            </HeartLogo>
           </Link>
           <Link to={routes.CART}>
-            <CartLogo />
+            <CartLogo>
+              <CartHeader />
+            </CartLogo>
           </Link>
           <Link to={routes.SIGNIN}>
-            <UserLogo />
+            <UserLogo>
+              <UserHeader />
+            </UserLogo>
           </Link>
         </Navbar>
       </StyledBurgerNavbar>
