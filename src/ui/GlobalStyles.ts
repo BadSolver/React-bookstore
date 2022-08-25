@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import { Colors } from "./colors";
-import { Spaces } from "./typography";
+import { Color } from "./color";
+import { Space } from "./space";
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -8,19 +8,17 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
 }
-HTML {
-    max-width: 100%;
-    height: 100vh;
-    background-color: ${Colors.White};
-}
+
 body {
+    height:100%;
     margin: 0 auto;
     font-family: 'Source Sans Pro', sans-serif;
     max-width: 1200px;
-    color: ${Colors.Primary};
+    color: ${Color.Primary};
 }
+
 #root {
-    margin-left: ${Spaces.large};
-    margin-right: ${Spaces.large};
+    margin-left: ${Space.Large};
+    margin-right: ${Space.Large};
 }
 `;

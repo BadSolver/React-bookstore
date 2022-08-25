@@ -6,8 +6,8 @@ import { StyledHome } from "./style";
 export const Home = () => {
   return (
     <StyledHome>
-      <Title text="New Releases Books"></Title>
-      <BooksList></BooksList>
+      <Title text="New Releases Books" />
+      <BooksList />
       <Subscribe />
     </StyledHome>
   );

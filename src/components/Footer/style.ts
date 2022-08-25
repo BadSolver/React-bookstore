@@ -1,20 +1,26 @@
 import styled from "styled-components";
-import { Colors } from "../../ui/colors";
-import { fonts, Spaces } from "../../ui/typography";
+import { Space, Color, fonts } from "../../ui";
 
 export const StyledFooter = styled.footer`
+  flex-shrink: 0;
   max-width: 1120px;
-  margin-top: ${Spaces.extraLarge};
+  margin-top: ${Space.ExtraLarge};
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid ${Colors.Gray};
-  @media (max-width: 768px) {
-    margin-left: ${Spaces.large};
-    margin-right: ${Spaces.large};
+  border-top: 1px solid ${Color.Gray};
+  @media (max-width: 800px) {
+    margin-left: ${Space.Large};
+    margin-right: ${Space.Large};
   }
 `;
 export const Description = styled.p`
   padding: 36px 0;
   ${fonts.BodyRegular}
-  ${Colors.Secondary}
+  ${Color.Secondary}
+  :first-child {
+    text-align: left;
+  }
+  :last-child {
+    text-align: right;
+  }
 `;

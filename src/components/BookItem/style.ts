@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "../../ui/colors";
-import { fonts, Spaces } from "../../ui/typography";
+import { Color, fonts, Space } from "../../ui";
 
 export const StyledBookItem = styled.div`
   width: 352px;
@@ -10,9 +9,9 @@ export const ItemBackground = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${Colors.Blue};
+  background-color: ${Color.Blue};
   border-radius: 10px;
-  margin-bottom: ${Spaces.small};
+  margin-bottom: ${Space.Small};
 `;
 
 export const Image = styled.img`
@@ -26,13 +25,13 @@ export const Image = styled.img`
 export const Title = styled.h3`
   ${fonts.H3}
   flex-grow: 1;
-  ${Colors.Primary}
-  margin-bottom: ${Spaces.extraSmall};
+  ${Color.Primary}
+  margin-bottom: ${Space.ExtraSmall};
 `;
 export const SubTitle = styled.p`
   ${fonts.BodyRegular}
-  ${Colors.Secondary}
-    margin-bottom: ${Spaces.large};
+  ${Color.Secondary}
+    margin-bottom: ${Space.Large};
   flex-grow: 1;
 `;
 export const Cost = styled(Title)``;

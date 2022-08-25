@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "../../ui/colors";
-import { Spaces } from "../../ui/typography";
+import { Color, Space } from "../../ui";
 
 interface IProps {
   open?: boolean;
@@ -14,11 +13,11 @@ export const StyledBurger = styled.div<IProps>`
     display: flex;
     justify-content: space-between;
     flex-flow: column nowrap;
-    width: ${Spaces.medium};
-    height: ${Spaces.medium};
+    width: ${Space.Medium};
+    height: ${Space.Medium};
     top: 28px;
     right: 40px;
-    margin-left: ${Spaces.medium};
+    margin-left: ${Space.Medium};
     z-index: 99;
   }
 
@@ -27,7 +26,7 @@ export const StyledBurger = styled.div<IProps>`
     width: 29px;
     height: 2px;
     background: ${({ open }) =>
-      open ? `${Colors.Primary}` : `${Colors.Primary}`};
+      open ? `${Color.Primary}` : `${Color.Primary}`};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.4s linear;

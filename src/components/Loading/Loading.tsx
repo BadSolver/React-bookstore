@@ -10,9 +10,5 @@ const override: CSSProperties = {
 export const Loading = () => {
   const { loading } = useNewBooks();
 
-  return (
-    <>
-      <RingLoader loading={loading} cssOverride={override} size={50} />
-    </>
-  );
+  return <RingLoader loading={loading} cssOverride={override} size={50} />;
 };

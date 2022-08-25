@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "../../ui/colors";
-import { fonts, Spaces } from "../../ui/typography";
+import { Color, Space, fonts } from "../../ui";
 import { StyledSearch } from "../Search/style";
 
 interface IProps {
@@ -21,8 +20,8 @@ export const StyledList = styled.ul<IProps>`
   @media (max-width: 800px) {
     display: flex;
     flex-flow: column nowrap;
-    background-color: ${Colors.White};
-    color: ${Colors.Primary};
+    background-color: ${Color.White};
+    color: ${Color.Primary};
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     transition: transform 0.4s ease-in-out;
@@ -37,10 +36,10 @@ export const StyledList = styled.ul<IProps>`
 export const Hr = styled.span`
   display: none;
   position: relative;
-  top: ${Spaces.superLarge};
+  top: ${Space.SuperLarge};
   width: 288px;
   height: 1px;
-  background: ${Colors.Gray};
+  background: ${Color.Gray};
   margin: 0 auto;
 
   @media (max-width: 768px) {
@@ -53,7 +52,7 @@ export const Background = styled.div<IProps>`
   right: 0;
   width: 100%;
   height: 100vh;
-  background-color: ${Colors.Gray};
+  background-color: ${Color.Gray};
   opacity: 0.8;
   z-index: 0;
   display: ${({ open }) => (open ? "block" : "none")};
@@ -73,7 +72,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: ${Spaces.superLarge};
+  gap: ${Space.SuperLarge};
   margin: 56px auto 0 auto;
   max-width: 287px;
 `;
@@ -89,14 +88,14 @@ export const Button = styled.button`
   display: none;
   border: none;
   text-align: center;
-  font-size: ${Spaces.medium};
-  line-height: ${Spaces.medium};
+  font-size: ${Space.Medium};
+  line-height: ${Space.Medium};
   letter-spacing: 0.05em;
-  color: ${Colors.White};
+  color: ${Color.White};
   padding: 16px 100px;
   margin: 0 auto;
   margin-top: 512px;
-  background-color: ${Colors.Primary};
+  background-color: ${Color.Primary};
 
   @media (max-width: 800px) {
     display: block;

@@ -8,14 +8,10 @@ export const BooksList = () => {
   const { loading, error, books } = useNewBooks();
 
   return (
-    <>
       <StyledBooksList>
         {loading && <Loading />}
         {error && <ErrorMessage text={error} />}
-        {books.map((book) => (
-          <BookItem book={book} key={book.isbn13} />
-        ))}
+       
       </StyledBooksList>
-    </>
   );
 };
