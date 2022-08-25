@@ -3,8 +3,7 @@ import { fonts, Color } from "../../ui";
 import { StyledButton } from "../Button/style";
 
 export const StyledSubscribe = styled.div`
-  margin-left: 64px;
-  margin-right: 64px;
+  margin: 0 64px;
   padding-bottom: 56px;
 
   @media (max-width: 568px) {

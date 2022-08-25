@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color, fonts, Space } from "../../ui";
+import { Color, Space, fonts } from "../../ui";
 
 export const StyledBookItem = styled.div`
   width: 352px;

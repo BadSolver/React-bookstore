@@ -1,7 +1,7 @@
 import { Color } from "./color";
-import { GlobalStyle } from "./GlobalStyles";
+import { GlobalStyles } from "./GlobalStyles";
 import { Space } from "./space";
 import { fonts } from "./typography";
 
 
-export { fonts, Space, Color, GlobalStyle };
+export { fonts, Space, Color, GlobalStyles };
