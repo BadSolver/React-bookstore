@@ -56,6 +56,7 @@ export const BookDetailsPage = () => {
     ]
   }
 
+
   return (
     <StyledBookDetails>
       {isLoading && <RingLoader cssOverride={override} size={50}/>}
