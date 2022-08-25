@@ -1,20 +1,18 @@
 import styled from "styled-components";
-// import cartHeader from '../../assets/cartHeader.svg'
 import cartHeader from "../../assets/search.svg";
-import { Colors } from "../../ui/colors";
-import { fonts } from "../../ui/typography";
+import { Color, fonts } from "../../ui";
 
 export const StyledSearch = styled.input`
   background: url(${cartHeader}) no-repeat right 20px center;
   flex: 0 0 48%;
-  padding: 5px 20px;
-  color: ${Colors.Secondary};
-  border: 1px solid ${Colors.Gray};
+  padding: 10px 20px;
+  color: ${Color.Secondary};
+  border: 1px solid ${Color.Gray};
   ${fonts.BodyRegular}
   outline: none;
   &::placeholder {
     ${fonts.BodyRegular}
-    ${Colors.Gray}
+    ${Color.Gray}
     opacity: 1
   }
 

@@ -18,7 +18,7 @@ export const BurgerNavbar = () => {
       <StyledBurgerNavbar>
         <Link to={ROUTE.HOME}>
           <Logo>
-            <Bookstore></Bookstore>
+            <Bookstore />
           </Logo>
         </Link>
         <Search />

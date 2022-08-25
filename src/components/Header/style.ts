@@ -1,12 +1,10 @@
 import styled from "styled-components";
-import { Colors } from "../../ui/colors";
-import { Spaces } from "../../ui/typography";
+import { Space, Color } from "../../ui";
 
 export const StyledHeader = styled.header`
-  max-width: 1120px;
-  margin-top: ${Spaces.medium};
+  margin-top: ${Space.Medium};
   padding-bottom: 33px;
-  border-bottom: 1px solid ${Colors.Gray};
+  border-bottom: 1px solid ${Color.Gray};
 
   @media (max-width: 800px) {
     justify-content: space-between;

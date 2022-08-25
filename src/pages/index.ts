@@ -1,7 +1,7 @@
 import { Account } from "./Account";
 import { Book } from "./Book";
 import { Cart } from "./Cart";
-import { Favorites } from "./Favorites";
+import { Favorites } from "./Favorites/Favorites";
 import { Home } from "./Home/Home";
 import { NotFound } from "./NotFound";
 import { Search } from "./Search";

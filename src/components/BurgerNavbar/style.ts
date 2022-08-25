@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledBurgerNavbar = styled.nav`
-  max-width: 1120px;
   display: flex;
   justify-content: space-between;
 
@@ -12,6 +11,7 @@ export const Logo = styled.button`
   border: none;
   background: transparent;
   cursor: pointer;
+  margin-top: 5px;
 `;
 export const Navbar = styled.nav`
   width: 184px;
@@ -32,12 +32,7 @@ export const CartLogo = styled.div`
   cursor: pointer;
 
   @media (max-width: 800px) {
-    margin-left: 100px;
-    margin-right: 31px;
-  }
-  @media (max-width: 568px) {
-    margin-left: 3px;
-    margin-right: 10;
+    display: none;
   }
 `;
 export const UserLogo = styled.div`

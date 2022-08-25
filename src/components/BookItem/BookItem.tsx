@@ -17,6 +17,7 @@ export const BookItem = ({ book }: IProps) => {
   return (
     <StyledBookItem>
       <ItemBackground>
+      <Cost>{book.price}</Cost>
         <Link
           to={`/book/${book.title}`}
         >
@@ -25,7 +26,7 @@ export const BookItem = ({ book }: IProps) => {
       </ItemBackground>
       <Title>{book.title}</Title>
       <SubTitle>{book.subtitle}</SubTitle>
-      <Cost>{book.price}</Cost>
+      
     </StyledBookItem>
   );
 };

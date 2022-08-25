@@ -19,7 +19,7 @@ export const Subscribe = () => {
           offers and more.
         </Subtitle>
         <InputContainer>
-          <Input placeholder="Your Email"></Input>
+          <Input placeholder="Your Email" />
           <Button type="submit">Subscribe</Button>
         </InputContainer>
       </StyledSubscribe>

@@ -1,5 +1,5 @@
 import { StyledSearch } from "./style";
 
 export const Search = () => {
-  return <StyledSearch placeholder="Search"></StyledSearch>;
+  return <StyledSearch placeholder="Search" />;
 };
