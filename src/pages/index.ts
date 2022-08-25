@@ -1,8 +1,8 @@
 import { Account } from "./Account";
-import { Book } from "./Book";
+import { BookDetailsPage } from "./BookDetailsPages";
 import { Cart } from "./Cart";
 import { Favorites } from "./Favorites/Favorites";
-import { Home } from "./Home/Home";
+import { Home } from "./Home";
 import { NotFound } from "./NotFound";
 import { Search } from "./Search";
 import { SignIn } from "./SignIn";
@@ -10,7 +10,7 @@ import { SignUp } from "./SignUp";
 
 export {
   Account,
-  Book,
+  BookDetailsPage,
   Cart,
   Favorites,
   Home,

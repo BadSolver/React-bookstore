@@ -17,6 +17,13 @@ export class BookStoreAPI {
     const { data } = await this.API.get<INewBooksApi[]>(BookEndpoint.NEW);
     return data;
   }
+
+  public async getDetails(isbn: string | undefined): Promise<any> {
+    const { data } = await this.API.get<INewBooksApi[]>(
+      `${BookEndpoint.BOOKS}/${isbn}`
+    );
+    return data;
+  }
 }
 
 export const bookStoreAPI = new BookStoreAPI();

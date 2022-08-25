@@ -19,7 +19,7 @@ export const BookItem = ({ book }: IProps) => {
       <ItemBackground>
       <Cost>{book.price}</Cost>
         <Link
-          to={`/book/${book.title}`}
+          to={`/book/${book.isbn13}`}
         >
           <Image src={book.image} alt={book.image} />
         </Link>

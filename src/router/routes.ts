@@ -2,7 +2,7 @@ export enum ROUTE {
   NOT_FOUND = "*",
   HOME = "/",
   SEARCH = "/search",
-  BOOK = "/book/:name",
+  BOOK_DETAILS = "/book/:isbn",
   CART = "/cart",
   FAVORITES = "/favorites",
   ACCOUNT = "/account",

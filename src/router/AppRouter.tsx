@@ -1,6 +1,7 @@
 import { Route, Routes} from "react-router-dom";
 import { MainTemplate } from "../components/MainTemplate";
-import { Account, Book, Cart, Favorites, Home, NotFound, Search, SignIn, SignUp } from "../pages";
+import { Account,  Cart, Favorites, Home, NotFound, Search, SignIn, SignUp } from "../pages";
+import { BookDetailsPage } from "../pages/BookDetailsPages/BookDetailsPages";
 
 
 import { HelloPages } from "../pages/HelloPages";
@@ -15,7 +16,7 @@ export const AppRouter = () => {
 
         <Route path={ROUTE.HOME} element={<HelloPages />} />
         <Route path={ROUTE.SEARCH} element={<Search />} />
-        <Route path={ROUTE.BOOK} element={<Book />} />
+        <Route path={ROUTE.BOOK_DETAILS} element={<BookDetailsPage />} />
         <Route path={ROUTE.CART} element={<Cart />} />
         <Route path={ROUTE.FAVORITES} element={<Favorites />} />
 
