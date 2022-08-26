@@ -1,5 +1,6 @@
 import { AxiosError } from "axios";
 import React, { CSSProperties, useEffect, useState } from "react";
+import { BsArrowBarLeft } from "react-icons/bs";
 import { useNavigate, useParams } from "react-router-dom";
 import { RingLoader } from "react-spinners";
 import { ErrorMessage } from "../../components";
@@ -8,7 +9,7 @@ import { Title } from "../../components/Title";
 import { bookStoreAPI } from "../../services/bookStoreApi";
 import { IBookDetails } from "../../types";
 import { getAuthor } from "../../utils";
-import { StyledBookDetails } from "./style";
+import { Arrow, StyledBookDetails } from "./style";
 
 const override: CSSProperties = {
   display: "block",
@@ -54,6 +55,9 @@ export const BookDetailsPage = () => {
       {error && <ErrorMessage text={error} />}
       {book && (
         <>
+        <Arrow>
+        <BsArrowBarLeft onClick={handleArrow} style={{fontSize: '50px'}}/>
+        </Arrow>
           <Title text={book.title}></Title>
           <img src={book.image} />
           <Raiting rating={book.rating} />
