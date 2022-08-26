@@ -48,16 +48,18 @@ export const BookDetailsPage = () => {
     fetchDetails();
   }, [isbn]);
 
-
   return (
     <StyledBookDetails>
       {isLoading && <RingLoader cssOverride={override} size={50} />}
       {error && <ErrorMessage text={error} />}
       {book && (
         <>
-        <Arrow>
-        <BsArrowBarLeft onClick={handleArrow} style={{fontSize: '50px'}}/>
-        </Arrow>
+          <Arrow>
+            <BsArrowBarLeft
+              onClick={handleArrow}
+              style={{ fontSize: "50px" }}
+            />
+          </Arrow>
           <Title text={book.title}></Title>
           <img src={book.image} />
           <Raiting rating={book.rating} />
