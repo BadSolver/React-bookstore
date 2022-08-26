@@ -3,6 +3,7 @@ import React, { CSSProperties, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { RingLoader } from "react-spinners";
 import { ErrorMessage } from "../../components";
+import { Raiting } from "../../components/Raiting";
 import { Title } from "../../components/Title";
 import { bookStoreAPI } from "../../services/bookStoreApi";
 import { IBookDetails } from "../../types";
@@ -20,11 +21,11 @@ export const BookDetailsPage = () => {
   const [book, setBook] = useState<IBookDetails>();
   const [error, setError] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  console.log(book)
+  console.log(book);
 
   const handleArrow = () => {
     navigate(-1);
-  }
+  };
 
   const fetchDetails = async () => {
     try {
@@ -39,35 +40,25 @@ export const BookDetailsPage = () => {
       const error = e as AxiosError;
       setIsLoading(true);
       setError(error.message);
-      setIsLoading(false)
+      setIsLoading(false);
     }
   };
   useEffect(() => {
     fetchDetails();
   }, [isbn]);
 
-  if (book) {
-    const detailsDescription = [
-      ['Authors', getAuthor(book.authors)],
-      ['Year', book.year],
-      ['Language', book.language],
-      ['Price', book.price],
-      ['Publisher', book.publisher]
-    ]
-  }
-
 
   return (
     <StyledBookDetails>
-      {isLoading && <RingLoader cssOverride={override} size={50}/>}
+      {isLoading && <RingLoader cssOverride={override} size={50} />}
       {error && <ErrorMessage text={error} />}
-      {book && 
+      {book && (
         <>
-        <Title text={book.title}></Title>
-        <img src={book.image} />
+          <Title text={book.title}></Title>
+          <img src={book.image} />
+          <Raiting rating={book.rating} />
         </>
-      }
-      
+      )}
     </StyledBookDetails>
-  )
+  );
 };
