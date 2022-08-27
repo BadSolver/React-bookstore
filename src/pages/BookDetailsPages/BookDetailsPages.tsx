@@ -1,6 +1,6 @@
 import { AxiosError } from "axios";
 import React, { CSSProperties, useEffect, useState } from "react";
-import { BsArrowBarLeft } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 import { useNavigate, useParams } from "react-router-dom";
 import { RingLoader } from "react-spinners";
 import { ErrorMessage } from "../../components";
@@ -8,8 +8,23 @@ import { Raiting } from "../../components/Raiting";
 import { Title } from "../../components/Title";
 import { bookStoreAPI } from "../../services/bookStoreApi";
 import { IBookDetails } from "../../types";
-import { getAuthor } from "../../utils";
-import { Arrow, StyledBookDetails } from "./style";
+import {
+  Arrow,
+  DetailsContainer,
+  StyledBookDetails,
+  Image,
+  Description,
+  Cost,
+  BackGround,
+  Price,
+  Options,
+  Authors,
+  Publisher,
+  Language,
+  Year,
+  LabelText,
+  ValueText,
+} from "./style";
 
 const override: CSSProperties = {
   display: "block",
@@ -22,7 +37,6 @@ export const BookDetailsPage = () => {
   const [book, setBook] = useState<IBookDetails>();
   const [error, setError] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  console.log(book);
 
   const handleArrow = () => {
     navigate(-1);
@@ -49,22 +63,47 @@ export const BookDetailsPage = () => {
   }, [isbn]);
 
   return (
-    <StyledBookDetails>
+    <>
       {isLoading && <RingLoader cssOverride={override} size={50} />}
       {error && <ErrorMessage text={error} />}
       {book && (
-        <>
+        <StyledBookDetails>
           <Arrow>
-            <BsArrowBarLeft
-              onClick={handleArrow}
-              style={{ fontSize: "50px" }}
-            />
+            <BsArrowLeft onClick={handleArrow} style={{ fontSize: "30px" }} />
           </Arrow>
           <Title text={book.title}></Title>
-          <img src={book.image} />
-          <Raiting rating={book.rating} />
-        </>
+          <DetailsContainer>
+            <BackGround>
+              <Image src={book.image} />
+            </BackGround>
+            <Description>
+              <Cost>
+                <Price>{book.price}</Price>
+                <Raiting rating={book.rating} />
+              </Cost>
+              <Options>
+                <Authors>
+                  <ValueText>Authors</ValueText>
+                  <LabelText>{book.authors}</LabelText>
+                </Authors>
+                <Publisher>
+                  <ValueText>Publisher</ValueText>
+                  <LabelText>{book.publisher}</LabelText>
+                </Publisher>
+                <Language>
+                  <ValueText>Language</ValueText>
+                  <LabelText>{book.language}</LabelText>
+                </Language>
+                <Year>
+                  <ValueText>Year</ValueText>
+                  <LabelText>{book.year}</LabelText>
+                </Year>
+              </Options>
+              <MoreDetails></MoreDetails>
+            </Description>
+          </DetailsContainer>
+        </StyledBookDetails>
       )}
-    </StyledBookDetails>
+    </>
   );
 };

@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: normal;
         vertical-align: baseline;
         background: transparent;
+        font-family: 'Source Sans Pro', sans-serif;
     }
     article, aside, figure, footer, header, nav, section, details, summary {
         display: block;
