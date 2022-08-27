@@ -16,8 +16,8 @@ export const Raiting = ({rating}: IProps) => {
     <StyledRating>
             {[...new Array(totalRating)].map((arr, index) => {
                 if (index < currRating) {
-                    return <FaStar key={index} style={{ fontSize: '24px', color: '#ffd700' }} />
-                } else return <BsStar key={index} style={{ fontSize: '24px' }} />
+                    return <FaStar key={index} style={{ fontSize: '18px', color: '#ffd700' }} />
+                } else return <BsStar key={index} style={{ fontSize: '18px' }} />
             })}
         </StyledRating>
   )

@@ -1,31 +1,20 @@
 import { AxiosError } from "axios";
-import React, { CSSProperties, useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { RingLoader } from "react-spinners";
-import { ErrorMessage } from "../../components";
-import { Raiting } from "../../components/Raiting";
-import { Title } from "../../components/Title";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { BookDetails, Subscribe, TabBar } from "../../components";
 import { bookStoreAPI } from "../../services/bookStoreApi";
 import { IBookDetails } from "../../types";
-import { getAuthor } from "../../utils";
-import { StyledBookDetails } from "./style";
-
-const override: CSSProperties = {
-  display: "block",
-  margin: "100px auto 0 auto",
-};
 
 export const BookDetailsPage = () => {
-  const navigate = useNavigate();
+
+  
   const { isbn } = useParams();
   const [book, setBook] = useState<IBookDetails>();
   const [error, setError] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  console.log(book);
+  const [details, setDetails] = useState<boolean>(false);
 
-  const handleArrow = () => {
-    navigate(-1);
-  };
+  
 
   const fetchDetails = async () => {
     try {
@@ -47,18 +36,15 @@ export const BookDetailsPage = () => {
     fetchDetails();
   }, [isbn]);
 
+  const handleDetails = () => {
+    setDetails(!details);
+  };
 
   return (
-    <StyledBookDetails>
-      {isLoading && <RingLoader cssOverride={override} size={50} />}
-      {error && <ErrorMessage text={error} />}
-      {book && (
-        <>
-          <Title text={book.title}></Title>
-          <img src={book.image} />
-          <Raiting rating={book.rating} />
-        </>
-      )}
-    </StyledBookDetails>
+    <div>
+      <BookDetails handleDetails={handleDetails} book={book} details={details} isLoading={isLoading} error={error}/>
+      <TabBar book={book}/>
+      <Subscribe />
+    </div>
   );
 };

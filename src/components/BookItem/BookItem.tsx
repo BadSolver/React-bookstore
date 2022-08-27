@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { INewBooksApi } from "../../types/newBooksApi";
+import { Raiting } from "../Raiting";
 import {
   Cost,
   ItemBackground,
@@ -25,8 +26,7 @@ export const BookItem = ({ book }: IProps) => {
         </Link>
       </ItemBackground>
       <Title>{book.title}</Title>
-      <SubTitle>{book.subtitle}</SubTitle>
-      
+      <SubTitle>{book.subtitle}</SubTitle>      
     </StyledBookItem>
   );
 };
