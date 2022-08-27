@@ -1,12 +1,10 @@
-import { AxiosError } from "axios";
-import React, { CSSProperties, useEffect, useState } from "react";
+import React, { CSSProperties } from "react";
 import { BsArrowLeft } from "react-icons/bs";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { RingLoader } from "react-spinners";
 import { ErrorMessage } from "../../components";
 import { Raiting } from "../../components/Raiting";
 import { Title } from "../../components/Title";
-import { bookStoreAPI } from "../../services/bookStoreApi";
 import { IBookDetails } from "../../types";
 import {
   Arrow,
@@ -22,7 +20,7 @@ import {
   Price,
   StyledBookDetails,
   ValueText,
-  Image
+  Image,
 } from "./style";
 
 const override: CSSProperties = {
@@ -30,40 +28,25 @@ const override: CSSProperties = {
   margin: "100px auto 0 auto",
 };
 
-export const BookDetails = () => {
+interface IProps {
+  isLoading: boolean;
+  book: IBookDetails | undefined;
+  error: string;
+  details: boolean;
+  handleDetails: () => void;
+}
+
+export const BookDetails = ({
+  isLoading,
+  book,
+  error,
+  details,
+  handleDetails,
+}: IProps) => {
   const navigate = useNavigate();
-  const { isbn } = useParams();
-  const [book, setBook] = useState<IBookDetails>();
-  const [error, setError] = useState<string>("");
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [details, setDetails] = useState<boolean>(false);
 
   const handleArrow = () => {
     navigate(-1);
-  };
-
-  const fetchDetails = async () => {
-    try {
-      setError("");
-      setIsLoading(true);
-
-      await bookStoreAPI.getDetails(isbn).then((detail) => {
-        setBook(detail);
-      });
-      setIsLoading(false);
-    } catch (e) {
-      const error = e as AxiosError;
-      setIsLoading(true);
-      setError(error.message);
-      setIsLoading(false);
-    }
-  };
-  useEffect(() => {
-    fetchDetails();
-  }, [isbn]);
-
-  const handleDetails = () => {
-    setDetails(!details);
   };
 
   return (

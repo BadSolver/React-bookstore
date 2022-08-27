@@ -33,6 +33,7 @@ export const Description = styled.div`
   flex-direction: column;
   border-top: 1px solid ${Color.PrimaryDark};
   margin-left: 120px;
+  width: 100%;
   max-width: 548px;
 
   @media (max-width: 800px) {
