@@ -34,6 +34,6 @@ export const Sign = styled.button<Iprops>`
     props.signIn ? `color:${Color.PrimaryDark} ` : `color:${Color.Secondary}`}
 `;
 
-export const Form = styled.form`
+export const Form = styled.div`
   padding-left: 40px;
 `;
