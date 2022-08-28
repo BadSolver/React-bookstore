@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const NotFoundStyled = styled.div`
-  margin: 0 auto;
   width: 1120px;
   height: 100vh;
+  margin: 0 auto;
   background-color: black;
 `;
 export const Title = styled.h1`

@@ -9,8 +9,8 @@ interface IProps {
 
 export const StyledList = styled.ul<IProps>`
   display: none;
-  list-style: none;
   margin: 0 auto;
+  list-style: none;
   z-index: 3;
 
   li {
@@ -18,29 +18,29 @@ export const StyledList = styled.ul<IProps>`
   }
 
   @media (max-width: 800px) {
-    display: flex;
-    flex-flow: column nowrap;
-    background-color: ${Color.White};
-    color: ${Color.Primary};
     position: fixed;
-    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-    transition: transform 0.4s ease-in-out;
     top: 0;
     right: 0;
+    display: flex;
+    flex-flow: column nowrap;
     height: 100vh;
     width: 368px;
     padding-top: 3.5rem;
     text-align: center;
+    color: ${Color.Primary};
+    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+    transition: transform 0.4s ease-in-out;
+    background-color: ${Color.White};
   }
 `;
 export const Hr = styled.span`
-  display: none;
   position: relative;
   top: ${Space.SuperLarge};
+  display: none;
+  margin: 0 auto;
   width: 288px;
   height: 1px;
   background: ${Color.Gray};
-  margin: 0 auto;
 
   @media (max-width: 768px) {
     display: block;
@@ -50,12 +50,12 @@ export const Background = styled.div<IProps>`
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 0;
+  display: ${({ open }) => (open ? "block" : "none")};
   width: 100%;
   height: 100vh;
   background-color: ${Color.Gray};
   opacity: 0.8;
-  z-index: 0;
-  display: ${({ open }) => (open ? "block" : "none")};
 `;
 
 export const Search = styled(StyledSearch)<IProps>`
@@ -86,15 +86,15 @@ export const Title = styled.h3`
 `;
 export const Button = styled.button`
   display: none;
-  border: none;
+  margin: 0 auto;
+  margin-top: 512px;
+  padding: 16px 100px;
   text-align: center;
   font-size: ${Space.Medium};
   line-height: ${Space.Medium};
   letter-spacing: 0.05em;
+  border: none;
   color: ${Color.White};
-  padding: 16px 100px;
-  margin: 0 auto;
-  margin-top: 512px;
   background-color: ${Color.Primary};
 
   @media (max-width: 800px) {
