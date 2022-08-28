@@ -11,7 +11,10 @@ import { Header } from "./Header";
 import { MainTemplate } from "./MainTemplate";
 import { NotFounded } from "./NotFounded";
 import { Raiting } from "./Raiting";
+import { RequareAuth } from "./RequareAuth";
 import { Search } from "./Search";
+import { SignIn } from "./SignIn";
+import { SignUp } from "./SignUp";
 import { SliderCom } from "./Slider";
 import { Subscribe } from "./Subscribe/Subscribe";
 import { TabBar } from "./TabBar/Index";
@@ -36,4 +39,7 @@ export {
   Raiting,
   Search,
   Title,
+  RequareAuth,
+  SignIn,
+  SignUp
 };

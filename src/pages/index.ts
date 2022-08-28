@@ -2,11 +2,11 @@ import { Account } from "./Account";
 import { BookDetailsPage } from "./BookDetailsPages";
 import { Cart } from "./Cart";
 import { Favorites } from "./Favorites";
+import { HelloPages } from "./HelloPages";
 import { Home } from "./Home";
 import { NotFound } from "./NotFound";
+import { Registration } from "./Registration";
 import { Search } from "./Search";
-import { SignIn } from "./SignIn";
-import { SignUp } from "./SignUp";
 
 export {
   Account,
@@ -16,6 +16,6 @@ export {
   Home,
   NotFound,
   Search,
-  SignIn,
-  SignUp,
+  Registration,
+  HelloPages,
 };

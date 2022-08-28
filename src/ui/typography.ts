@@ -3,8 +3,8 @@ import { css } from "styled-components";
 const H1 = css`
   font-family: "Bebas Neue";
   font-style: normal;
-  font-weight: 700;
-  font-size: 56px;
+  font-weight: 500;
+  font-size: 46px;
   line-height: 64px;
 
   @media (max-width: 568px) {
@@ -15,7 +15,7 @@ const H1 = css`
 
 const H2 = css`
   font-family: "Bebas Neue";
-  font-weight: 700;
+  font-weight: 500;
   font-size: 40px;
   line-height: 60px;
 
@@ -28,7 +28,7 @@ const H2 = css`
 const H3 = css`
   font-family: "Bebas Neue";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 24px;
   line-height: 32px;
 `;
