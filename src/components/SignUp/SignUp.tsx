@@ -37,13 +37,16 @@ export const SignUp = () => {
     
       .then((userCredential) => {
         const user = userCredential.user;
-        setIsLoading(false);
+        
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         
-      });
+      }).finally(() => {
+        setIsLoading(false)
+        reset()
+      })
   };
 
   return (

@@ -23,8 +23,8 @@ export const Home = () => {
       });
 
       setIsLoading(false);
-    } catch (e) {
-      const error = e as AxiosError;
+    } catch (errors) {
+      const error = errors as AxiosError;
       setIsLoading(false);
       setError(error.message);
     }
