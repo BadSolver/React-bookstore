@@ -27,4 +27,8 @@ export const Button = styled(StyledButton)`
   margin-top: 50px;
   margin-bottom: 50px;
   width: 90%;
+
+  @media (max-width: 576px) {
+    padding: 15px 10px;
+  }
 `;
