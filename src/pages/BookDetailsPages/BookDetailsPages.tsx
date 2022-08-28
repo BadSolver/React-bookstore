@@ -1,7 +1,7 @@
 import { AxiosError } from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { BookDetails, SliderCom, Subscribe, TabBar } from "../../components";
+import { BookDetails, SliderCom, Subscribe, TabBar, Title } from "../../components";
 import { bookStoreAPI } from "../../services/bookStoreApi";
 import { IBookDetails } from "../../types";
 
@@ -47,6 +47,7 @@ export const BookDetailsPage = () => {
       />
       <TabBar book={book} />
       <Subscribe />
+      <Title text={"Similar Books"}/>
       <SliderCom />
     </div>
   );

@@ -33,7 +33,7 @@ export const BurgerNavbar = () => {
               <CartHeader />
             </CartLogo>
           </Link>
-          <Link to={ROUTE.SIGNIN}>
+          <Link to={ROUTE.ACCOUNT}>
             <UserLogo>
               <UserHeader />
             </UserLogo>
