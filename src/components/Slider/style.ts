@@ -5,12 +5,16 @@ export const StyledSlider = styled.div`
   margin: 0 auto;
   .slick-list {
     margin: 0 auto;
-    width: 1120px;
+    max-width: 1120px;
   }
   .slick-track {
     gap: 60px;
     &:first-child {
       margin-left: 40px;
+    }
+    @media (max-width:768px) {
+      margin-left: 0;
+      gap: 10px;
     }
   }
 `;

@@ -11,7 +11,7 @@ export const StyledBurger = styled.div<IProps>`
   @media (max-width: 800px) {
     position: fixed;
     top: 28px;
-    right: 40px;
+    right: 60px;
     z-index: 99;
     display: flex;
     justify-content: space-between;

@@ -23,6 +23,10 @@ export const TabItem = styled.button`
 export const Container = styled.div`
   display: flex;
   gap: 60px;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
 `;
 export const TabDescription = styled.p`
   padding-bottom: 60px;

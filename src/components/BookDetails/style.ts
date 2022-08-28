@@ -38,6 +38,7 @@ export const Description = styled.div`
   @media (max-width: 800px) {
     margin-left: 0;
     margin-top: 20px;
+    max-width:310px
   }
 `;
 
@@ -60,6 +61,10 @@ export const BackGround = styled.div`
   background-color: ${Color.Blue};
   border-radius: 10px;
   box-shadow: 10px 10px 5px ${Color.Orange};
+
+  @media (max-width: 800px) {
+    max-width: 310px;
+  }
 `;
 
 export const Arrow = styled.div`
@@ -93,4 +98,10 @@ export const MoreDetails = styled.button`
 export const Button = styled(StyledButton)`
   display: block;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 15px 10px;
+    margin-top: 20px;
+    width:80%;
+  }
 `;
