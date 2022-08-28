@@ -1,20 +1,16 @@
 import { AxiosError } from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { BookDetails, Subscribe, TabBar } from "../../components";
+import { BookDetails, SliderCom, Subscribe, TabBar } from "../../components";
 import { bookStoreAPI } from "../../services/bookStoreApi";
 import { IBookDetails } from "../../types";
 
 export const BookDetailsPage = () => {
-
-  
   const { isbn } = useParams();
   const [book, setBook] = useState<IBookDetails>();
   const [error, setError] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [details, setDetails] = useState<boolean>(false);
-
-  
 
   const fetchDetails = async () => {
     try {
@@ -42,9 +38,16 @@ export const BookDetailsPage = () => {
 
   return (
     <div>
-      <BookDetails handleDetails={handleDetails} book={book} details={details} isLoading={isLoading} error={error}/>
-      <TabBar book={book}/>
+      <BookDetails
+        handleDetails={handleDetails}
+        book={book}
+        details={details}
+        isLoading={isLoading}
+        error={error}
+      />
+      <TabBar book={book} />
       <Subscribe />
+      <SliderCom />
     </div>
   );
 };
