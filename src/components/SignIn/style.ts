@@ -28,3 +28,9 @@ export const Button = styled(StyledButton)`
   margin-bottom: 50px;
   width: 90%;
 `;
+
+export const ErrorMessage = styled.p`
+  padding-top: 10px;
+  color: ${Color.Red};
+  text-transform: uppercase;
+`;
