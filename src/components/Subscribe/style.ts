@@ -22,10 +22,10 @@ export const Title = styled.h2`
   }
 `;
 export const Subtitle = styled.p`
+  padding-top: 10px;
   ${fonts.Subline}
   font-weight: 400;
   color: ${Color.Secondary};
-  padding-top: 10px;
 
   @media (max-width: 568px) {
     ${fonts.BodyRegular}
@@ -34,10 +34,10 @@ export const Subtitle = styled.p`
 export const Input = styled.input`
   display: inline-block;
   flex: 0 1 80%;
-  border: none;
   padding: 20px 0px 20px 20px;
   margin: 0;
   outline: none;
+  border: none;
 
   @media (max-width: 568px) {
     padding: 10px 5px;
@@ -55,8 +55,8 @@ export const Button = styled(StyledButton)`
   }
 `;
 export const Background = styled.div`
-  background: ${Color.Purple};
   margin-top: 56px;
+  background: ${Color.Purple};
 `;
 export const InputContainer = styled.form`
   display: flex;

@@ -10,15 +10,15 @@ export const StyledBurger = styled.div<IProps>`
 
   @media (max-width: 800px) {
     position: fixed;
+    top: 28px;
+    right: 40px;
+    z-index: 99;
     display: flex;
     justify-content: space-between;
     flex-flow: column nowrap;
     width: ${Space.Medium};
     height: ${Space.Medium};
-    top: 28px;
-    right: 40px;
     margin-left: ${Space.Medium};
-    z-index: 99;
   }
 
   div {

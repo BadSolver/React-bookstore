@@ -16,25 +16,24 @@ export const DetailsContainer = styled.div`
     align-self: center;
   }
 `;
-export const Image = styled.img`
-`;
+export const Image = styled.img``;
 export const Options = styled.div`
   flex: 0 1 70%;
   margin-top: 30px;
 `;
 export const Container = styled.div`
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 `;
 
 export const Description = styled.div`
   display: flex;
   flex-direction: column;
-  border-top: 1px solid ${Color.PrimaryDark};
-  margin-left: 120px;
   width: 100%;
   max-width: 548px;
+  margin-left: 120px;
+  border-top: 1px solid ${Color.PrimaryDark};
 
   @media (max-width: 800px) {
     margin-left: 0;
@@ -55,11 +54,11 @@ export const BackGround = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${Color.Blue};
   width: 450px;
   height: 470px;
-  border-radius: 10px;
   margin-bottom: ${Space.Small};
+  background-color: ${Color.Blue};
+  border-radius: 10px;
   box-shadow: 10px 10px 5px ${Color.Orange};
 `;
 
@@ -68,27 +67,27 @@ export const Arrow = styled.div`
   cursor: pointer;
 `;
 export const LabelText = styled.p`
+  flex: 0 1 70%;
+  padding-top: 6px;
   ${fonts.Subline}
   color: ${Color.PrimaryDark};
-  padding-top: 6px;
-  flex: 0 1 70%;
   text-align: right;
 `;
 export const ValueText = styled.p`
+  padding-top: 6px;
   ${fonts.Subline}
   color:${Color.Secondary};
-  padding-top: 6px;
 `;
 
 export const MoreDetails = styled.button`
   align-self: flex-start;
-  border: none;
-  background: transparent;
-  cursor: pointer;
+  margin-top: 10px;
   ${fonts.Subline}
+  background: transparent;
   color: ${Color.PrimaryDark};
   padding-left: 0;
-  margin-top: 10px;
+  border: none;
+  cursor: pointer;
 `;
 
 export const Button = styled(StyledButton)`

@@ -8,16 +8,16 @@ export const StyledBurgerNavbar = styled.nav`
   }
 `;
 export const Logo = styled.button`
-  border: none;
-  background: transparent;
-  cursor: pointer;
   margin-top: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 `;
 export const Navbar = styled.nav`
-  width: 184px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 184px;
 `;
 export const HeartLogo = styled.div`
   cursor: pointer;
