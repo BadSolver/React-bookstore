@@ -12,13 +12,17 @@ type SignUpValues = {
   password: string;
 };
 
+interface Iprops {
+  handleModal: () => void;
+}
+
 const override: CSSProperties = {
   display: "block",
   color: 'white',
   margin: '0 auto',
 };
 
-export const SignUp = () => {
+export const SignUp = ({handleModal}: Iprops) => {
   const {
     register,
     handleSubmit,
@@ -39,7 +43,7 @@ export const SignUp = () => {
     createUserWithEmailAndPassword(auth, email, password)
     
       .then((userCredential) => {
-        const user = userCredential.user;
+        
         
       })
       .catch((error) => {
@@ -48,6 +52,7 @@ export const SignUp = () => {
       }).finally(() => {
         setIsLoading(false)
         reset()
+        handleModal()
       })
   };
 
