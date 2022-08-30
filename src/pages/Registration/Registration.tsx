@@ -8,8 +8,6 @@ export const Registration = () => {
   const [signUp, setSignUp] = useState(true);
   const [isOpen, setIsOpen] = useToggle();
 
-  
-
   const handleSignIn = () => {
     setSignIn(true);
     setSignUp(false);
@@ -32,8 +30,8 @@ export const Registration = () => {
       </Container>
       <Form>
         {signIn && <SignIn />}
-        {signUp && <SignUp handleModal={setIsOpen}/>}
-        <ModalWindow isOpen={isOpen} handleModal={setIsOpen}/>
+        {signUp && <SignUp handleModal={setIsOpen} />}
+        <ModalWindow isOpen={isOpen} handleModal={setIsOpen} />
       </Form>
     </StyledRegistrtation>
   );

@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { ROUTE } from "../../router";
 import { Portal, PortalTarget } from "../Portal";
 import { StyledModalWindow } from "./style";
 
@@ -11,7 +13,9 @@ export const ModalWindow = ({ isOpen, handleModal }: IProps) => {
   return isOpen ? (
     <Portal target={PortalTarget.MODAL}>
       <StyledModalWindow onClick={handleModal}>
-        <button>123123213</button>
+        <Link to={ROUTE.SIGNIN}>
+          <button>Go to home page</button>
+        </Link>
       </StyledModalWindow>
     </Portal>
   ) : null;

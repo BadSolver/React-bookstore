@@ -18,11 +18,11 @@ interface Iprops {
 
 const override: CSSProperties = {
   display: "block",
-  color: 'white',
-  margin: '0 auto',
+  color: "white",
+  margin: "0 auto",
 };
 
-export const SignUp = ({handleModal}: Iprops) => {
+export const SignUp = ({ handleModal }: Iprops) => {
   const {
     register,
     handleSubmit,
@@ -33,27 +33,24 @@ export const SignUp = ({handleModal}: Iprops) => {
     reValidateMode: "onSubmit",
   });
 
-  const [isLoading, setIsLoading] = useState(false)
-  const [errorMsg, setErrorMsg] = useState<string |null>(null)
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const onSubmit: SubmitHandler<SignUpValues> = ({ email, password, name }) => {
-    setErrorMsg(null)
-    setIsLoading(true)
+    setErrorMsg(null);
+    setIsLoading(true);
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
-    
       .then((userCredential) => {
-        
-        
+        handleModal();
       })
       .catch((error) => {
-        setErrorMsg(getFirebaseMessageError(error.code))
-        
-      }).finally(() => {
-        setIsLoading(false)
-        reset()
-        handleModal()
+        setErrorMsg(getFirebaseMessageError(error.code));
       })
+      .finally(() => {
+        setIsLoading(false);
+        reset();
+      });
   };
 
   return (
@@ -110,7 +107,11 @@ export const SignUp = ({handleModal}: Iprops) => {
       )}
 
       <Button type="submit">
-      {isLoading ? <ClipLoader cssOverride={override} size={30} color={'white'}/> : 'Sign up'}
+        {isLoading ? (
+          <ClipLoader cssOverride={override} size={30} color={"white"} />
+        ) : (
+          "Sign up"
+        )}
       </Button>
     </StyledSignUp>
   );
