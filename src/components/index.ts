@@ -9,7 +9,9 @@ import { ErrorMessage } from "./ErrorMessage";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { MainTemplate } from "./MainTemplate";
+import { ModalWindow } from "./ModalWindow";
 import { NotFounded } from "./NotFounded";
+import { Portal } from "./Portal";
 import { Raiting } from "./Raiting";
 import { RequareAuth } from "./RequareAuth";
 import { Search } from "./Search";
@@ -17,7 +19,7 @@ import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
 import { SliderCom } from "./Slider";
 import { Subscribe } from "./Subscribe/Subscribe";
-import { TabBar } from "./TabBar/Index";
+import { TabBar } from "./TabBar/TabBar";
 import { Title } from "./Title";
 
 export {
@@ -41,5 +43,7 @@ export {
   Title,
   RequareAuth,
   SignIn,
-  SignUp
+  SignUp,
+  Portal,
+  ModalWindow,
 };

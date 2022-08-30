@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { SignIn, SignUp } from "../../components";
+import { ModalWindow, SignIn, SignUp } from "../../components";
+import { useToggle } from "../../hooks";
 import { Container, Form, Sign, StyledRegistrtation } from "./style";
 
 export const Registration = () => {
   const [signIn, setSignIn] = useState(false);
   const [signUp, setSignUp] = useState(true);
+  const [isOpen, setIsOpen] = useToggle();
 
   const handleSignIn = () => {
     setSignIn(true);
@@ -28,7 +30,8 @@ export const Registration = () => {
       </Container>
       <Form>
         {signIn && <SignIn />}
-        {signUp && <SignUp />}
+        {signUp && <SignUp handleModal={setIsOpen} />}
+        <ModalWindow isOpen={isOpen} handleModal={setIsOpen} />
       </Form>
     </StyledRegistrtation>
   );
