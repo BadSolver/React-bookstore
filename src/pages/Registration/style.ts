@@ -8,7 +8,7 @@ interface Iprops {
 export const StyledRegistrtation = styled.div`
   margin: 0 auto;
   max-width: 550px;
-  margin-top: 150px;
+  margin-top: 80px;
   border: 1px solid ${Color.Secondary};
   border-radius: 10px;
 `;

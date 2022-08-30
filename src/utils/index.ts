@@ -1,3 +1,4 @@
+import { getFirebaseMessageError } from "./firebaseError";
 import { getAuthor } from "./getAuthors";
 
-export { getAuthor };
+export { getAuthor, getFirebaseMessageError };
