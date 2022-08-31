@@ -6,7 +6,7 @@ export enum ROUTE {
   CART = "/cart",
   FAVORITES = "/favorites",
   ACCOUNT = "/account",
-  SIGNIN = "/sigh-in",
+  SIGNIN = "/sign-in",
   // SIGNUP = "/sign-up",
   HELLO_PAGE = "/react-bookstore",
   REGISTRATION = "registration",

@@ -5,6 +5,8 @@ import { ClipLoader } from "react-spinners";
 import { getFirebaseMessageError } from "../../utils";
 import { ErrorMessage } from "../SignIn/style";
 import { StyledSignUp, Input, Title, Button } from "./style";
+import { setUser } from "../../store";
+import { useAppDispatch } from "../../hooks";
 
 type SignUpValues = {
   name: string;
@@ -23,6 +25,8 @@ const override: CSSProperties = {
 };
 
 export const SignUp = ({ handleModal }: Iprops) => {
+  const dispatch = useAppDispatch();
+
   const {
     register,
     handleSubmit,
@@ -41,7 +45,14 @@ export const SignUp = ({ handleModal }: Iprops) => {
     setIsLoading(true);
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
+      .then(({ user }) => {
+        dispatch(
+          setUser({
+            email: user.email,
+            id: user.uid,
+            token: user.metadata.creationTime,
+          })
+        );
         handleModal();
       })
       .catch((error) => {
