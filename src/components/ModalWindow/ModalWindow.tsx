@@ -14,7 +14,7 @@ export const ModalWindow = ({ isOpen, handleModal }: IProps) => {
     <Portal target={PortalTarget.MODAL}>
       <StyledModalWindow onClick={handleModal}>
         <Link to={ROUTE.SIGNIN}>
-          <button>Go to home page</button>
+          <button>Go to Sign In</button>
         </Link>
       </StyledModalWindow>
     </Portal>

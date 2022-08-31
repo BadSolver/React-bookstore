@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../hooks";
 import { ROUTE } from "../../router/routes";
 import { Button } from "../Button/Button";
 
@@ -11,9 +11,10 @@ interface IProps {
 }
 
 export const RightNav = ({ open, close }: IProps) => {
-  const [auth, setAuth] = useState(true);
 
-  if (auth) {
+  const {isAuth } = useAuth()
+
+  if (isAuth) {
     return (
       <>
         <Background open={open} onClick={close} />
@@ -41,7 +42,9 @@ export const RightNav = ({ open, close }: IProps) => {
           <Form>
             <Search placeholder="Search" open={open} />
           </Form>
+          <Link to={ROUTE.SIGNIN} onClick={close}>
           <Button text="Sign In"></Button>
+          </Link>
         </StyledList>
       </>
     );

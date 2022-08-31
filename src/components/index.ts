@@ -8,6 +8,7 @@ import { Button } from "./Button";
 import { ErrorMessage } from "./ErrorMessage";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import { LogOut } from "./LogOut";
 import { MainTemplate } from "./MainTemplate";
 import { ModalWindow } from "./ModalWindow";
 import { NotFounded } from "./NotFounded";
@@ -46,4 +47,6 @@ export {
   SignUp,
   Portal,
   ModalWindow,
+  LogOut,
+  
 };
