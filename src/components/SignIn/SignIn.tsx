@@ -1,14 +1,20 @@
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import React, { CSSProperties, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import { useAppDispatch } from "../../hooks";
 import { ROUTE } from "../../router";
 import { setUser } from "../../store";
 import { getFirebaseMessageError } from "../../utils";
-import { Button, ErrorMessage, Input, StyledSignIn, Title } from "./style";
+import {
+  Button,
+  ErrorMessage,
+  ForgotPassword,
+  Input,
+  StyledSignIn,
+  Title,
+} from "./style";
 
 type SignInValues = {
   name: string;
@@ -85,7 +91,9 @@ export const SignIn = () => {
         })}
       />
 
-      <p onClick={() => navigate(ROUTE.RESET_PASSWORD)}>Forgot password?</p>
+      <ForgotPassword onClick={() => navigate(ROUTE.RESET_PASSWORD)}>
+        Forgot password?
+      </ForgotPassword>
 
       {errorMsg && <ErrorMessage> {errorMsg}</ErrorMessage>}
       {errors.password && (

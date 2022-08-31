@@ -15,6 +15,7 @@ import { NotFounded } from "./NotFounded";
 import { Portal } from "./Portal";
 import { Raiting } from "./Raiting";
 import { RequareAuth } from "./RequareAuth";
+import { ResetPassword } from "./ResetPassword";
 import { Search } from "./Search";
 import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
@@ -48,5 +49,5 @@ export {
   Portal,
   ModalWindow,
   LogOut,
-  
+  ResetPassword,
 };
