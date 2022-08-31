@@ -1,5 +1,16 @@
 import React from "react";
+import { LogOut } from "../../components";
+import { useAuth } from "../../hooks";
 
 export const Account = () => {
-  return <div>Account</div>;
+  const { email, id, token } = useAuth();
+
+  return (
+    <div>
+      <LogOut />
+      <p>{email}</p>
+      <p>{id}</p>
+      <p>{token}</p>
+    </div>
+  );
 };
