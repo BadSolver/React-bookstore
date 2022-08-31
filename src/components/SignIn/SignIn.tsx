@@ -1,6 +1,7 @@
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import React, { CSSProperties, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import { useAppDispatch } from "../../hooks";
@@ -83,7 +84,9 @@ export const SignIn = () => {
           required: "Password is required",
         })}
       />
-      <p>Forgot password?</p>
+
+      <p onClick={() => navigate(ROUTE.RESET_PASSWORD)}>Forgot password?</p>
+
       {errorMsg && <ErrorMessage> {errorMsg}</ErrorMessage>}
       {errors.password && (
         <ErrorMessage> {errors.password.message}</ErrorMessage>

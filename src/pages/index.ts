@@ -6,6 +6,7 @@ import { HelloPages } from "./HelloPages";
 import { Home } from "./Home";
 import { NotFound } from "./NotFound";
 import { Registration } from "./Registration";
+import { ResetPassword } from "./ResetPassword";
 import { Search } from "./Search";
 
 export {
@@ -18,4 +19,5 @@ export {
   Search,
   Registration,
   HelloPages,
+  ResetPassword,
 };

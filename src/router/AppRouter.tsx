@@ -9,6 +9,7 @@ import {
   Home,
   NotFound,
   Registration,
+  ResetPassword,
   Search,
 } from "../pages";
 import { SignInPages } from "../pages/SignIn/SignInPages";
@@ -32,6 +33,7 @@ export const AppRouter = () => {
 
         <Route path={ROUTE.REGISTRATION} element={<Registration />} />
         <Route path={ROUTE.SIGNIN} element={<SignInPages />} />
+        <Route path={ROUTE.RESET_PASSWORD} element={<ResetPassword />}/>
 
         <Route path={ROUTE.NOT_FOUND} element={<NotFound />} />
       </Route>
