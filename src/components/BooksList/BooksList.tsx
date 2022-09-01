@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { RingLoader } from "react-spinners";
+import { ClipLoader } from "react-spinners";
 import { INewBooksApi } from "../../types";
 import { BookItem } from "../BookItem";
 import { ErrorMessage } from "../ErrorMessage";
@@ -16,15 +16,14 @@ const override: CSSProperties = {
   margin: "100px auto 0 auto",
 };
 
-
 export const BooksList = ({ isLoading, error, books }: IProps) => {
   return (
     <StyledBooksList>
-      {isLoading && <RingLoader cssOverride={override} size={50} />}
+      {isLoading && <ClipLoader cssOverride={override} size={50} />}
       {error && <ErrorMessage text={error} />}
 
       {books.map((book) => {
-        return <BookItem book={book} key={book.isbn13} />
+        return <BookItem book={book} key={book.isbn13} />;
       })}
     </StyledBooksList>
   );

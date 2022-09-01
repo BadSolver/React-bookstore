@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { MainTemplate, RequareAuth } from "../components";
 import {
-  Account,
+  AccountPage,
   BookDetailsPage,
   Cart,
   Favorites,
@@ -28,7 +28,7 @@ export const AppRouter = () => {
         <Route path={ROUTE.FAVORITES} element={<Favorites />} />
 
         <Route element={<RequareAuth />}>
-          <Route path={ROUTE.ACCOUNT} element={<Account />} />
+          <Route path={ROUTE.ACCOUNT} element={<AccountPage />} />
         </Route>
 
         <Route path={ROUTE.REGISTRATION} element={<Registration />} />
