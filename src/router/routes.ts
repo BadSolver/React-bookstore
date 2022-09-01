@@ -10,5 +10,5 @@ export enum ROUTE {
   // SIGNUP = "/sign-up",
   HELLO_PAGE = "/react-bookstore",
   REGISTRATION = "registration",
-  RESET_PASSWORD = "/sign-in/ResetPassword",
+  RESET_PASSWORD = "/sign-in/reset-password",
 }
