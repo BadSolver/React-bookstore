@@ -51,11 +51,12 @@ export const SignIn = () => {
 
     signInWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
+        console.log(user)
         dispatch(
           setUser({
             email: user.email,
             id: user.uid,
-            token: user.metadata.creationTime,
+            userDate: user.metadata.creationTime,
           })
         );
         navigate(ROUTE.ACCOUNT);

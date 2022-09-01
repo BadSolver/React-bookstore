@@ -50,7 +50,7 @@ export const SignUp = ({ handleModal }: Iprops) => {
           setUser({
             email: user.email,
             id: user.uid,
-            token: user.metadata.creationTime,
+            userDate: user.metadata.creationTime,
           })
         );
         handleModal();
