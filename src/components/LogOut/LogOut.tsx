@@ -1,14 +1,18 @@
 import React from "react";
 import { useAppDispatch } from "../../hooks";
 import { removeUser } from "../../store";
-import { StyledLogOut } from "./style";
+import { Button, StyledLogOut } from "./style";
 
 export const LogOut = () => {
   const dispatch = useAppDispatch();
 
+  const handleRemove = () => {
+    dispatch(removeUser());
+  };
+
   return (
     <StyledLogOut>
-      <button onClick={() => dispatch(removeUser())}> Log out </button>
+      <Button onClick={handleRemove}> Log out </Button>
     </StyledLogOut>
   );
 };
