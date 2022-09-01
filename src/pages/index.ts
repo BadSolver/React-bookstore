@@ -1,4 +1,4 @@
-import { Account } from "./Account";
+import { AccountPage } from "./AccountPage";
 import { BookDetailsPage } from "./BookDetailsPages";
 import { Cart } from "./Cart";
 import { Favorites } from "./Favorites";
@@ -10,7 +10,7 @@ import { ResetPasswordPages } from "./ResetPasswordPages";
 import { Search } from "./Search";
 
 export {
-  Account,
+  AccountPage,
   BookDetailsPage,
   Cart,
   Favorites,
