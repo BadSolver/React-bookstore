@@ -1,3 +1,4 @@
+import { Account } from "./Account";
 import { BookDetails } from "./BookDetails";
 import { BookItem } from "./BookItem";
 import { BooksList } from "./BooksList";
@@ -50,4 +51,5 @@ export {
   ModalWindow,
   LogOut,
   ResetPassword,
+  Account,
 };
