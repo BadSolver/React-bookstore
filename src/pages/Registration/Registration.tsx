@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ModalWindow, SignIn, SignUp } from "../../components";
+import { ArrowBack, ModalWindow, SignIn, SignUp } from "../../components";
 import { useToggle } from "../../hooks";
 import { Container, Form, Sign, StyledRegistrtation } from "./style";
 
@@ -19,20 +19,23 @@ export const Registration = () => {
   };
 
   return (
-    <StyledRegistrtation>
-      <Container>
-        <Sign onClick={handleSignIn} signIn={signIn}>
-          Sign in
-        </Sign>
-        <Sign onClick={handleSignUp} signIn={signUp}>
-          Sign up
-        </Sign>
-      </Container>
-      <Form>
-        {signIn && <SignIn />}
-        {signUp && <SignUp handleModal={setIsOpen} />}
-        <ModalWindow isOpen={isOpen} handleModal={setIsOpen} />
-      </Form>
-    </StyledRegistrtation>
+    <>
+      <ArrowBack />
+      <StyledRegistrtation>
+        <Container>
+          <Sign onClick={handleSignIn} signIn={signIn}>
+            Sign in
+          </Sign>
+          <Sign onClick={handleSignUp} signIn={signUp}>
+            Sign up
+          </Sign>
+        </Container>
+        <Form>
+          {signIn && <SignIn />}
+          {signUp && <SignUp handleModal={setIsOpen} />}
+          <ModalWindow isOpen={isOpen} handleModal={setIsOpen} />
+        </Form>
+      </StyledRegistrtation>
+    </>
   );
 };

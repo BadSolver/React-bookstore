@@ -37,7 +37,7 @@ export const BookDetailsPage = () => {
   useEffect(() => {
     fetchDetails();
     window.scrollTo({
-      top: 120,
+      top: 0,
       behavior: "smooth",
     });
   }, [isbn]);

@@ -1,13 +1,10 @@
 import React, { CSSProperties } from "react";
-import { BsArrowLeft } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
 import { RingLoader } from "react-spinners";
-import { ErrorMessage } from "../../components";
+import { ArrowBack, ErrorMessage } from "../../components";
 import { Raiting } from "../../components/Raiting";
 import { Title } from "../../components/Title";
 import { IBookDetails } from "../../types";
 import {
-  Arrow,
   BackGround,
   Button,
   Container,
@@ -43,21 +40,15 @@ export const BookDetails = ({
   details,
   handleDetails,
 }: IProps) => {
-  const navigate = useNavigate();
-
-  const handleArrow = () => {
-    navigate(-1);
-  };
+  
 
   return (
     <>
+    <ArrowBack />
       {isLoading && <RingLoader cssOverride={override} size={50} />}
       {error && <ErrorMessage text={error} />}
       {book && (
         <StyledBookDetails>
-          <Arrow>
-            <BsArrowLeft onClick={handleArrow} style={{ fontSize: "30px" }} />
-          </Arrow>
           <Title text={book.title}></Title>
           <DetailsContainer>
             <BackGround>
@@ -65,7 +56,7 @@ export const BookDetails = ({
             </BackGround>
             <Description>
               <Cost>
-                <Price>{book.price}</Price>
+                <Price>{book.price === "$0.00" ? "free" : book.price}</Price>
                 <Raiting rating={book.rating} />
               </Cost>
               <Options>
