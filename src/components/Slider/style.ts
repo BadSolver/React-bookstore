@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledSlider = styled.div`
-  padding-top: 60px;
+  /* padding-top: 60px;
   margin: 0 auto;
   .slick-list {
     margin: 0 auto;
@@ -16,5 +16,5 @@ export const StyledSlider = styled.div`
       margin-left: 0;
       gap: 10px;
     }
-  }
+  } */
 `;

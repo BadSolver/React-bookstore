@@ -13,32 +13,37 @@ interface IProps {
 }
 
 export const TabBar = ({ book }: IProps) => {
-  const [description, setDescription] = useState<boolean>(false);
+  const [description, setDescription] = useState<boolean>(true);
   const [authors, setAuthors] = useState<boolean>(false);
   const [reviews, setReviews] = useState<boolean>(false);
+  const [isActive, setIsActive] = useState<boolean>(true);
 
   const handleDescription = () => {
-    setDescription(!description);
+    setDescription((description) => !description);
     setAuthors(false);
     setReviews(false);
   };
 
   const handleAuthors = () => {
-    setAuthors(!authors);
+    setAuthors((authors) => !authors);
     setDescription(false);
     setReviews(false);
+    setIsActive(false);
   };
 
   const handleReviews = () => {
-    setReviews(!reviews);
+    setReviews((reviews) => !reviews);
     setAuthors(false);
     setDescription(false);
+    setIsActive(false);
   };
 
   return (
     <StyledTabBar>
       <Container>
-        <TabItem onClick={handleDescription}>Description</TabItem>
+        <TabItem onClick={handleDescription} isActive={isActive}>
+          Description
+        </TabItem>
         <TabItem onClick={handleAuthors}>Authors</TabItem>
         <TabItem onClick={handleReviews}>Reviews</TabItem>
       </Container>

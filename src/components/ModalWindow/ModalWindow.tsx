@@ -14,15 +14,13 @@ export const ModalWindow = ({ isOpen, handleModal }: IProps) => {
     <Portal target={PortalTarget.MODAL}>
       <StyledModalWindow onClick={handleModal}>
         <Wrapper>
-    <Container>
-    <Title>Congratulations, registration was successful</Title>
-        <Link to={ROUTE.SIGNIN}>
-          <Button>Go to Sign In</Button>
-        </Link>
-    </Container>
-
+          <Container>
+            <Title>Congratulations, registration was successful</Title>
+            <Link to={ROUTE.SIGNIN}>
+              <Button>Go to Sign In</Button>
+            </Link>
+          </Container>
         </Wrapper>
-        
       </StyledModalWindow>
     </Portal>
   ) : null;

@@ -44,13 +44,14 @@ export const SliderCom = () => {
 
   const settings = {
     dots: true,
-    infinite: false,
+    className: "center",
+      centerMode: true,
+      infinite: true,
+      centerPadding: "60px",
     speed: 400,
     slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 0,
-    nextArrow: <BsArrowLeft />,
-    prevArrow: <BsArrowLeft />,
     responsive: [
       {
         breakpoint: 1024,

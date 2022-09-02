@@ -37,13 +37,13 @@ export const BookDetailsPage = () => {
   useEffect(() => {
     fetchDetails();
     window.scrollTo({
-      top: 120,
+      top: 0,
       behavior: "smooth",
     });
   }, [isbn]);
 
   const handleDetails = () => {
-    setDetails(!details);
+    setDetails((details) => !details);
   };
 
   return (

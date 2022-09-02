@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { Color, fonts } from "../../ui";
 
+interface Iprops {
+  isActive?: boolean;
+}
+
 export const StyledTabBar = styled.div`
   display: flex;
   flex-direction: column;
@@ -8,7 +12,7 @@ export const StyledTabBar = styled.div`
   gap: 50px;
 `;
 
-export const TabItem = styled.button`
+export const TabItem = styled.button<Iprops>`
   ${fonts.Subline}
   color: ${Color.Secondary};
   border: none;
@@ -18,6 +22,8 @@ export const TabItem = styled.button`
   &:focus {
     color: ${Color.PrimaryDark};
   }
+
+  ${(props) => (props.isActive ? `color: ${Color.PrimaryDark}` : "white")}
 `;
 
 export const Container = styled.div`
@@ -35,5 +41,5 @@ export const TabDescription = styled.p`
   font-weight: 400;
 `;
 export const ContainerDescription = styled.div`
-  height: 300px;
+  height: 150px;
 `;

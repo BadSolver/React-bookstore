@@ -38,7 +38,7 @@ export const Description = styled.div`
   @media (max-width: 800px) {
     margin-left: 0;
     margin-top: 20px;
-    max-width:310px
+    max-width: 310px;
   }
 `;
 
@@ -67,10 +67,6 @@ export const BackGround = styled.div`
   }
 `;
 
-export const Arrow = styled.div`
-  margin: 30px 0 10px 10px;
-  cursor: pointer;
-`;
 export const LabelText = styled.p`
   flex: 0 1 70%;
   padding-top: 6px;
@@ -102,6 +98,6 @@ export const Button = styled(StyledButton)`
   @media (max-width: 768px) {
     padding: 15px 10px;
     margin-top: 20px;
-    width:80%;
+    width: 80%;
   }
 `;

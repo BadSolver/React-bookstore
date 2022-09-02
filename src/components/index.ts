@@ -1,4 +1,5 @@
 import { Account } from "./Account";
+import { ArrowBack } from "./ArrowBack";
 import { BookDetails } from "./BookDetails";
 import { BookItem } from "./BookItem";
 import { BooksList } from "./BooksList";
@@ -52,4 +53,5 @@ export {
   LogOut,
   ResetPassword,
   Account,
+  ArrowBack,
 };
