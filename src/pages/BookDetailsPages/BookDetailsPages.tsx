@@ -40,10 +40,11 @@ export const BookDetailsPage = () => {
       top: 0,
       behavior: "smooth",
     });
+    
   }, [isbn]);
 
   const handleDetails = () => {
-    setDetails(!details);
+    setDetails((details) => !details);
   };
 
   return (

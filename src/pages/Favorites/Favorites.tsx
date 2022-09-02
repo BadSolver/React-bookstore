@@ -4,11 +4,9 @@ import { StyledFavorites } from "./style";
 
 export const Favorites = () => {
   return (
-    (
-      <>
-        <ArrowBack />
-        <StyledFavorites></StyledFavorites>
-      </>
-    )
+    <>
+      <ArrowBack />
+      <StyledFavorites></StyledFavorites>
+    </>
   );
 };
