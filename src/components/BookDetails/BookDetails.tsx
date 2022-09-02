@@ -3,6 +3,7 @@ import { RingLoader } from "react-spinners";
 import { ArrowBack, ErrorMessage } from "../../components";
 import { Raiting } from "../../components/Raiting";
 import { Title } from "../../components/Title";
+import { useToggle } from "../../hooks";
 import { IBookDetails } from "../../types";
 import {
   BackGround,
@@ -40,11 +41,11 @@ export const BookDetails = ({
   details,
   handleDetails,
 }: IProps) => {
-  
+  const [isActive, setIsActive] = useToggle();
 
   return (
     <>
-    <ArrowBack />
+      <ArrowBack />
       {isLoading && <RingLoader cssOverride={override} size={50} />}
       {error && <ErrorMessage text={error} />}
       {book && (
@@ -76,7 +77,12 @@ export const BookDetails = ({
                   <ValueText>Year</ValueText>
                   <LabelText>{book.year}</LabelText>
                 </Container>
-                <MoreDetails onClick={handleDetails}>More Details</MoreDetails>
+                <div onClick={setIsActive}>
+                  <MoreDetails onClick={handleDetails}>
+                    {isActive ? "More Details 🠕" : "More Details  🠗"}
+                  </MoreDetails>
+                </div>
+
                 {details && (
                   <>
                     <Container>
