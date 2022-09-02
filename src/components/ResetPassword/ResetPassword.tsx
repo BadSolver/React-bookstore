@@ -63,7 +63,7 @@ export const ResetPassword = () => {
           {isLoading ? (
             <ClipLoader cssOverride={override} size={30} color={"white"} />
           ) : (
-            "Sign up"
+            "Reset Password"
           )}
         </Button>
       </Form>
