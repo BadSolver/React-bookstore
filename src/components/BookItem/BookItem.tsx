@@ -17,7 +17,7 @@ export const BookItem = ({ book }: IProps) => {
   return (
     <StyledBookItem>
       <ItemBackground>
-        <Cost>{book.price}</Cost>
+        <Cost>{book.price === "$0.00" ? "free" : book.price}</Cost>
         <Link to={`/book/${book.isbn13}`}>
           <Image src={book.image} alt={book.image} />
         </Link>

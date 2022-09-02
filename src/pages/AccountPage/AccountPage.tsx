@@ -1,6 +1,11 @@
 import React from "react";
-import { Account } from "../../components";
+import { Account, ArrowBack } from "../../components";
 
 export const AccountPage = () => {
-  return <Account />;
+  return (
+    <>
+      <ArrowBack />
+      <Account />
+    </>
+  );
 };
