@@ -29,9 +29,9 @@ export const Sign = styled.button<Iprops>`
   color: ${Color.Secondary};
   cursor: pointer;
 
-  ${(props) => (props.signIn ? "text-decoration: underline;" : "none")}
-  ${(props) =>
-    props.signIn ? `color:${Color.PrimaryDark} ` : `color:${Color.Secondary}`}
+  ${({ signIn }) => (signIn ? "text-decoration: underline;" : "none")}
+  ${({ signIn }) =>
+    signIn ? `color:${Color.PrimaryDark} ` : `color:${Color.Secondary}`}
 `;
 
 export const Form = styled.div`
