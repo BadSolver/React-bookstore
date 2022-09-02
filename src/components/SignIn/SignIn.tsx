@@ -44,6 +44,10 @@ export const SignIn = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
+  const handleNavigate = () => {
+    navigate(ROUTE.RESET_PASSWORD);
+  };
+
   const onSubmit: SubmitHandler<SignInValues> = ({ email, password, name }) => {
     setErrorMsg(null);
     setIsLoading(true);
@@ -51,7 +55,6 @@ export const SignIn = () => {
 
     signInWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
-        console.log(user)
         dispatch(
           setUser({
             email: user.email,
@@ -92,9 +95,7 @@ export const SignIn = () => {
         })}
       />
 
-      <ForgotPassword onClick={() => navigate(ROUTE.RESET_PASSWORD)}>
-        Forgot password?
-      </ForgotPassword>
+      <ForgotPassword onClick={handleNavigate}>Forgot password?</ForgotPassword>
 
       {errorMsg && <ErrorMessage> {errorMsg}</ErrorMessage>}
       {errors.password && (
