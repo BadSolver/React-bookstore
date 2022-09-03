@@ -1,20 +1,23 @@
 import styled from "styled-components";
 
 export const StyledSlider = styled.div`
-  /* padding-top: 60px;
-  margin: 0 auto;
+margin-left: 20px;
+  /* margin-left: 40px;
+  margin-right: 40px;
   .slick-list {
-    margin: 0 auto;
-    max-width: 1120px;
   }
-  .slick-track {
-    gap: 60px;
-    &:first-child {
-      margin-left: 40px;
-    }
-    @media (max-width:768px) {
-      margin-left: 0;
-      gap: 10px;
-    }
+  .slick-slide {
+    max-width: 280px;
+    margin: 0 40px;
+  }
+  .slick-slide.slick-active {
+    max-width: 280px;
+    margin: 0 40px;
   } */
+  .slick-prev:before {
+    color: black;
+  }
+  .slick-next:before {
+    color: black;
+  }
 `;
