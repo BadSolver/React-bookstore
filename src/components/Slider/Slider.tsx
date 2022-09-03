@@ -9,7 +9,6 @@ import { INewBooksApi } from "../../types";
 import { BookItem } from "../BookItem";
 import { RingLoader } from "react-spinners";
 import { ErrorMessage } from "../ErrorMessage";
-import { BsArrowLeft } from "react-icons/bs";
 
 export const SliderCom = () => {
   const [books, setBooks] = useState<INewBooksApi[]>([]);
@@ -44,14 +43,10 @@ export const SliderCom = () => {
 
   const settings = {
     dots: true,
-    className: "center",
-      centerMode: true,
-      infinite: true,
-      centerPadding: "60px",
+    infinite: false,
     speed: 400,
     slidesToShow: 3,
     slidesToScroll: 3,
-    initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
@@ -63,11 +58,12 @@ export const SliderCom = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 650,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 2,
+          dots: false,
         },
       },
       {
@@ -75,6 +71,7 @@ export const SliderCom = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: false,
         },
       },
     ],
@@ -83,11 +80,11 @@ export const SliderCom = () => {
   return (
     <StyledSlider>
       <Slider {...settings}>
-        {isLoading && <RingLoader cssOverride={override} size={50} />}
-        {error && <ErrorMessage text={error} />}
-        {books.map((book) => {
-          return <BookItem book={book} key={book.isbn13} />;
-        })}
+          {isLoading && <RingLoader cssOverride={override} size={50} />}
+          {error && <ErrorMessage text={error} />}
+          {books.map((book) => {
+            return <BookItem book={book} key={book.isbn13} />;
+          })}
       </Slider>
     </StyledSlider>
   );
