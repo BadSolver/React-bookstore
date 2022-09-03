@@ -66,17 +66,8 @@ export const SignUp = ({ handleModal }: Iprops) => {
 
   return (
     <StyledSignUp onSubmit={handleSubmit(onSubmit)}>
-      <Title>Name</Title>
-      <Input
-        type="name"
-        placeholder="Enter your name..."
-        {...register("name", {
-          required: "Name is required",
-        })}
-      />
       {errors.name && <ErrorMessage> {errors.name.message}</ErrorMessage>}
       <Title>Email</Title>
-
       <Input
         type="email"
         placeholder="Enter your email..."
@@ -99,9 +90,7 @@ export const SignUp = ({ handleModal }: Iprops) => {
           },
         })}
       />
-
       <Title>Confirm password</Title>
-
       <Input
         type="password"
         placeholder="Confirm your password..."
@@ -116,7 +105,6 @@ export const SignUp = ({ handleModal }: Iprops) => {
       {errors.password && (
         <ErrorMessage> {errors.password.message}</ErrorMessage>
       )}
-
       <Button type="submit">
         {isLoading ? (
           <ClipLoader cssOverride={override} size={30} color={"white"} />

@@ -1,4 +1,3 @@
-import { INewBooksApi } from "./newBooksApi";
-import { IBookDetails } from "./bookDetails";
+import { INewBooksApi, IBookDetails } from "./newBooksApi";
 
 export type { INewBooksApi, IBookDetails };

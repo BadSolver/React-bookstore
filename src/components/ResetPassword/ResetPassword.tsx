@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { ClipLoader } from "react-spinners";
 import { app } from "../../firebase";
 import { getFirebaseMessageError } from "../../utils";
+import { ArrowBack } from "../ArrowBack";
 import { ErrorMessage } from "../SignIn/style";
 import { Button, Form, Input, Title } from "./style";
 
@@ -47,26 +48,24 @@ export const ResetPassword = () => {
   };
 
   return (
-    <>
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <Title>Reset your Password</Title>
-        <Input
-          type="email"
-          {...register("email", { required: "Enter your email" })}
-          placeholder="Enter your email"
-          id="email"
-        />
-        <Title>{errors.email?.message}</Title>
-        {errors.email && <ErrorMessage> {errors.email.message}</ErrorMessage>}
-        {message && <ErrorMessage> {message}</ErrorMessage>}
-        <Button type="submit">
-          {isLoading ? (
-            <ClipLoader cssOverride={override} size={30} color={"white"} />
-          ) : (
-            "Reset Password"
-          )}
-        </Button>
-      </Form>
-    </>
+    <Form onSubmit={handleSubmit(onSubmit)}>
+      <Title>Reset your Password</Title>
+      <Input
+        type="email"
+        {...register("email", { required: "Enter your email" })}
+        placeholder="Enter your email"
+        id="email"
+      />
+      <Title>{errors.email?.message}</Title>
+      {errors.email && <ErrorMessage> {errors.email.message}</ErrorMessage>}
+      {message && <ErrorMessage> {message}</ErrorMessage>}
+      <Button type="submit">
+        {isLoading ? (
+          <ClipLoader cssOverride={override} size={30} color={"white"} />
+        ) : (
+          "Reset Password"
+        )}
+      </Button>
+    </Form>
   );
 };
