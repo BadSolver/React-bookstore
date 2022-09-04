@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Bookstore, CartHeader, HeartHeader, UserHeader } from "../../assets";
 import { ROUTE } from "../../router";
-import { useAppSelector } from "../../store";
+import { getFavorites, useAppSelector } from "../../store";
 import { getCart } from "../../store/selectors/cartSelector";
 import { BurgerMenu } from "../BurgerMenu";
 import { Search } from "../Search";
@@ -16,6 +16,7 @@ import {
 
 export const BurgerNavbar = () => {
 
+  const {item} = useAppSelector(getFavorites)
   const {cart} = useAppSelector(getCart)
 
   return (
@@ -29,7 +30,7 @@ export const BurgerNavbar = () => {
         <Search />
         <Navbar>
           <Link to={ROUTE.FAVORITES}>
-            <HeartLogo >
+            <HeartLogo item={item}>
               <HeartHeader />
             </HeartLogo>
           </Link>
