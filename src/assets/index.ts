@@ -4,5 +4,6 @@ import { ReactComponent as Closed } from "./closed.svg";
 import { ReactComponent as HeartHeader } from "./heart-header.svg";
 import { ReactComponent as SearchLogo } from "./search.svg";
 import { ReactComponent as UserHeader } from "./user-header.svg";
+import { ReactComponent as EmptyCart } from "./vector.svg";
 
-export { Bookstore, CartHeader, Closed, HeartHeader, SearchLogo, UserHeader };
+export { Bookstore, CartHeader, Closed, HeartHeader, SearchLogo, UserHeader, EmptyCart };

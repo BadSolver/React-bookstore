@@ -59,8 +59,12 @@ export const Button = styled(StyledButton)`
   padding: 0;
   margin: 0;
   margin-right: 15px;
+  border: none;
   background: transparent;
   color: ${Color.PrimaryDark};
+  :hover {
+    border: none;
+  }
 `;
 export const ButtonCount = styled(StyledButton)`
   display: block;
