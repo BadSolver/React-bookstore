@@ -3,7 +3,7 @@ import { MainTemplate, RequareAuth } from "../components";
 import {
   AccountPage,
   BookDetailsPage,
-  Cart,
+  CartPages,
   Favorites,
   HelloPages,
   Home,
@@ -24,7 +24,7 @@ export const AppRouter = () => {
         <Route path={ROUTE.HOME} element={<HelloPages />} />
         <Route path={ROUTE.SEARCH} element={<Search />} />
         <Route path={ROUTE.BOOK_DETAILS} element={<BookDetailsPage />} />
-        <Route path={ROUTE.CART} element={<Cart />} />
+        <Route path={ROUTE.CART} element={<CartPages />} />
         <Route path={ROUTE.FAVORITES} element={<Favorites />} />
 
         <Route element={<RequareAuth />}>

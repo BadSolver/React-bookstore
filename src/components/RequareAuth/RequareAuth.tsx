@@ -1,7 +1,8 @@
 import React from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
-import { useAppDispatch, useAuth } from '../../hooks'
+import { useAuth } from '../../hooks'
 import { ROUTE } from '../../router'
+import { useAppDispatch } from '../../store/redux-hooks/redux-hooks'
 
 export const RequareAuth = () => {
 

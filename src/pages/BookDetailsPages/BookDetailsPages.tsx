@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { AxiosError } from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import {
@@ -9,39 +7,27 @@ import {
   TabBar,
   Title,
 } from "../../components";
-import { bookStoreAPI } from "../../services/bookStoreApi";
-import { IBookDetails } from "../../types";
+
+import {
+  useAppDispatch,
+  useAppSelector,
+} from "../../store/redux-hooks/redux-hooks";
+import { getBookDetails } from "../../store/selectors/bookDetailsSelector";
+import { fetchDetailsBook } from "../../store/slices/bookDetailsSlice";
 
 export const BookDetailsPage = () => {
-  const { isbn } = useParams();
-  const [book, setBook] = useState<IBookDetails>();
-  const [error, setError] = useState<string>("");
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const { isbn = "" } = useParams();
+  const dispatch = useAppDispatch();
+  const { error, isLoading, book } = useAppSelector(getBookDetails);
   const [details, setDetails] = useState<boolean>(false);
 
-  const fetchDetails = async () => {
-    try {
-      setError("");
-      setIsLoading(true);
-
-      await bookStoreAPI.getDetails(isbn).then((detail) => {
-        setBook(detail);
-      });
-      setIsLoading(false);
-    } catch (e) {
-      const error = e as AxiosError;
-      setIsLoading(true);
-      setError(error.message);
-      setIsLoading(false);
-    }
-  };
   useEffect(() => {
-    fetchDetails();
+    dispatch(fetchDetailsBook(isbn));
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
-  }, [isbn]);
+  }, [isbn, dispatch]);
 
   const handleDetails = () => {
     setDetails((details) => !details);

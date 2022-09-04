@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Link } from "react-router-dom";
 import { INewBooksApi } from "../../types/newBooksApi";
 import {
@@ -13,7 +14,7 @@ interface IProps {
   book: INewBooksApi;
 }
 
-export const BookItem = ({ book }: IProps) => {
+export const BookItem = memo(({ book }: IProps) => {
   return (
     <StyledBookItem>
       <ItemBackground>
@@ -26,4 +27,4 @@ export const BookItem = ({ book }: IProps) => {
       <SubTitle>{book.subtitle}</SubTitle>
     </StyledBookItem>
   );
-};
+});

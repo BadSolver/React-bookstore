@@ -1,6 +1,6 @@
 import { AccountPage } from "./AccountPage";
 import { BookDetailsPage } from "./BookDetailsPages";
-import { Cart } from "./Cart";
+import { CartPages } from "./CartPages";
 import { Favorites } from "./Favorites";
 import { HelloPages } from "./HelloPages";
 import { Home } from "./Home";
@@ -12,7 +12,7 @@ import { Search } from "./Search";
 export {
   AccountPage,
   BookDetailsPage,
-  Cart,
+  CartPages,
   Favorites,
   Home,
   NotFound,

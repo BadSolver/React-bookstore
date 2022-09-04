@@ -7,7 +7,7 @@ import { StyledBooksList } from "./style";
 
 interface IProps {
   isLoading: boolean;
-  error: string;
+  error: string | null;
   books: INewBooksApi[];
 }
 
@@ -18,13 +18,14 @@ const override: CSSProperties = {
 
 export const BooksList = ({ isLoading, error, books }: IProps) => {
   return (
-    <StyledBooksList>
+    <>
       {isLoading && <ClipLoader cssOverride={override} size={50} />}
-      {error && <ErrorMessage text={error} />}
-
-      {books.map((book) => {
-        return <BookItem book={book} key={book.isbn13} />;
-      })}
-    </StyledBooksList>
+      <StyledBooksList>
+        {error && <ErrorMessage text={error} />}
+        {books.map((book) => {
+          return <BookItem book={book} key={book.isbn13} />;
+        })}
+      </StyledBooksList>
+    </>
   );
 };

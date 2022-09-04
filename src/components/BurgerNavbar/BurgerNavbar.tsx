@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Bookstore, CartHeader, HeartHeader, UserHeader } from "../../assets";
 import { ROUTE } from "../../router/routes";
+import { useAppSelector } from "../../store/redux-hooks/redux-hooks";
+import { getCart } from "../../store/selectors/cartSelector";
 import { BurgerMenu } from "../BurgerMenu";
 import { Search } from "../Search/Search";
 import {
@@ -13,6 +15,9 @@ import {
 } from "./style";
 
 export const BurgerNavbar = () => {
+
+  const {cart} = useAppSelector(getCart)
+
   return (
     <>
       <StyledBurgerNavbar>
@@ -24,12 +29,12 @@ export const BurgerNavbar = () => {
         <Search />
         <Navbar>
           <Link to={ROUTE.FAVORITES}>
-            <HeartLogo>
+            <HeartLogo >
               <HeartHeader />
             </HeartLogo>
           </Link>
           <Link to={ROUTE.CART}>
-            <CartLogo>
+            <CartLogo cart={cart}>
               <CartHeader />
             </CartLogo>
           </Link>

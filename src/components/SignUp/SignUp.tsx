@@ -6,7 +6,7 @@ import { getFirebaseMessageError } from "../../utils";
 import { ErrorMessage } from "../SignIn/style";
 import { StyledSignUp, Input, Title, Button } from "./style";
 import { setUser } from "../../store";
-import { useAppDispatch } from "../../hooks";
+import { useAppDispatch } from "../../store/redux-hooks/redux-hooks";
 
 type SignUpValues = {
   name: string;
