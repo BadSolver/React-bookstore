@@ -9,6 +9,7 @@ import { RightNav } from "./BurgerRightNav";
 import { Button } from "./Button";
 import { Cart } from "./Cart";
 import { ErrorMessage } from "./ErrorMessage";
+import { FavoritesItem } from "./Favorites";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { LogOut } from "./LogOut";
@@ -56,4 +57,5 @@ export {
   Account,
   ArrowBack,
   Cart,
+  FavoritesItem,
 };

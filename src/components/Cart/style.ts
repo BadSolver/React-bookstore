@@ -6,7 +6,8 @@ export const StyledCart = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 210px;
+  height: 280px;
+  margin-top: 30px;
   border: 1px solid ${Color.PrimaryDark};
   border-radius: 10px;
 `;

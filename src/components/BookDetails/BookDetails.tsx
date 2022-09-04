@@ -4,6 +4,7 @@ import { ArrowBack, ErrorMessage, Raiting, Title } from "../../components";
 import { useToggle } from "../../hooks";
 import { useAppDispatch } from "../../store";
 import { addItem } from "../../store/slices/cartSlice";
+import { addItemFavorites } from "../../store/slices/favoritesSlice";
 import { IBookDetails } from "../../types";
 import {
   BackGround,
@@ -19,6 +20,7 @@ import {
   StyledBookDetails,
   ValueText,
   Image,
+  ButtonContainer,
 } from "./style";
 
 const override: CSSProperties = {
@@ -45,7 +47,11 @@ export const BookDetails = ({
   const dispatch = useAppDispatch();
 
   const handleAddToCart = () => {
-    return dispatch(addItem(book));
+     dispatch(addItem(book));
+     
+  };
+  const hadleAddToFavorites = () => {
+    dispatch(addItemFavorites(book));
   };
 
   return (
@@ -105,7 +111,10 @@ export const BookDetails = ({
                   </>
                 )}
               </Options>
-              <Button onClick={handleAddToCart}>Add to Cart</Button>
+              <ButtonContainer>
+                <Button onClick={handleAddToCart}>Add to Cart</Button>
+                <Button onClick={hadleAddToFavorites}>Add to favorites</Button>
+              </ButtonContainer>
             </Description>
           </DetailsContainer>
         </StyledBookDetails>
