@@ -1,10 +1,8 @@
 import React, { CSSProperties } from "react";
 import { ClipLoader } from "react-spinners";
-import { ArrowBack, ErrorMessage } from "../../components";
-import { Raiting } from "../../components/Raiting";
-import { Title } from "../../components/Title";
+import { ArrowBack, ErrorMessage, Raiting, Title } from "../../components";
 import { useToggle } from "../../hooks";
-import { useAppDispatch } from "../../store/redux-hooks/redux-hooks";
+import { useAppDispatch } from "../../store";
 import { addItem } from "../../store/slices/cartSlice";
 import { IBookDetails } from "../../types";
 import {

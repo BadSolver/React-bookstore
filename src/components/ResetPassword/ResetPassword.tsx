@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { ClipLoader } from "react-spinners";
 import { app } from "../../firebase";
 import { getFirebaseMessageError } from "../../utils";
-import { ArrowBack } from "../ArrowBack";
 import { ErrorMessage } from "../SignIn/style";
 import { Button, Form, Input, Title } from "./style";
 

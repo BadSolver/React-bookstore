@@ -1,13 +1,11 @@
 import { useEffect } from "react";
-import { BooksList } from "../../components/BooksList";
-import { Subscribe } from "../../components/Subscribe/Subscribe";
-import { Title } from "../../components/Title/Title";
+import { BooksList, Subscribe, Title } from "../../components";
 import {
+  fetchNewBooks,
+  getNewBooks,
   useAppDispatch,
   useAppSelector,
-} from "../../store/redux-hooks/redux-hooks";
-import { getNewBooks } from "../../store/selectors";
-import { fetchNewBooks } from "../../store/slices/newBooksSlice";
+} from "../../store";
 import { StyledHome } from "./style";
 
 export const Home = () => {

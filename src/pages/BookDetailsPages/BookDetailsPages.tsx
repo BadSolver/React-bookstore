@@ -7,13 +7,12 @@ import {
   TabBar,
   Title,
 } from "../../components";
-
 import {
+  fetchDetailsBook,
+  getBookDetails,
   useAppDispatch,
   useAppSelector,
-} from "../../store/redux-hooks/redux-hooks";
-import { getBookDetails } from "../../store/selectors/bookDetailsSelector";
-import { fetchDetailsBook } from "../../store/slices/bookDetailsSlice";
+} from "../../store";
 
 export const BookDetailsPage = () => {
   const { isbn = "" } = useParams();

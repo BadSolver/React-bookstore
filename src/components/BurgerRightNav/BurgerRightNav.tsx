@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../../hooks";
-import { ROUTE } from "../../router/routes";
-import { Button } from "../Button/Button";
+import { ROUTE } from "../../router";
+import { Button } from "../Button";
 
 import { Background, Form, Hr, Search, StyledList, Title } from "./style";
 

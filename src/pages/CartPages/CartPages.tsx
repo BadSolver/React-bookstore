@@ -1,9 +1,5 @@
 import { ArrowBack, Cart } from "../../components";
-import {
-  useAppDispatch,
-  useAppSelector,
-} from "../../store/redux-hooks/redux-hooks";
-import { getCart } from "../../store/selectors/cartSelector";
+import { getCart, useAppDispatch, useAppSelector } from "../../store";
 import { clearCart } from "../../store/slices/cartSlice";
 import { Button, ButtonContainer, StyledCartPages, Title } from "./style";
 

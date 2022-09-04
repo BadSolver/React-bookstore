@@ -5,7 +5,7 @@ export const StyledFooter = styled.footer`
   display: flex;
   justify-content: space-between;
   flex-shrink: 0;
-  max-width: 1120px;
+  max-width: 1200px;
   margin-top: ${Space.ExtraLarge};
   border-top: 1px solid ${Color.Gray};
   

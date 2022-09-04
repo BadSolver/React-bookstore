@@ -23,7 +23,7 @@ export const fetchNewBooks = createAsyncThunk<
   }
 });
 
-export const newBooksSlice = createSlice({
+const newBooksSlice = createSlice({
   name: "newBooks",
   initialState,
   reducers: {},
