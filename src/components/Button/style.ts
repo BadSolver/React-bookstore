@@ -13,6 +13,12 @@ export const StyledButton = styled.button`
   letter-spacing: 0.05em;
   color: ${Color.White};
   background-color: ${Color.Primary};
+  border: 1px solid black;
+  :hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
 
   @media (max-width: 800px) {
     display: block;

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { getCart, useAppDispatch, useAppSelector } from "../../store";
 import {
   countPlus,
@@ -46,7 +47,9 @@ export const Cart = ({ book }: IProps) => {
     <>
       <StyledCart>
         <Container>
-          <img src={book.image} alt={book.image} />
+          <Link to={`/book/${book.isbn13}`}>
+            <img src={book.image} alt={book.image} />
+          </Link>
           <ContainerTitle>
             <Title>{book.title}</Title>
             <Subtitel>{book.authors}</Subtitel>

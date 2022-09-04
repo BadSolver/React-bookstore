@@ -27,6 +27,11 @@ export const Button = styled(StyledButton)`
   margin-top: 50px;
   margin-bottom: 50px;
   width: 90%;
+  :hover {
+    background-color: white;
+    color: black;
+    border: 0.1px solid black;
+  }
 
   @media (max-width: 576px) {
     padding: 15px 10px;

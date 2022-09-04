@@ -16,5 +16,8 @@ export type CartState = {
   isLoading: boolean;
   total: number;
   cart: IBookDetails[];
-  amount: number;
+};
+
+export type FavoritesState = {
+  item: IBookDetails[];
 };

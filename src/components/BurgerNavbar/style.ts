@@ -5,6 +5,9 @@ import { Color } from "../../ui";
 interface ICart {
   cart: IBookDetails[];
 }
+interface Ifavorites {
+  item: IBookDetails[];
+}
 
 export const StyledBurgerNavbar = styled.nav`
   display: flex;
@@ -25,9 +28,10 @@ export const Navbar = styled.nav`
   align-items: center;
   width: 184px;
 `;
-export const HeartLogo = styled.div`
+export const HeartLogo = styled.div<Ifavorites>`
   cursor: pointer;
   color: ${Color.White};
+  color: ${({ item }) => (item.length > 0 ? `${Color.Red}` : `${Color.White}`)};
   @media (max-width: 800px) {
     display: none;
   }
