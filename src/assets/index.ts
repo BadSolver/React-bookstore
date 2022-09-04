@@ -5,5 +5,6 @@ import { ReactComponent as HeartHeader } from "./heart-header.svg";
 import { ReactComponent as SearchLogo } from "./search.svg";
 import { ReactComponent as UserHeader } from "./user-header.svg";
 import { ReactComponent as EmptyCart } from "./vector.svg";
+import Fave from './favor.png'
 
-export { Bookstore, CartHeader, Closed, HeartHeader, SearchLogo, UserHeader, EmptyCart };
+export { Bookstore, CartHeader, Closed, HeartHeader, SearchLogo, UserHeader, EmptyCart, Fave };
