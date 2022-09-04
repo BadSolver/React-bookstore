@@ -24,7 +24,7 @@ export const Button = styled(StyledButton)`
   :hover {
     background-color: white;
     color: black;
-    border: .1px solid black;
+    border: 0.1px solid black;
   }
 `;
 export const ButtonContainer = styled.div`
@@ -32,3 +32,5 @@ export const ButtonContainer = styled.div`
   justify-content: space-between;
   width: 100%;
 `;
+
+

@@ -1,3 +1,4 @@
+import { EmptyCart } from "../../assets";
 import { ArrowBack, Cart } from "../../components";
 import { getCart, useAppDispatch, useAppSelector } from "../../store";
 import { clearCart } from "../../store/slices/cartSlice";
@@ -17,7 +18,7 @@ export const CartPages = () => {
       {cart && (
         <StyledCartPages>
           {cart.map((book) => (
-            <Cart book={book}></Cart>
+            <Cart book={book} key={book.isbn13}></Cart>
           ))}
           {cart.length > 0 && (
             <ButtonContainer>
@@ -30,6 +31,7 @@ export const CartPages = () => {
       {cart.length === 0 && (
         <StyledCartPages>
           <Title>Your cart is empty</Title>
+          <EmptyCart />
         </StyledCartPages>
       )}
     </>
