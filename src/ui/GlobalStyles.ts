@@ -10,6 +10,9 @@ export const GlobalStyles = createGlobalStyle`
         vertical-align: baseline;
         background: transparent;
         font-family: 'Source Sans Pro', sans-serif;
+        :focus-visible {
+        outline: none;
+    }   
     }
     article, aside, figure, footer, header, nav, section, details, summary {
         display: block;

@@ -1,6 +1,6 @@
 import React from "react";
-import { useAppDispatch } from "../../hooks";
 import { removeUser } from "../../store";
+import { useAppDispatch } from "../../store/redux-hooks/redux-hooks";
 import { Button, StyledLogOut } from "./style";
 
 export const LogOut = () => {

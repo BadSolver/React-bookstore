@@ -7,6 +7,7 @@ import { BurgerMenu } from "./BurgerMenu";
 import { BurgerNavbar } from "./BurgerNavbar";
 import { RightNav } from "./BurgerRightNav";
 import { Button } from "./Button";
+import { Cart } from "./Cart";
 import { ErrorMessage } from "./ErrorMessage";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
@@ -54,4 +55,5 @@ export {
   ResetPassword,
   Account,
   ArrowBack,
+  Cart,
 };

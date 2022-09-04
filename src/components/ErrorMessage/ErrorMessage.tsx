@@ -1,7 +1,7 @@
 import React from "react";
 
 interface IProps {
-  text: string;
+  text: string | null;
 }
 
 export const ErrorMessage = ({ text }: IProps) => {
