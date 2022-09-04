@@ -6,7 +6,6 @@ const initialState: CartState = {
   isLoading: true,
   total: 0,
   cart: [],
-  amount: 0,
 };
 
 const cartSlice = createSlice({

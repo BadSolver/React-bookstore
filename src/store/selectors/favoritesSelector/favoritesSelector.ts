@@ -1,3 +1,3 @@
 import { RootState } from "../../store";
 
-export const getFavorites = (state: RootState) => state.user
+export const getFavorites = (state: RootState) => state.favorites
