@@ -1,44 +1,27 @@
-import { AxiosError } from "axios";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { BooksList } from "../../components/BooksList";
 import { Subscribe } from "../../components/Subscribe/Subscribe";
 import { Title } from "../../components/Title/Title";
-import { bookStoreAPI } from "../../services/bookStoreApi";
-import { INewBooksApi } from "../../types";
+import {
+  useAppDispatch,
+  useAppSelector,
+} from "../../store/redux-hooks/redux-hooks";
+import { getNewBooks } from "../../store/selectors";
+import { fetchNewBooks } from "../../store/slices/newBooksSlice";
 import { StyledHome } from "./style";
 
 export const Home = () => {
+  const { error, isLoading, books } = useAppSelector(getNewBooks);
+  const dispatch = useAppDispatch();
 
-  const [books, setBooks] = useState<INewBooksApi[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string>("");
-
-  const fetchBooks = async () => {
-    try {
-      setError("");
-      setIsLoading(true);
-
-      await bookStoreAPI.getNew().then((book) => {
-        setBooks(book.books);
-      });
-
-      setIsLoading(false);
-    } catch (errors) {
-      const error = errors as AxiosError;
-      setIsLoading(false);
-      setError(error.message);
-    }
-  };
-  
   useEffect(() => {
-    fetchBooks();
-  }, []);
-
+    dispatch(fetchNewBooks());
+  }, [dispatch]);
 
   return (
     <StyledHome>
       <Title text="New Releases Books" />
-      <BooksList isLoading={isLoading} error={error} books={books}/>
+      <BooksList isLoading={isLoading} error={error} books={books} />
       <Subscribe />
     </StyledHome>
   );
