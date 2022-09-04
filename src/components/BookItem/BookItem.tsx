@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
-import { INewBooksApi } from "../../types/newBooksApi";
+import { INewBooksApi } from "../../types";
 import {
   Cost,
   ItemBackground,

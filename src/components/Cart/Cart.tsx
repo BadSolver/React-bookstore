@@ -1,12 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { getCart, useAppDispatch, useAppSelector } from "../../store";
 import {
-  useAppDispatch,
-  useAppSelector,
-} from "../../store/redux-hooks/redux-hooks";
-import { getCart } from "../../store/selectors/cartSelector";
-import {
-  countMinus,
   countPlus,
+  countMinus,
   removeItem,
 } from "../../store/slices/cartSlice";
 import { IBookDetails } from "../../types";

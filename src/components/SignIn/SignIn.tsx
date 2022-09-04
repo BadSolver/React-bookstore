@@ -4,8 +4,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import { ROUTE } from "../../router";
-import { setUser } from "../../store";
-import { useAppDispatch } from "../../store/redux-hooks/redux-hooks";
+import { setUser, useAppDispatch } from "../../store";
 import { getFirebaseMessageError } from "../../utils";
 import {
   Button,

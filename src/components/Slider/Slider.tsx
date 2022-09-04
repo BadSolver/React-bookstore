@@ -5,11 +5,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BookItem } from "../BookItem";
 import {
+  fetchNewBooks,
+  getNewBooks,
   useAppDispatch,
   useAppSelector,
-} from "../../store/redux-hooks/redux-hooks";
-import { getNewBooks } from "../../store/selectors";
-import { fetchNewBooks } from "../../store/slices/newBooksSlice";
+} from "../../store";
 
 export const SliderCom = () => {
   const { books } = useAppSelector(getNewBooks);

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { Bookstore, CartHeader, HeartHeader, UserHeader } from "../../assets";
-import { ROUTE } from "../../router/routes";
-import { useAppSelector } from "../../store/redux-hooks/redux-hooks";
+import { ROUTE } from "../../router";
+import { useAppSelector } from "../../store";
 import { getCart } from "../../store/selectors/cartSelector";
 import { BurgerMenu } from "../BurgerMenu";
-import { Search } from "../Search/Search";
+import { Search } from "../Search";
 import {
   CartLogo,
   HeartLogo,
