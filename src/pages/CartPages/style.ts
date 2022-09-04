@@ -7,7 +7,6 @@ export const StyledCartPages = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: 1120px;
-  gap: 30px;
   margin: 0 auto;
 `;
 
@@ -21,8 +20,12 @@ export const Button = styled(StyledButton)`
   padding: 0;
   width: 200px;
   height: 60px;
-  border-radius: 10px;
   ${fonts.BodyRegular}
+  :hover {
+    background-color: white;
+    color: black;
+    border: .1px solid black;
+  }
 `;
 export const ButtonContainer = styled.div`
   display: flex;

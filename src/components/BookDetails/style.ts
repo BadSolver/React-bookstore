@@ -94,10 +94,26 @@ export const MoreDetails = styled.button`
 export const Button = styled(StyledButton)`
   display: block;
   margin: 0 auto;
+  width: 40%;
+  padding: 15px 15px;
+  ${fonts.BodyRegular}
+  :hover {
+    background-color: white;
+    color: black;
+    border: 0.1px solid black;
+  }
 
   @media (max-width: 768px) {
     padding: 15px 10px;
     margin-top: 20px;
     width: 80%;
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
   }
 `;
