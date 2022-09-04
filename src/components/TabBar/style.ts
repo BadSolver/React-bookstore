@@ -41,5 +41,9 @@ export const TabDescription = styled.p`
   font-weight: 400;
 `;
 export const ContainerDescription = styled.div`
-  height: 150px;
+  height: 200px;
+
+  @media (max-width: 576px) {
+    height: auto;
+  }
 `;
