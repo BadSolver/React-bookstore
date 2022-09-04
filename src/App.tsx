@@ -1,9 +1,12 @@
+import { AppRouter } from "./router/AppRouter";
+import { Wrapper } from "./style";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-    </div>
+    <Wrapper>
+      <AppRouter />
+    </Wrapper>
   );
-}
+};
 
 export default App;
