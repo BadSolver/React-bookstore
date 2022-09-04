@@ -3,7 +3,7 @@ import { Color, Space, fonts } from "../../ui";
 
 export const StyledBookItem = styled.div`
   width: 280px;
-  margin-bottom: 50px;
+  margin: 0 auto;
 `;
 export const ItemBackground = styled.div`
   display: flex;

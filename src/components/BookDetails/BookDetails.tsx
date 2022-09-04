@@ -1,9 +1,11 @@
 import React, { CSSProperties } from "react";
-import { RingLoader } from "react-spinners";
+import { ClipLoader } from "react-spinners";
 import { ArrowBack, ErrorMessage } from "../../components";
 import { Raiting } from "../../components/Raiting";
 import { Title } from "../../components/Title";
 import { useToggle } from "../../hooks";
+import { useAppDispatch } from "../../store/redux-hooks/redux-hooks";
+import { addItem } from "../../store/slices/cartSlice";
 import { IBookDetails } from "../../types";
 import {
   BackGround,
@@ -28,8 +30,8 @@ const override: CSSProperties = {
 
 interface IProps {
   isLoading: boolean;
-  book: IBookDetails | undefined;
-  error: string;
+  book: IBookDetails;
+  error: string | null;
   details: boolean;
   handleDetails: () => void;
 }
@@ -42,11 +44,16 @@ export const BookDetails = ({
   handleDetails,
 }: IProps) => {
   const [isActive, setIsActive] = useToggle();
+  const dispatch = useAppDispatch();
+
+  const handleAddToCart = () => {
+    return dispatch(addItem(book));
+  };
 
   return (
     <>
       <ArrowBack />
-      {isLoading && <RingLoader cssOverride={override} size={50} />}
+      {isLoading && <ClipLoader cssOverride={override} size={50} />}
       {error && <ErrorMessage text={error} />}
       {book && (
         <StyledBookDetails>
@@ -100,8 +107,7 @@ export const BookDetails = ({
                   </>
                 )}
               </Options>
-
-              <Button>Add to Cart</Button>
+              <Button onClick={handleAddToCart}>Add to Cart</Button>
             </Description>
           </DetailsContainer>
         </StyledBookDetails>
