@@ -1,7 +1,8 @@
 import React from "react";
+import { Fave } from "../../assets";
 import { ArrowBack, FavoritesItem } from "../../components";
 import { getFavorites, useAppSelector } from "../../store";
-import { StyledFavorites, Title } from "./style";
+import { StyledFavorites, StyledTitleFavorites, Title } from "./style";
 
 export const Favorites = () => {
   const { item } = useAppSelector(getFavorites);
@@ -11,15 +12,19 @@ export const Favorites = () => {
       <ArrowBack />
       <StyledFavorites>
         {item.map((book) => (
-          <FavoritesItem book={book} />
+          <FavoritesItem book={book} key={book.isbn13} />
         ))}
       </StyledFavorites>
       {item.length === 0 && (
-        <StyledFavorites>
+        <StyledTitleFavorites>
           <Title>
             You don't have favorite books, please add from the store
           </Title>
-        </StyledFavorites>
+          <img
+            src={Fave}
+            alt=""
+          />
+        </StyledTitleFavorites>
       )}
     </>
   );

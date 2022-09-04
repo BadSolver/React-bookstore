@@ -33,7 +33,7 @@ export const Cart = ({ book }: IProps) => {
 
   const handleCountPlus = () => {
     dispatch(countPlus(book));
-    setCost(total * Number(book.price.slice(1)));
+    setCost(total * (Math.round(Number(book.price.slice(1)))));
   };
   const handleCountMinus = () => {
     dispatch(countMinus());
@@ -63,7 +63,7 @@ export const Cart = ({ book }: IProps) => {
           <ButtonCount onClick={handleCountPlus}>+</ButtonCount>
         </CountContainer>
         <CostContainer>
-          <Cost> {book.price === "$0.00" ? "free" : cost}</Cost>
+          <Cost> {book.price === "$0.00" ? "free" : cost} $</Cost>
         </CostContainer>
         <Button onClick={handleDeleteBook}>✖</Button>
       </StyledCart>
