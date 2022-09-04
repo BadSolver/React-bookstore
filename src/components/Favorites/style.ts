@@ -8,16 +8,25 @@ export const StyledBookItem = styled.div`
   margin-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid ${Color.Secondary};
+
+  @media (max-width: 1120px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 export const ItemBackground = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 350px;
   height: 380px;
   margin-bottom: ${Space.Small};
   background-color: ${Color.Blue};
   border-radius: 10px;
   box-shadow: 10px 10px 5px ${Color.Orange};
+  @media (max-width: 1120px) {
+    margin: 0 auto;
+  }
 `;
 
 export const Cost = styled.div`
@@ -32,6 +41,13 @@ export const Link = styled.div``;
 export const Description = styled.div`
   ${fonts.Subline}
   max-width: 400px;
+
+  @media (max-width: 1120px) {
+    max-width: 800px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+  }
 `;
 export const Title = styled.h1`
   ${fonts.H1}
@@ -61,6 +77,11 @@ export const Button = styled(StyledButton)`
     margin: 0;
   }
 
+  @media (max-width: 1120px) {
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
   @media (max-width: 768px) {
     padding: 15px 10px;
     margin-top: 20px;

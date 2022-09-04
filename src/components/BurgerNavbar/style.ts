@@ -32,6 +32,10 @@ export const HeartLogo = styled.div<Ifavorites>`
   cursor: pointer;
   color: ${Color.White};
   color: ${({ item }) => (item.length > 0 ? `${Color.Red}` : `${Color.White}`)};
+
+  :hover {
+    color: black;
+  }
   @media (max-width: 800px) {
     display: none;
   }
@@ -41,6 +45,10 @@ export const CartLogo = styled.div<ICart>`
   height: 24px;
   color: ${({ cart }) => (cart.length > 0 ? `${Color.Red}` : `${Color.White}`)};
   cursor: pointer;
+
+  :hover {
+    color: black;
+  }
   @media (max-width: 800px) {
     display: none;
   }
@@ -48,7 +56,12 @@ export const CartLogo = styled.div<ICart>`
 export const UserLogo = styled.div`
   width: 24px;
   height: 24px;
+  color: ${Color.White};
   cursor: pointer;
+
+  :hover {
+    color: black;
+  }
 
   @media (max-width: 800px) {
     display: none;
