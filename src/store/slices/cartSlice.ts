@@ -1,11 +1,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IBookDetails } from "../../types";
 import { CartState } from "../types";
+import { getCartFromLocalStorage } from "../utils";
 
 const initialState: CartState = {
   isLoading: true,
   total: 0,
-  cart: [],
+  cart: getCartFromLocalStorage(),
 };
 
 const cartSlice = createSlice({

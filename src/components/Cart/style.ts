@@ -33,7 +33,7 @@ export const CountContainer = styled.div`
 export const Count = styled.div`
   padding: 30px;
 `;
-export const CostContainer = styled.h1`
+export const CostContainer = styled.div`
   align-items: center;
   align-self: center;
   padding-right: 15px;

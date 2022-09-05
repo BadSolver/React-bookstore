@@ -1,9 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IBookDetails } from "../../types";
 import { FavoritesState } from "../types";
+import { getFavoritesFromLocalStorage } from "../utils";
 
 const initialState: FavoritesState = {
-  item: [],
+  item: getFavoritesFromLocalStorage(),
 };
 
 const favoritesSlice = createSlice({
@@ -22,5 +23,6 @@ const favoritesSlice = createSlice({
   },
 });
 
-export const { addItemFavorites, removeItemFavorites, clearFavorites } = favoritesSlice.actions;
+export const { addItemFavorites, removeItemFavorites, clearFavorites } =
+  favoritesSlice.actions;
 export default favoritesSlice.reducer;
