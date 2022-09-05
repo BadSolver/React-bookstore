@@ -1,9 +1,8 @@
 import React from "react";
 import { Fave } from "../../assets";
-import { ArrowBack, FavoritesItem } from "../../components";
+import { ArrowBack, FavoritesItem, ScrollUp } from "../../components";
 import { getFavorites, useAppSelector } from "../../store";
 import {
-  ButtonScroll,
   StyledFavorites,
   StyledTitleFavorites,
   Title,
@@ -14,7 +13,7 @@ export const Favorites = () => {
   
   return (
     <>
-      
+      <ScrollUp />
       <ArrowBack />
       <StyledFavorites>
         {item.map((book) => (
