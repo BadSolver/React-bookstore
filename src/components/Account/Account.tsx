@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useAuth } from "../../hooks";
 import { LogOut } from "../LogOut";
 import {
@@ -12,6 +12,16 @@ import {
 
 export const Account = () => {
   const { userDate, id, email } = useAuth();
+  const isMounted = useRef(false);
+
+  useEffect(() => {
+    if (isMounted) {
+      localStorage.setItem("userDate", JSON.stringify(userDate));
+      localStorage.setItem("userId", JSON.stringify(id));
+      localStorage.setItem("userEmail", JSON.stringify(email));
+    }
+    isMounted.current = true;
+  }, [userDate, id, email]);
 
   return (
     <StyledAccount>

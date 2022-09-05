@@ -24,7 +24,7 @@ export const Description = styled.div`
   padding-left: 30px;
 `;
 
-export const SubTitle = styled.p`
+export const SubTitle = styled.div`
   padding: 10px 5px;
   padding-left: 30px;
 `;
