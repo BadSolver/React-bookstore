@@ -1,4 +1,5 @@
 export interface INewBooksApi {
+  books: INewBooksApi[];
   title: string;
   subtitle: string;
   isbn13: string;

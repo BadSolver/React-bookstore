@@ -13,6 +13,7 @@ import {
 
 export const SliderCom = () => {
   const { books } = useAppSelector(getNewBooks);
+  console.log(books);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
