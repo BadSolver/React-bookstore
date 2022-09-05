@@ -14,3 +14,14 @@ export const Title = styled.h1`
   ${fonts.H1}
 `;
 export const StyledFavorites = styled.div``;
+
+export const ButtonScroll = styled.button`
+  position: fixed;
+  top: 600px;
+  left: 100px;
+  background: black;
+  border-radius: 50%;
+  color: white;
+  padding: 10px 20px;
+
+`
