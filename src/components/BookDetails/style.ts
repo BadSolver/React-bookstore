@@ -89,19 +89,16 @@ export const MoreDetails = styled.button`
   padding-left: 0;
   border: none;
   cursor: pointer;
+  :hover {
+    color: black;
+    transition: all 0.5s;
+  }
 `;
 
 export const Button = styled(StyledButton)`
-  display: block;
   margin: 0 auto;
   width: 40%;
   padding: 15px 15px;
-  ${fonts.BodyRegular}
-  :hover {
-    background-color: white;
-    color: black;
-    border: 0.1px solid black;
-  }
 
   @media (max-width: 768px) {
     padding: 15px 10px;

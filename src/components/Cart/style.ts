@@ -63,12 +63,11 @@ export const Button = styled(StyledButton)`
   background: transparent;
   color: ${Color.PrimaryDark};
   :hover {
+    transition: all 0.5s;
     border: none;
   }
 `;
 export const ButtonCount = styled(StyledButton)`
-  display: block;
-  margin: 0;
   width: 30px;
   height: 30px;
   padding: 0;

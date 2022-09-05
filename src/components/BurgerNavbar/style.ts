@@ -35,6 +35,7 @@ export const HeartLogo = styled.div<Ifavorites>`
 
   :hover {
     color: black;
+    transition: all 0.5s;
   }
   @media (max-width: 800px) {
     display: none;
@@ -48,6 +49,7 @@ export const CartLogo = styled.div<ICart>`
 
   :hover {
     color: black;
+    transition: all 0.5s;
   }
   @media (max-width: 800px) {
     display: none;
@@ -61,6 +63,7 @@ export const UserLogo = styled.div`
 
   :hover {
     color: black;
+    transition: all 0.5s;
   }
 
   @media (max-width: 800px) {

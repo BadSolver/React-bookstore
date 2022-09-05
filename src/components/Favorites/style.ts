@@ -64,18 +64,9 @@ export const RateWithBuy = styled.div`
   flex-direction: column;
 `;
 export const Button = styled(StyledButton)`
-  display: block;
   margin: 0;
-  width: 100%;
+  width: 130%;
   padding: 15px 15px;
-  border: 1px solid black;
-  ${fonts.BodyRegular}
-  :hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    margin: 0;
-  }
 
   @media (max-width: 1120px) {
     width: 30%;
