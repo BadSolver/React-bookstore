@@ -19,7 +19,6 @@ interface Iprops {
 
 const override: CSSProperties = {
   display: "block",
-  color: "white",
   margin: "0 auto",
 };
 
@@ -106,7 +105,7 @@ export const SignUp = ({ handleModal }: Iprops) => {
       )}
       <Button type="submit">
         {isLoading ? (
-          <ClipLoader cssOverride={override} size={30} color={"white"} />
+          <ClipLoader cssOverride={override} size={25} color={"black"} />
         ) : (
           "Sign up"
         )}

@@ -61,8 +61,7 @@ export const FavoritesItem = ({ book }: IProps) => {
           <Button onClick={handleAddToCart}>Add to Cart</Button>
         </RateWithBuy>
       </StyledBookItem>
-
-      {}
+      
     </>
   );
 };

@@ -28,6 +28,10 @@ export const Sign = styled.button<Iprops>`
   ${fonts.H3}
   color: ${Color.Secondary};
   cursor: pointer;
+  :hover {
+    color: black;
+    transition: all .5s;
+  }
 
   ${({ signIn }) => (signIn ? "text-decoration: underline;" : "none")}
   ${({ signIn }) =>
