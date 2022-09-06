@@ -5,7 +5,8 @@ import App from "./App";
 import { GlobalStyles } from "./ui";
 import "./firebase";
 import { Provider } from "react-redux";
-import { store } from "./store/store";
+import { persistor, store } from "./store/store";
+import { PersistGate } from "redux-persist/integration/react";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -13,8 +14,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <BrowserRouter>
     <Provider store={store}>
-      <GlobalStyles />
-      <App />
+      <PersistGate loading={null} persistor={persistor}>
+        <GlobalStyles />
+        <App />
+      </PersistGate>
     </Provider>
   </BrowserRouter>
 );
