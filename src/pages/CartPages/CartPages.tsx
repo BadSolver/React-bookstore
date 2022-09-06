@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import { EmptyCart } from "../../assets";
 import { ArrowBack, Cart } from "../../components";
 import { getCart, useAppDispatch, useAppSelector } from "../../store";
@@ -8,18 +7,10 @@ import { Button, ButtonContainer, StyledCartPages, Title } from "./style";
 export const CartPages = () => {
   const { cart } = useAppSelector(getCart);
   const dispatch = useAppDispatch();
-  const isMounted = useRef(false);
 
   const handleDeleteAll = () => {
     dispatch(clearCart());
   };
-
-  useEffect(() => {
-    if (isMounted) {
-      localStorage.setItem("cart", JSON.stringify(cart));
-    }
-    isMounted.current = true;
-  }, [cart]);
 
   return (
     <>

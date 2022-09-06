@@ -1,9 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {
-  getEmailFromLocalStorage,
-  getIdFromLocalStorage,
-  getUserDateFromLocalStorage,
-} from "../utils";
 
 interface UserState {
   email: string | null;
@@ -12,9 +7,9 @@ interface UserState {
 }
 
 const initialState: UserState = {
-  email: getEmailFromLocalStorage(),
-  userDate: getUserDateFromLocalStorage(),
-  id: getIdFromLocalStorage(),
+  email: null,
+  userDate: null,
+  id: null,
 };
 
 const userSlice = createSlice({
