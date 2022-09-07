@@ -5,20 +5,41 @@ import {
   getFavorites,
   getNewBooks,
 } from "./selectors";
-import { fetchDetailsBook, fetchNewBooks } from "./slices";
+import {
+  addItem,
+  clearCart,
+  countMinus,
+  countPlus,
+  decrementPage,
+  fetchDetailsBook,
+  fetchNewBooks,
+  incrementPage,
+  removeItem,
+  removeSearchValue,
+  setSearchValue,
+} from "./slices";
 import { removeUser, setUser } from "./slices/userSlice";
 import { AppDispatch, RootState } from "./store";
 
 export {
-  removeUser,
-  setUser,
-  fetchDetailsBook,
-  fetchNewBooks,
   getNewBooks,
   getFavorites,
   getCart,
   getBookDetails,
   useAppDispatch,
   useAppSelector,
+  fetchDetailsBook,
+  fetchNewBooks,
+  addItem,
+  removeItem,
+  clearCart,
+  countPlus,
+  countMinus,
+  removeSearchValue,
+  setSearchValue,
+  incrementPage,
+  decrementPage,
+  setUser,
+  removeUser,
 };
 export type { AppDispatch, RootState };

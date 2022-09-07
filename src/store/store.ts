@@ -4,6 +4,7 @@ import newBooksReducer from "./slices/newBooksSlice";
 import bookDetailsReducer from "./slices/bookDetailsSlice";
 import cartReducer from "./slices/cartSlice";
 import favoritesReducer from "./slices/favoritesSlice";
+import searchReducer from "./slices/searchSlice";
 import storage from "redux-persist/lib/storage";
 import {
   FLUSH,
@@ -32,7 +33,7 @@ const rootReducer = combineReducers({
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
-  reducer: { persistedReducer },
+  reducer: { persistedReducer, search: searchReducer },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {

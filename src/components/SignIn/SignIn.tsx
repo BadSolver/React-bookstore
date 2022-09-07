@@ -65,7 +65,6 @@ export const SignIn = () => {
 
       .catch((error) => {
         setErrorMsg(getFirebaseMessageError(error.code));
-        console.log(error.code);
       })
       .finally(() => {
         setIsLoading(false);
