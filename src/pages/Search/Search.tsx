@@ -15,8 +15,7 @@ import {
 import { getPagesCount } from "../../utils";
 
 export const Search = () => {
-  const { searchParams, searchResponse, isLoading, error } =
-    useAppSelector(getSearch);
+  const { searchParams, searchResponse, isLoading, error } = useAppSelector(getSearch);
   const dispatch = useAppDispatch();
 
   const handleNext = () => {
