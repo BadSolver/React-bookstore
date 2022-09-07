@@ -15,6 +15,7 @@ export const StyledCart = styled.div`
 export const Container = styled.div`
   display: flex;
   max-width: 400px;
+  background: transparent;
 `;
 
 export const Title = styled.h1`
@@ -73,3 +74,7 @@ export const ButtonCount = styled(StyledButton)`
   padding: 0;
   border-radius: 50%;
 `;
+export const Images = styled.img`
+  background: transparent;
+  
+`

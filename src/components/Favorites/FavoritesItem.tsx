@@ -16,6 +16,7 @@ import {
   Button,
   TitleContainer,
   ButtonDeleteBook,
+  Images,
 } from "./style";
 
 interface IProps {
@@ -42,7 +43,7 @@ export const FavoritesItem = ({ book }: IProps) => {
         <ItemBackground>
           <Cost>{book.price === "$0.00" ? "free" : book.price}</Cost>
           <Link to={`/book/${book.isbn13}`}>
-            <img src={book.image} alt={book.image} />
+            <Images src={book.image} alt={book.image} />
           </Link>
         </ItemBackground>
         <SubTitle>

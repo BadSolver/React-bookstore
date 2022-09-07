@@ -16,6 +16,7 @@ import {
   CostContainer,
   Count,
   CountContainer,
+  Images,
   StyledCart,
   Subtitel,
   Title,
@@ -49,7 +50,7 @@ export const Cart = memo(({ book }: IProps) => {
       <StyledCart>
         <Container>
           <Link to={`/book/${book.isbn13}`}>
-            <img src={book.image} alt={book.image} />
+            <Images src={book.image} alt={book.image} />
           </Link>
           <ContainerTitle>
             <Title>{book.title}</Title>
