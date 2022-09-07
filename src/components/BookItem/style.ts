@@ -22,6 +22,7 @@ export const Image = styled.img`
   align-items: center;
   justify-content: center;
   width: 226px;
+  background: transparent;
 `;
 
 export const Title = styled.h3`
@@ -43,4 +44,5 @@ export const Cost = styled(Title)`
   flex-grow: 1;
   padding-top: 10px;
   padding-left: 10px;
+  background: transparent;
 `;

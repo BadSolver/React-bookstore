@@ -16,7 +16,11 @@ export const DetailsContainer = styled.div`
     align-self: center;
   }
 `;
-export const Image = styled.img``;
+export const Image = styled.img`
+  background: transparent;
+  width: 350px;
+  height: 420px;
+`;
 export const Options = styled.div`
   flex: 0 1 70%;
   margin-top: 30px;
@@ -90,7 +94,7 @@ export const MoreDetails = styled.button`
   border: none;
   cursor: pointer;
   :hover {
-    color: black;
+    color: ${Color.Black};
     transition: all 0.5s;
   }
 `;

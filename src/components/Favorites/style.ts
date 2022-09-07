@@ -36,6 +36,7 @@ export const Cost = styled.div`
   flex-grow: 1;
   padding-top: 10px;
   padding-left: 10px;
+  background: transparent;
 `;
 export const Link = styled.div``;
 export const Description = styled.div`
@@ -93,4 +94,6 @@ export const ButtonDeleteBook = styled(StyledButton)`
     background: none;
   }
 `;
-
+export const Images = styled.img`
+  background: transparent;
+`

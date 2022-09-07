@@ -5,6 +5,7 @@ import { StyledButton } from "../Button/style";
 export const StyledSubscribe = styled.div`
   margin: 0 64px;
   padding-bottom: 56px;
+  background: transparent;
 
   @media (max-width: 568px) {
     text-align: left;
@@ -15,7 +16,8 @@ export const StyledSubscribe = styled.div`
 
 export const Title = styled.h2`
   padding-top: 56px;
-  ${fonts.H2}
+  ${fonts.H2};
+  background: transparent;
 
   @media (max-width: 568px) {
     padding-top: 16px;
@@ -26,6 +28,7 @@ export const Subtitle = styled.p`
   ${fonts.Subline}
   font-weight: 400;
   color: ${Color.Secondary};
+  background: transparent;
 
   @media (max-width: 568px) {
     ${fonts.BodyRegular}
@@ -62,6 +65,7 @@ export const Background = styled.div`
 export const InputContainer = styled.form`
   display: flex;
   padding-top: 32px;
+  background: transparent;
 
   @media (max-width: 568px) {
     flex-direction: column;

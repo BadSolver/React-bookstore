@@ -34,7 +34,7 @@ export const HeartLogo = styled.div<Ifavorites>`
   color: ${({ item }) => (item.length > 0 ? `red` : `${Color.White}`)};
 
   :hover {
-    color: black;
+    color: ${Color.Black};
     transition: all 0.5s;
   }
   @media (max-width: 800px) {
@@ -48,7 +48,7 @@ export const CartLogo = styled.div<ICart>`
   cursor: pointer;
 
   :hover {
-    color: black;
+    color: ${Color.Black};
     transition: all 0.5s;
   }
   @media (max-width: 800px) {
@@ -62,7 +62,7 @@ export const UserLogo = styled.div`
   cursor: pointer;
 
   :hover {
-    color: black;
+    color: ${Color.Black};
     transition: all 0.5s;
   }
 

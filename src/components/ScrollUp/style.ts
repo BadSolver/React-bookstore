@@ -1,12 +1,13 @@
 import styled from "styled-components";
+import { Color } from "../../ui";
 
 export const ButtonScroll = styled.button`
   position: fixed;
   top: 600px;
   left: 100px;
-  background: black;
+  background: ${Color.Black};
   border-radius: 50%;
-  color: white;
+  color: ${Color.White};
   padding: 10px 20px;
 
 `
