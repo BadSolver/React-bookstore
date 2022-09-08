@@ -70,3 +70,20 @@ export const UserLogo = styled.div`
     display: none;
   }
 `;
+export const TogglerTheme = styled.div`
+  align-self: center;
+`;
+
+export const ButtonTheme = styled.button`
+  background: black;
+  color: white;
+  border-color: white;
+/* 
+  &:first-child {
+    border-right: none;
+  }
+  &:last-child {
+    border-left: none;
+  } */
+`;
+

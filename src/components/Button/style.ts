@@ -9,7 +9,7 @@ export const StyledButton = styled.button`
   ${fonts.BodyRegular}
   text-align: center;
   color: ${Color.White};
-  background-color: ${Color.Primary};
+  background-color: ${Color.Black};
   border: 1px solid ${Color.Black};
   :hover {
     background-color: ${Color.White};

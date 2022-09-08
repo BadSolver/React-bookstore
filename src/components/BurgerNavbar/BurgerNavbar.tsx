@@ -1,24 +1,37 @@
 import { Link } from "react-router-dom";
 import { Bookstore, CartHeader, HeartHeader, UserHeader } from "../../assets";
 import { ROUTE } from "../../router";
-import { getFavorites, useAppSelector } from "../../store";
+import { getFavorites, useAppDispatch, useAppSelector } from "../../store";
 import { getCart } from "../../store/selectors/cartSelector";
+import { setThemesDark, setThemesLight } from "../../store/slices/userSlice";
+import { useTheme } from "../../ui/theme";
 import { BurgerMenu } from "../BurgerMenu";
 import { Search } from "../Search";
 import {
+  ButtonTheme,
   CartLogo,
   HeartLogo,
   Logo,
   Navbar,
   StyledBurgerNavbar,
+  TogglerTheme,
   UserLogo,
 } from "./style";
 
 export const BurgerNavbar = () => {
+  const { item } = useAppSelector(getFavorites);
+  const { cart } = useAppSelector(getCart);
+  const dispatch = useAppDispatch()
+  // const { theme, setTheme } = useTheme();
 
-  const {item} = useAppSelector(getFavorites)
-  const {cart} = useAppSelector(getCart)
+  const handleThemeLight = () => {
+    dispatch(setThemesLight())
+  };
+  const handleThemeDark = () => {
+    dispatch(setThemesDark());
+  };
 
+ 
   return (
     <>
       <StyledBurgerNavbar>
@@ -28,6 +41,11 @@ export const BurgerNavbar = () => {
           </Logo>
         </Link>
         <Search />
+        <TogglerTheme>
+          <ButtonTheme onClick={handleThemeLight}>light</ButtonTheme>
+          <ButtonTheme onClick={handleThemeDark}> dark</ButtonTheme>
+        </TogglerTheme>
+
         <Navbar>
           <Link to={ROUTE.FAVORITES}>
             <HeartLogo item={item}>
