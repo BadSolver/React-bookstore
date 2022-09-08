@@ -22,5 +22,6 @@ const favoritesSlice = createSlice({
   },
 });
 
-export const { addItemFavorites, removeItemFavorites, clearFavorites } = favoritesSlice.actions;
+export const { addItemFavorites, removeItemFavorites, clearFavorites } =
+  favoritesSlice.actions;
 export default favoritesSlice.reducer;

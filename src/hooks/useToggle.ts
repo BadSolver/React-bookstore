@@ -5,7 +5,7 @@ export const useToggle = (
 ): [boolean, () => void] => {
   const [state, setState] = useState(initState);
   const toggle = () => {
-     setState((state) => !state);
+    setState((state) => !state);
   };
 
   return [state, toggle];

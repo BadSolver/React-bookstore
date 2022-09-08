@@ -18,12 +18,15 @@ export const TabItem = styled.button<Iprops>`
   border: none;
   background: transparent;
   cursor: pointer;
-
+  :hover {
+    color: ${Color.Black};
+    transition: all .5s;
+  }
   &:focus {
     color: ${Color.PrimaryDark};
   }
 
-  ${(props) => (props.isActive ? `color: ${Color.PrimaryDark}` : "white")}
+  ${(props) => (props.isActive ? `color: ${Color.PrimaryDark}` : `${Color.White}`)}
 `;
 
 export const Container = styled.div`
@@ -41,5 +44,9 @@ export const TabDescription = styled.p`
   font-weight: 400;
 `;
 export const ContainerDescription = styled.div`
-  height: 150px;
+  height: 200px;
+
+  @media (max-width: 576px) {
+    height: auto;
+  }
 `;

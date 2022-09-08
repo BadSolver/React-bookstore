@@ -17,7 +17,7 @@ export const fetchNewBooks = createAsyncThunk<
 >("newBooks/fetchNewBooks", async (_, { rejectWithValue }) => {
   try {
     const response = await bookStoreAPI.getNew();
-    return response.books;
+    return response;
   } catch (error) {
     return rejectWithValue("error");
   }

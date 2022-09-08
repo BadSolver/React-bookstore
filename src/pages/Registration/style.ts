@@ -19,6 +19,7 @@ export const Container = styled.div`
   width: 100%;
   padding-top: 20px;
   border-bottom: 1px solid ${Color.Secondary};
+  background: transparent;
 `;
 
 export const Sign = styled.button<Iprops>`
@@ -28,6 +29,10 @@ export const Sign = styled.button<Iprops>`
   ${fonts.H3}
   color: ${Color.Secondary};
   cursor: pointer;
+  :hover {
+    color: ${Color.Black};
+    transition: all .5s;
+  }
 
   ${({ signIn }) => (signIn ? "text-decoration: underline;" : "none")}
   ${({ signIn }) =>
@@ -36,4 +41,6 @@ export const Sign = styled.button<Iprops>`
 
 export const Form = styled.div`
   padding-left: 40px;
+  background: transparent;
+  margin-right: 6px;
 `;

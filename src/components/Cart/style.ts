@@ -15,6 +15,7 @@ export const StyledCart = styled.div`
 export const Container = styled.div`
   display: flex;
   max-width: 400px;
+  background: transparent;
 `;
 
 export const Title = styled.h1`
@@ -33,7 +34,7 @@ export const CountContainer = styled.div`
 export const Count = styled.div`
   padding: 30px;
 `;
-export const CostContainer = styled.h1`
+export const CostContainer = styled.div`
   align-items: center;
   align-self: center;
   padding-right: 15px;
@@ -63,14 +64,17 @@ export const Button = styled(StyledButton)`
   background: transparent;
   color: ${Color.PrimaryDark};
   :hover {
+    transition: all 0.5s;
     border: none;
   }
 `;
 export const ButtonCount = styled(StyledButton)`
-  display: block;
-  margin: 0;
   width: 30px;
   height: 30px;
   padding: 0;
   border-radius: 50%;
 `;
+export const Images = styled.img`
+  background: transparent;
+  
+`

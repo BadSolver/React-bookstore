@@ -1,4 +1,5 @@
 export interface INewBooksApi {
+  books: INewBooksApi[];
   title: string;
   subtitle: string;
   isbn13: string;
@@ -28,3 +29,17 @@ export interface IBookDetails {
 export interface IBookFormat {
   [key: string]: string;
 }
+
+export interface NewBooksResponse {
+  error: string | null;
+  total: string | null;
+  books: INewBooksApi[];
+}
+export interface SearchedBooksResponse extends NewBooksResponse {
+  page: string | null;
+}
+
+export type SearchParams = {
+  searchValue: string | null;
+  page?: number | null;
+};

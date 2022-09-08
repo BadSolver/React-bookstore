@@ -1,6 +1,7 @@
 import { getBookDetails } from "./bookDetailsSelector";
 import { getCart } from "./cartSelector";
 import { getFavorites } from "./favoritesSelector";
-import { getNewBooks } from "./newBookSelector/newBooksSelector";
+import { getNewBooks } from "./newBookSelector";
+import { getSearch } from "./searchSelector";
 
-export { getNewBooks, getFavorites, getCart, getBookDetails };
+export { getNewBooks, getFavorites, getCart, getBookDetails, getSearch };

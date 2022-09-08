@@ -14,3 +14,4 @@ export const Title = styled.h1`
   ${fonts.H1}
 `;
 export const StyledFavorites = styled.div``;
+

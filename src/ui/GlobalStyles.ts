@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { Color } from "./color";
 
 export const GlobalStyles = createGlobalStyle`
     html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
@@ -8,7 +9,8 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 100%;
         font-weight: normal;
         vertical-align: baseline;
-        background: transparent;
+        background: ${Color.Backround};
+        color: ${Color.Black};
         font-family: 'Source Sans Pro', sans-serif;
         :focus-visible {
         outline: none;

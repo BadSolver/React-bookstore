@@ -7,6 +7,7 @@ import { Button, ButtonContainer, StyledCartPages, Title } from "./style";
 export const CartPages = () => {
   const { cart } = useAppSelector(getCart);
   const dispatch = useAppDispatch();
+
   const handleDeleteAll = () => {
     dispatch(clearCart());
   };
@@ -14,7 +15,6 @@ export const CartPages = () => {
   return (
     <>
       <ArrowBack />
-
       {cart && (
         <StyledCartPages>
           {cart.map((book) => (

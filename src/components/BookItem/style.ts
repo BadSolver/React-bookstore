@@ -11,9 +11,9 @@ export const ItemBackground = styled.div`
   align-items: center;
   height: 320px;
   margin-bottom: ${Space.Small};
-  background-color: ${Color.Blue};
+  background-color: white;
   border-radius: 10px;
-  box-shadow: 10px 10px 5px ${Color.Orange};
+  box-shadow: 1px 4px 17px rgba(0, 0, 0, 0.5);
 `;
 
 export const Image = styled.img`
@@ -22,6 +22,7 @@ export const Image = styled.img`
   align-items: center;
   justify-content: center;
   width: 226px;
+  background: transparent;
 `;
 
 export const Title = styled.h3`
@@ -43,4 +44,6 @@ export const Cost = styled(Title)`
   flex-grow: 1;
   padding-top: 10px;
   padding-left: 10px;
+  background: transparent;
+  color: black;
 `;

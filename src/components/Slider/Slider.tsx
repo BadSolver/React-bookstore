@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import { StyledSlider } from "./style";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -11,7 +11,7 @@ import {
   useAppSelector,
 } from "../../store";
 
-export const SliderCom = () => {
+export const SliderCom = memo(() => {
   const { books } = useAppSelector(getNewBooks);
   const dispatch = useAppDispatch();
 
@@ -64,4 +64,4 @@ export const SliderCom = () => {
       </Slider>
     </StyledSlider>
   );
-};
+});

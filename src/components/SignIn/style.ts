@@ -22,16 +22,8 @@ export const Input = styled.input`
 `;
 
 export const Button = styled(StyledButton)`
-  display: block;
-  margin: 0;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px 0;
   width: 90%;
-  :hover {
-    background-color: white;
-    color: black;
-    border: 0.1px solid black;
-  }
 
   @media (max-width: 576px) {
     padding: 15px 10px;

@@ -1,26 +1,20 @@
 import styled from "styled-components";
-import { Space, Color } from "../../ui";
+import { Color, fonts } from "../../ui";
 
 export const StyledButton = styled.button`
-  display: none;
-  border: none;
-  padding: 16px 100px;
+  box-sizing: border-box;
+  display: block;
   margin: 0 auto;
-  margin-top: 512px;
+  padding: 15px 10px;
+  ${fonts.BodyRegular}
   text-align: center;
-  font-size: ${Space.Medium};
-  line-height: ${Space.Medium};
-  letter-spacing: 0.05em;
   color: ${Color.White};
-  background-color: ${Color.Primary};
-  border: 1px solid black;
+  background-color: ${Color.Black};
+  border: 1px solid ${Color.Black};
   :hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-  }
-
-  @media (max-width: 800px) {
-    display: block;
+    background-color: ${Color.White};
+    color: ${Color.Black};
+    border: 1px solid ${Color.Black};
+    transition: all 0.5s;
   }
 `;

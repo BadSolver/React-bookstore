@@ -7,7 +7,6 @@ export enum ROUTE {
   FAVORITES = "/favorites",
   ACCOUNT = "/account",
   SIGNIN = "/sign-in",
-  // SIGNUP = "/sign-up",
   HELLO_PAGE = "/react-bookstore",
   REGISTRATION = "registration",
   RESET_PASSWORD = "/sign-in/reset-password",

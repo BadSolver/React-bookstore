@@ -13,18 +13,20 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: transparent;
 `;
 
 export const Title = styled.h2`
   ${fonts.H2}
   padding-top: 20px;
   padding-left: 30px;
+  background: transparent;
 `;
 export const Description = styled.div`
   padding-left: 30px;
 `;
 
-export const SubTitle = styled.p`
+export const SubTitle = styled.div`
   padding: 10px 5px;
   padding-left: 30px;
 `;

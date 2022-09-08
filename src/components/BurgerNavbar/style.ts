@@ -16,10 +16,9 @@ export const StyledBurgerNavbar = styled.nav`
   @media (max-width: 768) {
   }
 `;
-export const Logo = styled.button`
+export const Logo = styled.div`
   margin-top: 5px;
-  background: transparent;
-  border: none;
+  color:${Color.Black};
   cursor: pointer;
 `;
 export const Navbar = styled.nav`
@@ -30,8 +29,13 @@ export const Navbar = styled.nav`
 `;
 export const HeartLogo = styled.div<Ifavorites>`
   cursor: pointer;
-  color: ${Color.White};
-  color: ${({ item }) => (item.length > 0 ? `${Color.Red}` : `${Color.White}`)};
+
+  stroke: ${({ item }) => (item.length > 0 ? `red` : `${Color.Black}`)};
+
+  :hover {
+    stroke: goldenrod;
+    transition: all 0.5s;
+  }
   @media (max-width: 800px) {
     display: none;
   }
@@ -39,8 +43,13 @@ export const HeartLogo = styled.div<Ifavorites>`
 export const CartLogo = styled.div<ICart>`
   width: 24px;
   height: 24px;
-  color: ${({ cart }) => (cart.length > 0 ? `${Color.Red}` : `${Color.White}`)};
+  stroke: ${({ cart }) => (cart.length > 0 ? `red` : `${Color.Black}`)};
   cursor: pointer;
+
+  :hover {
+    stroke: goldenrod;
+    transition: all 0.5s;
+  }
   @media (max-width: 800px) {
     display: none;
   }
@@ -48,9 +57,39 @@ export const CartLogo = styled.div<ICart>`
 export const UserLogo = styled.div`
   width: 24px;
   height: 24px;
+  stroke: ${Color.Black};
   cursor: pointer;
+
+  :hover {
+    stroke: goldenrod;
+    transition: all 0.5s;
+  }
 
   @media (max-width: 800px) {
     display: none;
+  }
+`;
+export const TogglerTheme = styled.div`
+  align-self: center;
+`;
+
+export const ButtonTheme = styled.button`
+  background: black;
+  color: white;
+  border-color: white;
+  
+  &:first-child {
+    border: 1px solid #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    background: transparent;
+  }
+  &:last-child {
+    border: 1px solid #1B1B1D;
+    color: #1B1B1D;
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 10px;
   }
 `;

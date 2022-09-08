@@ -20,6 +20,7 @@ import { Portal } from "./Portal";
 import { Raiting } from "./Raiting";
 import { RequareAuth } from "./RequareAuth";
 import { ResetPassword } from "./ResetPassword";
+import { ScrollUp } from "./ScrollUp";
 import { Search } from "./Search";
 import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
@@ -58,4 +59,5 @@ export {
   ArrowBack,
   Cart,
   FavoritesItem,
+  ScrollUp,
 };

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import { Link } from "react-router-dom";
 import { getCart, useAppDispatch, useAppSelector } from "../../store";
 import {
@@ -16,6 +16,7 @@ import {
   CostContainer,
   Count,
   CountContainer,
+  Images,
   StyledCart,
   Subtitel,
   Title,
@@ -25,7 +26,7 @@ interface IProps {
   book: IBookDetails;
 }
 
-export const Cart = ({ book }: IProps) => {
+export const Cart = memo(({ book }: IProps) => {
   const { total } = useAppSelector(getCart);
   const [cost, setCost] = useState(0);
 
@@ -33,7 +34,7 @@ export const Cart = ({ book }: IProps) => {
 
   const handleCountPlus = () => {
     dispatch(countPlus(book));
-    setCost(total * (Math.round(Number(book.price.slice(1)))));
+    setCost(total * Math.round(Number(book.price.slice(1))));
   };
   const handleCountMinus = () => {
     dispatch(countMinus());
@@ -43,12 +44,13 @@ export const Cart = ({ book }: IProps) => {
     dispatch(removeItem(book));
   };
 
+ 
   return (
     <>
       <StyledCart>
         <Container>
           <Link to={`/book/${book.isbn13}`}>
-            <img src={book.image} alt={book.image} />
+            <Images src={book.image} alt={book.image} />
           </Link>
           <ContainerTitle>
             <Title>{book.title}</Title>
@@ -69,4 +71,4 @@ export const Cart = ({ book }: IProps) => {
       </StyledCart>
     </>
   );
-};
+});

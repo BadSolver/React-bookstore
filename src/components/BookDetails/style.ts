@@ -16,7 +16,11 @@ export const DetailsContainer = styled.div`
     align-self: center;
   }
 `;
-export const Image = styled.img``;
+export const Image = styled.img`
+  background: transparent;
+  width: 350px;
+  height: 420px;
+`;
 export const Options = styled.div`
   flex: 0 1 70%;
   margin-top: 30px;
@@ -58,9 +62,9 @@ export const BackGround = styled.div`
   width: 450px;
   height: 470px;
   margin-bottom: ${Space.Small};
-  background-color: ${Color.Blue};
+  background-color: white;
   border-radius: 10px;
-  box-shadow: 10px 10px 5px ${Color.Orange};
+  box-shadow: 1px 4px 17px rgba(0, 0, 0, 0.5);
 
   @media (max-width: 800px) {
     max-width: 310px;
@@ -89,19 +93,16 @@ export const MoreDetails = styled.button`
   padding-left: 0;
   border: none;
   cursor: pointer;
+  :hover {
+    color: ${Color.Black};
+    transition: all 0.5s;
+  }
 `;
 
 export const Button = styled(StyledButton)`
-  display: block;
   margin: 0 auto;
   width: 40%;
   padding: 15px 15px;
-  ${fonts.BodyRegular}
-  :hover {
-    background-color: white;
-    color: black;
-    border: 0.1px solid black;
-  }
 
   @media (max-width: 768px) {
     padding: 15px 10px;

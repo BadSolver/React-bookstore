@@ -8,16 +8,25 @@ export const StyledBookItem = styled.div`
   margin-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid ${Color.Secondary};
+
+  @media (max-width: 1120px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 export const ItemBackground = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 350px;
   height: 380px;
   margin-bottom: ${Space.Small};
-  background-color: ${Color.Blue};
+  background-color: white;
   border-radius: 10px;
-  box-shadow: 10px 10px 5px ${Color.Orange};
+  box-shadow: 1px 4px 17px rgba(0, 0, 0, 0.5);
+  @media (max-width: 1120px) {
+    margin: 0 auto;
+  }
 `;
 
 export const Cost = styled.div`
@@ -27,11 +36,20 @@ export const Cost = styled.div`
   flex-grow: 1;
   padding-top: 10px;
   padding-left: 10px;
+  background: transparent;
+  color: black;
 `;
 export const Link = styled.div``;
 export const Description = styled.div`
   ${fonts.Subline}
   max-width: 400px;
+
+  @media (max-width: 1120px) {
+    max-width: 800px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+  }
 `;
 export const Title = styled.h1`
   ${fonts.H1}
@@ -48,19 +66,15 @@ export const RateWithBuy = styled.div`
   flex-direction: column;
 `;
 export const Button = styled(StyledButton)`
-  display: block;
   margin: 0;
-  width: 100%;
+  width: 130%;
   padding: 15px 15px;
-  border: 1px solid black;
-  ${fonts.BodyRegular}
-  :hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    margin: 0;
-  }
 
+  @media (max-width: 1120px) {
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
   @media (max-width: 768px) {
     padding: 15px 10px;
     margin-top: 20px;
@@ -81,3 +95,6 @@ export const ButtonDeleteBook = styled(StyledButton)`
     background: none;
   }
 `;
+export const Images = styled.img`
+  background: transparent;
+`

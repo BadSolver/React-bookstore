@@ -1,4 +1,3 @@
-import React from "react";
 import { useAuth } from "../../hooks";
 import { LogOut } from "../LogOut";
 import {
@@ -12,7 +11,7 @@ import {
 
 export const Account = () => {
   const { userDate, id, email } = useAuth();
-
+ 
   return (
     <StyledAccount>
       <Container>

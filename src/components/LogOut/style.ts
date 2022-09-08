@@ -5,15 +5,13 @@ export const StyledLogOut = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  background: transparent;
 `;
 
 export const Button = styled(StyledButton)`
-  display: block;
-  margin: 0;
   margin-top: 50px;
   margin-bottom: 50px;
-  padding: 10px auto;
-  width: 70%;
+  width: 60%;
 
   @media (max-width: 576px) {
     padding: 15px 10px;

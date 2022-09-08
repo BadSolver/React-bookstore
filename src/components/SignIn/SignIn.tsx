@@ -22,7 +22,6 @@ type SignInValues = {
 };
 const override: CSSProperties = {
   display: "block",
-  color: "white",
   margin: "0 auto",
 };
 
@@ -66,7 +65,6 @@ export const SignIn = () => {
 
       .catch((error) => {
         setErrorMsg(getFirebaseMessageError(error.code));
-        console.log(error.code);
       })
       .finally(() => {
         setIsLoading(false);
@@ -106,7 +104,7 @@ export const SignIn = () => {
       )}
       <Button type="submit">
         {isLoading ? (
-          <ClipLoader cssOverride={override} size={30} color={"white"} />
+          <ClipLoader cssOverride={override} size={25} color={"black"} />
         ) : (
           "Sign In"
         )}

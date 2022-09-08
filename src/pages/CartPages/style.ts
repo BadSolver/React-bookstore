@@ -14,23 +14,13 @@ export const Title = styled.h1`
   ${fonts.H1}
 `;
 export const Button = styled(StyledButton)`
-  display: block;
+  width: 20%;
+  padding: 15px 0;
   margin: 0;
   margin-top: 30px;
-  padding: 0;
-  width: 200px;
-  height: 60px;
-  ${fonts.BodyRegular}
-  :hover {
-    background-color: white;
-    color: black;
-    border: 0.1px solid black;
-  }
 `;
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
 `;
-
-
