@@ -51,6 +51,9 @@ export const Button = styled(StyledButton)`
   margin: 0;
   padding-left: 15px;
   padding-right: 15px;
+  color: ${Color.White};
+  background-color: ${Color.Black};
+  border-left: 1px solid black;
   cursor: pointer;
 
   @media (max-width: 568px) {

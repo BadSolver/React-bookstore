@@ -54,13 +54,13 @@ export const Background = styled.div<IProps>`
   display: ${({ open }) => (open ? "block" : "none")};
   width: 100%;
   height: 100vh;
-  background-color: ${Color.Gray};
+  background-color: ${Color.Black};
   opacity: 0.8;
 `;
 
 export const Search = styled(StyledSearch)<IProps>`
   display: none;
-  flex: 50%;
+  width: 90%;
   padding: 17px 60px 17px 30px;
   margin-top: 56px;
 
@@ -75,10 +75,12 @@ export const Form = styled.form`
   gap: ${Space.SuperLarge};
   margin: 56px auto 0 auto;
   max-width: 287px;
+  background: transparent;
 `;
 export const Title = styled.h3`
   display: none;
   ${fonts.H3}
+  background: transparent;
 
   @media (max-width: 768px) {
     display: block;

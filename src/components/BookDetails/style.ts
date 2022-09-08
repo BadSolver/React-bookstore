@@ -62,9 +62,9 @@ export const BackGround = styled.div`
   width: 450px;
   height: 470px;
   margin-bottom: ${Space.Small};
-  background-color: ${Color.Blue};
+  background-color: white;
   border-radius: 10px;
-  box-shadow: 10px 10px 5px ${Color.Orange};
+  box-shadow: 1px 4px 17px rgba(0, 0, 0, 0.5);
 
   @media (max-width: 800px) {
     max-width: 310px;

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { SearchLogo } from "../../assets";
 import { useInput } from "../../hooks";
 import { useDebounce } from "../../hooks/useDebounce";
 import { ROUTE } from "../../router/routes";
@@ -43,7 +44,9 @@ export const Search = () => {
         name="search"
         {...searchValue}
       />
-      <Button type="button" onClick={handleSearch} />
+      <Button onClick={handleSearch} >
+        <SearchLogo />
+      </Button>
     </StyledSearch>
   );
 };
