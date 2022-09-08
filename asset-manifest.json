@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/react-bookstore/static/css/main.57febedd.css",
-    "main.js": "/react-bookstore/static/js/main.36c9a7d1.js",
-    "static/media/favor.png": "/react-bookstore/static/media/favor.1ba9d623dd18f90798b2.png",
-    "static/media/vector.svg": "/react-bookstore/static/media/vector.118093d592171fd0e80c711744f3fceb.svg",
-    "static/media/bookstore.svg": "/react-bookstore/static/media/bookstore.8dd1a7ce2b1cd05e3fd1a561dd523ed2.svg",
-    "static/media/slick.svg": "/react-bookstore/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/react-bookstore/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/react-bookstore/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/react-bookstore/static/media/slick.295183786cd8a1389865.woff",
-    "static/media/github.svg": "/react-bookstore/static/media/github.893247ec3efa77233d696d2dd448b04a.svg",
-    "index.html": "/react-bookstore/index.html",
-    "static/media/heart-header.svg": "/react-bookstore/static/media/heart-header.389f30ff31c6b2403f8cf7208dae1939.svg",
-    "static/media/closed.svg": "/react-bookstore/static/media/closed.cfe0d056fe58518cca64ee4f4e670397.svg",
-    "static/media/cart-header.svg": "/react-bookstore/static/media/cart-header.5dd7eaaa29d4230390f21ef55d324899.svg",
-    "static/media/search.svg": "/react-bookstore/static/media/search.c024a3122f357146e09dc24458c23bdf.svg",
-    "static/media/user-header.svg": "/react-bookstore/static/media/user-header.875256114691e07e1903fdeffb337b45.svg",
-    "main.57febedd.css.map": "/react-bookstore/static/css/main.57febedd.css.map",
-    "main.36c9a7d1.js.map": "/react-bookstore/static/js/main.36c9a7d1.js.map"
+    "main.css": "/React-bookstore/static/css/main.aab8087f.css",
+    "main.js": "/React-bookstore/static/js/main.17679acc.js",
+    "static/media/favor.png": "/React-bookstore/static/media/favor.1ba9d623dd18f90798b2.png",
+    "static/media/vector.svg": "/React-bookstore/static/media/vector.118093d592171fd0e80c711744f3fceb.svg",
+    "static/media/bookstore.svg": "/React-bookstore/static/media/bookstore.8dd1a7ce2b1cd05e3fd1a561dd523ed2.svg",
+    "static/media/slick.svg": "/React-bookstore/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/React-bookstore/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/React-bookstore/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/React-bookstore/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/github.svg": "/React-bookstore/static/media/github.893247ec3efa77233d696d2dd448b04a.svg",
+    "index.html": "/React-bookstore/index.html",
+    "static/media/heart-header.svg": "/React-bookstore/static/media/heart-header.389f30ff31c6b2403f8cf7208dae1939.svg",
+    "static/media/closed.svg": "/React-bookstore/static/media/closed.cfe0d056fe58518cca64ee4f4e670397.svg",
+    "static/media/cart-header.svg": "/React-bookstore/static/media/cart-header.5dd7eaaa29d4230390f21ef55d324899.svg",
+    "static/media/search.svg": "/React-bookstore/static/media/search.c024a3122f357146e09dc24458c23bdf.svg",
+    "static/media/user-header.svg": "/React-bookstore/static/media/user-header.875256114691e07e1903fdeffb337b45.svg",
+    "main.aab8087f.css.map": "/React-bookstore/static/css/main.aab8087f.css.map",
+    "main.17679acc.js.map": "/React-bookstore/static/js/main.17679acc.js.map"
   },
   "entrypoints": [
-    "static/css/main.57febedd.css",
-    "static/js/main.36c9a7d1.js"
+    "static/css/main.aab8087f.css",
+    "static/js/main.17679acc.js"
   ]
 }
