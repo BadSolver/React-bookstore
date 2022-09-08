@@ -1,7 +1,7 @@
 {
   "name": "react-bookstore",
   "version": "0.1.0",
-  "homepage": "https://badsolver.github.io/react-bookstore/",
+  "homepage": "https://badsolver.github.io/React-bookstore/",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
