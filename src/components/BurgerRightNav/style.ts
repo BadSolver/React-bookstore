@@ -82,7 +82,7 @@ export const Title = styled.h3`
   ${fonts.H3}
   background: transparent;
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     display: block;
   }
 `;
