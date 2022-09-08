@@ -13,7 +13,7 @@ export const ItemBackground = styled.div`
   margin-bottom: ${Space.Small};
   background-color: ${Color.Blue};
   border-radius: 10px;
-  box-shadow: 10px 10px 5px ${Color.Orange};
+  box-shadow: 10px 10px 5px ${Color.PrimaryDark};
 `;
 
 export const Image = styled.img`

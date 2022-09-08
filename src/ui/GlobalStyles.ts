@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: normal;
         vertical-align: baseline;
         background: ${Color.Backround};
+        color: ${Color.Black};
         font-family: 'Source Sans Pro', sans-serif;
         :focus-visible {
         outline: none;
