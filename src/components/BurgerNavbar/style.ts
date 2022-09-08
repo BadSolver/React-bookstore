@@ -77,11 +77,19 @@ export const ButtonTheme = styled.button`
   background: black;
   color: white;
   border-color: white;
-  /* 
+  
   &:first-child {
-    border-right: none;
+    border: 1px solid #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    background: transparent;
   }
   &:last-child {
-    border-left: none;
-  } */
+    border: 1px solid #1B1B1D;
+    color: #1B1B1D;
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
 `;

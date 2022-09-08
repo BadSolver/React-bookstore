@@ -21,9 +21,9 @@ export const ItemBackground = styled.div`
   max-width: 350px;
   height: 380px;
   margin-bottom: ${Space.Small};
-  background-color: ${Color.Blue};
+  background-color: white;
   border-radius: 10px;
-  box-shadow: 10px 10px 5px ${Color.Orange};
+  box-shadow: 1px 4px 17px rgba(0, 0, 0, 0.5);
   @media (max-width: 1120px) {
     margin: 0 auto;
   }
@@ -37,6 +37,7 @@ export const Cost = styled.div`
   padding-top: 10px;
   padding-left: 10px;
   background: transparent;
+  color: black;
 `;
 export const Link = styled.div``;
 export const Description = styled.div`

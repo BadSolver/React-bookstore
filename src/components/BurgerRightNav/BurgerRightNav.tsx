@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../../hooks";
 import { ROUTE } from "../../router";
-import { Button } from "../Button";
+import { removeUser, useAppDispatch } from "../../store";
+import { Search } from "../Search";
 
-import { Background, Form, Hr, Search, StyledList, Title } from "./style";
+import { Background, Button, Form, Hr, StyledList, Title } from "./style";
 
 interface IProps {
   open?: boolean;
@@ -11,6 +12,11 @@ interface IProps {
 }
 
 export const RightNav = ({ open, close }: IProps) => {
+
+  const dispatch = useAppDispatch()
+  const hadleLogOut = () => {
+    dispatch(removeUser())
+  }
 
   const {isAuth } = useAuth()
 
@@ -21,7 +27,7 @@ export const RightNav = ({ open, close }: IProps) => {
         <StyledList open={open}>
           <Hr />
           <Form>
-            <Search placeholder="Search" open={open} />
+            <Search  />
             <Link to={ROUTE.FAVORITES} onClick={close}>
               <Title>FAVORITES</Title>
             </Link>
@@ -29,7 +35,7 @@ export const RightNav = ({ open, close }: IProps) => {
               <Title>CART</Title>
             </Link>
           </Form>
-          <Button text="Log out"></Button>
+          <Button onClick={hadleLogOut}>Log Out</Button>
         </StyledList>
       </>
     );
@@ -40,10 +46,10 @@ export const RightNav = ({ open, close }: IProps) => {
         <StyledList open={open}>
           <Hr />
           <Form>
-            <Search placeholder="Search" open={open} />
+            <Search   />
           </Form>
           <Link to={ROUTE.SIGNIN} onClick={close}>
-          <Button text="Sign In"></Button>
+          <Button >Sign In</Button>
           </Link>
         </StyledList>
       </>

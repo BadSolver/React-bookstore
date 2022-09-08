@@ -4,7 +4,6 @@ import { ROUTE } from "../../router";
 import { getFavorites, useAppDispatch, useAppSelector } from "../../store";
 import { getCart } from "../../store/selectors/cartSelector";
 import { setThemesDark, setThemesLight } from "../../store/slices/userSlice";
-import { useTheme } from "../../ui/theme";
 import { BurgerMenu } from "../BurgerMenu";
 import { Search } from "../Search";
 import {
@@ -22,7 +21,6 @@ export const BurgerNavbar = () => {
   const { item } = useAppSelector(getFavorites);
   const { cart } = useAppSelector(getCart);
   const dispatch = useAppDispatch()
-  // const { theme, setTheme } = useTheme();
 
   const handleThemeLight = () => {
     dispatch(setThemesLight())

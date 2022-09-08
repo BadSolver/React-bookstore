@@ -1,6 +1,5 @@
 import { AppRouter } from "./router/AppRouter";
 import { Wrapper } from "./style";
-import { useTheme } from "./ui/theme";
 
 
 const App = () => {
