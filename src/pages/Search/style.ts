@@ -14,7 +14,7 @@ export const Previous = styled.button`
   margin-top: 30px;
   font-size: 21px;
   color: ${Color.Secondary};
-  background-color: #fff;
+  background-color: transparent;
   border: none;
   &:hover {
     color: ${Color.Primary};
@@ -25,7 +25,7 @@ export const Next = styled.button`
   margin-top: 30px;
   font-size: 21px;
   color: ${Color.Secondary};
-  background-color: #fff;
+  background-color: transparent;
   border: none;
   &:hover {
     color: ${Color.PrimaryDark};
