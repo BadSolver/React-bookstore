@@ -12,13 +12,10 @@ interface Ifavorites {
 export const StyledBurgerNavbar = styled.nav`
   display: flex;
   justify-content: space-between;
-
-  @media (max-width: 768) {
-  }
 `;
 export const Logo = styled.div`
   margin-top: 5px;
-  color:${Color.Black};
+  color: ${Color.Black};
   cursor: pointer;
 `;
 export const Navbar = styled.nav`
@@ -77,7 +74,7 @@ export const ButtonTheme = styled.button`
   background: black;
   color: white;
   border-color: white;
-  
+
   &:first-child {
     border: 1px solid #ffffff;
     padding: 10px 20px;
@@ -86,8 +83,8 @@ export const ButtonTheme = styled.button`
     background: transparent;
   }
   &:last-child {
-    border: 1px solid #1B1B1D;
-    color: #1B1B1D;
+    border: 1px solid #1b1b1d;
+    color: #1b1b1d;
     background: transparent;
     padding: 10px 20px;
     border-radius: 10px;

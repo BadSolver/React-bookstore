@@ -20,16 +20,15 @@ import {
 export const BurgerNavbar = () => {
   const { item } = useAppSelector(getFavorites);
   const { cart } = useAppSelector(getCart);
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
 
   const handleThemeLight = () => {
-    dispatch(setThemesLight())
+    dispatch(setThemesLight());
   };
   const handleThemeDark = () => {
     dispatch(setThemesDark());
   };
 
- 
   return (
     <>
       <StyledBurgerNavbar>

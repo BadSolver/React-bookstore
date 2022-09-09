@@ -25,6 +25,7 @@ const initialState: BookDetails = {
   },
   error: null,
   isLoading: false,
+  amount: 0
 };
 
 export const fetchDetailsBook = createAsyncThunk<

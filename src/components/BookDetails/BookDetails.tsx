@@ -47,8 +47,7 @@ export const BookDetails = ({
   const dispatch = useAppDispatch();
 
   const handleAddToCart = () => {
-     dispatch(addItem(book));
-     
+    dispatch(addItem(book));
   };
   const hadleAddToFavorites = () => {
     dispatch(addItemFavorites(book));

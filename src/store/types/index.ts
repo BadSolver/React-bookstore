@@ -4,6 +4,7 @@ export type BookDetails = {
   book: IBookDetails;
   error: null | string;
   isLoading: boolean;
+  amount: number | null;
 };
 
 export type NewBooks = {
@@ -14,7 +15,9 @@ export type NewBooks = {
 
 export type CartState = {
   isLoading: boolean;
-  total: number;
+  amount: {
+    [key: string]: number;
+  };
   cart: IBookDetails[];
 };
 

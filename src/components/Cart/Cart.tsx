@@ -1,4 +1,4 @@
-import { memo, useState } from "react";
+import { memo } from "react";
 import { Link } from "react-router-dom";
 import { getCart, useAppDispatch, useAppSelector } from "../../store";
 import {
@@ -27,24 +27,21 @@ interface IProps {
 }
 
 export const Cart = memo(({ book }: IProps) => {
-  const { total } = useAppSelector(getCart);
-  const [cost, setCost] = useState(0);
+  const { amount } = useAppSelector(getCart);
 
   const dispatch = useAppDispatch();
 
   const handleCountPlus = () => {
     dispatch(countPlus(book));
-    setCost(total * Math.round(Number(book.price.slice(1))));
   };
   const handleCountMinus = () => {
-    dispatch(countMinus());
+    dispatch(countMinus(book));
   };
 
   const handleDeleteBook = () => {
     dispatch(removeItem(book));
   };
-
- 
+console.log(amount[book.isbn13])
   return (
     <>
       <StyledCart>
@@ -60,12 +57,15 @@ export const Cart = memo(({ book }: IProps) => {
         <CountContainer>
           <ButtonCount onClick={handleCountMinus}>-</ButtonCount>
           <Count>
-            <Subtitel>{total}</Subtitel>
+            <Subtitel>{amount[book.isbn13]}</Subtitel>
           </Count>
           <ButtonCount onClick={handleCountPlus}>+</ButtonCount>
         </CountContainer>
         <CostContainer>
-          <Cost> {book.price === "$0.00" ? "free" : cost} $</Cost>
+          <Cost>
+            {book.price === '$0.00' ? 'free' : amount[book.isbn13] * Math.round(Number(book.price.slice(1))) +
+                "$"}
+          </Cost>
         </CostContainer>
         <Button onClick={handleDeleteBook}>✖</Button>
       </StyledCart>
