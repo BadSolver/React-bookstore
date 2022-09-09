@@ -5,7 +5,7 @@ import { StyledFavorites, StyledTitleFavorites, Title } from "./style";
 
 export const Favorites = () => {
   const { item } = useAppSelector(getFavorites);
-
+  
   return (
     <>
       <ScrollUp />
