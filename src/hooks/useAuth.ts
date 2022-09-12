@@ -6,7 +6,7 @@ export const useAuth = () => {
   );
 
   return {
-    isAuth: !!email,
+    isAuth: email,
     email,
     userDate,
     id,

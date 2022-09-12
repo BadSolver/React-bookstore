@@ -13,7 +13,9 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addItem: (state, { payload }: PayloadAction<IBookDetails>) => {
-      const findItem = state.cart.find((cart) => cart.isbn13 === payload.isbn13);
+      const findItem = state.cart.find(
+        (cart) => cart.isbn13 === payload.isbn13
+      );
       if (!findItem) {
         state.cart.push(payload);
       }

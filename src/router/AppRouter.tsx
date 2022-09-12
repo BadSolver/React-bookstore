@@ -10,7 +10,7 @@ import {
   NotFound,
   Registration,
   ResetPasswordPages,
-  Search,
+  SearchPages,
 } from "../pages";
 import { SignInPages } from "../pages/SignIn/SignInPages";
 import { ROUTE } from "./routes";
@@ -22,7 +22,7 @@ export const AppRouter = () => {
         <Route index element={<Home />} />
 
         <Route path={ROUTE.HOME} element={<HelloPages />} />
-        <Route path={ROUTE.SEARCH} element={<Search />} />
+        <Route path={ROUTE.SEARCH} element={<SearchPages />} />
         <Route path={ROUTE.BOOK_DETAILS} element={<BookDetailsPage />} />
         <Route path={ROUTE.CART} element={<CartPages />} />
         <Route path={ROUTE.FAVORITES} element={<Favorites />} />
