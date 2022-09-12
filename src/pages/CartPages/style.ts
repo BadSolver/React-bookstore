@@ -18,6 +18,10 @@ export const Button = styled(StyledButton)`
   padding: 15px 0;
   margin: 0;
   margin-top: 30px;
+
+  @media (max-width: 800px) {
+    width: 40%;
+  }
 `;
 export const ButtonContainer = styled.div`
   display: flex;

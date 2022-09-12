@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
+import { useWindowSize } from "../../hooks";
 import { getCart, useAppDispatch, useAppSelector } from "../../store";
 import {
   countPlus,
@@ -27,7 +28,9 @@ interface IProps {
 }
 
 export const Cart = memo(({ book }: IProps) => {
+  console.log('books',book)
   const { amount } = useAppSelector(getCart);
+  const { width = 0 } = useWindowSize();
 
   const dispatch = useAppDispatch();
 
@@ -41,33 +44,69 @@ export const Cart = memo(({ book }: IProps) => {
   const handleDeleteBook = () => {
     dispatch(removeItem(book));
   };
-console.log(amount[book.isbn13])
   return (
     <>
       <StyledCart>
-        <Container>
-          <Link to={`/book/${book.isbn13}`}>
-            <Images src={book.image} alt={book.image} />
-          </Link>
-          <ContainerTitle>
-            <Title>{book.title}</Title>
-            <Subtitel>{book.authors}</Subtitel>
-          </ContainerTitle>
-        </Container>
-        <CountContainer>
-          <ButtonCount onClick={handleCountMinus}>-</ButtonCount>
-          <Count>
-            <Subtitel>{amount[book.isbn13]}</Subtitel>
-          </Count>
-          <ButtonCount onClick={handleCountPlus}>+</ButtonCount>
-        </CountContainer>
-        <CostContainer>
-          <Cost>
-            {book.price === '$0.00' ? 'free' : amount[book.isbn13] * Math.round(Number(book.price.slice(1))) +
-                "$"}
-          </Cost>
-        </CostContainer>
-        <Button onClick={handleDeleteBook}>✖</Button>
+        {width > 800 && (
+          <>
+            <Container>
+              <Link to={`/book/${book.isbn13}`}>
+                <Images src={book.image} alt={book.image} />
+              </Link>
+              <ContainerTitle>
+                <Title>{book.title}</Title>
+                <Subtitel>{book.authors}</Subtitel>
+              </ContainerTitle>
+            </Container>
+            <CountContainer>
+              <ButtonCount onClick={handleCountMinus}>-</ButtonCount>
+              <Count>
+                <Subtitel>{amount[book.isbn13]}</Subtitel>
+              </Count>
+              <ButtonCount onClick={handleCountPlus}>+</ButtonCount>
+            </CountContainer>
+            <CostContainer>
+              <Cost>
+                {book.price === "$0.00"
+                  ? "free"
+                  : amount[book.isbn13] *
+                      Math.round(Number(book.price.slice(1))) +
+                    "$"}
+              </Cost>
+            </CostContainer>
+            <Button onClick={handleDeleteBook}>✖</Button>
+          </>
+        )}
+        {width < 801 && (
+          <>
+            <Container>
+              <Link to={`/book/${book.isbn13}`}>
+                <Images src={book.image} alt={book.image} />
+              </Link>
+              <ContainerTitle>
+                <Title>{book.title}</Title>
+                <Subtitel>{book.authors}</Subtitel>
+              </ContainerTitle>
+            </Container>
+            <CountContainer>
+              <ButtonCount onClick={handleCountMinus}>-</ButtonCount>
+              <Count>
+                <Subtitel>{amount[book.isbn13]}</Subtitel>
+              </Count>
+              <ButtonCount onClick={handleCountPlus}>+</ButtonCount>
+              <CostContainer>
+                <Cost>
+                  {book.price === "$0.00"
+                    ? "free"
+                    : amount[book.isbn13] *
+                        Math.round(Number(book.price.slice(1))) +
+                      "$"}
+                </Cost>
+              </CostContainer>
+              <Button onClick={handleDeleteBook}>✖</Button>
+            </CountContainer>
+          </>
+        )}
       </StyledCart>
     </>
   );
