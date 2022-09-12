@@ -40,10 +40,6 @@ export const Hr = styled.span`
   height: 1px;
   background: ${Color.Gray};
   margin-bottom: 20px;
-
-  @media (max-width: 768px) {
-    display: block;
-  }
 `;
 export const Background = styled.div<IProps>`
   position: fixed;

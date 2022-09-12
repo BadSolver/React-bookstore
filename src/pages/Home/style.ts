@@ -4,7 +4,7 @@ import { Space } from "../../ui";
 export const StyledHome = styled.div`
   margin-top: ${Space.ExtraLarge};
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     margin-top: 36px;
   }
 `;

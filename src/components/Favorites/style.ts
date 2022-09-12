@@ -75,7 +75,7 @@ export const Button = styled(StyledButton)`
     margin: 0 auto;
     margin-top: 30px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     padding: 15px 10px;
     margin-top: 20px;
     width: 80%;
