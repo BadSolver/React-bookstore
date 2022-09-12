@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ArrowBack, BooksList, Title } from "../../components";
+import { ArrowBack, BooksList, Search, Title } from "../../components";
 import { getSearch } from "../../store/selectors/searchSelector";
 import { fetchSearchedBooks } from "../../store/slices/searchSlice";
 import { GrLinkPrevious, GrLinkNext } from "react-icons/gr";
@@ -11,17 +11,21 @@ import {
   Next,
   NextText,
   Container,
+  SearchContainer,
 } from "./style";
 import { getPagesCount } from "../../utils";
+import { useWindowSize } from "../../hooks";
 
-export const Search = () => {
-  const { searchParams, searchResponse, isLoading, error } = useAppSelector(getSearch);
+export const SearchPages = () => {
+  const { searchParams, searchResponse, isLoading, error } =
+    useAppSelector(getSearch);
+  const { width = 0 } = useWindowSize();
   const dispatch = useAppDispatch();
 
   const handleNext = () => {
     if (
-      !!searchParams.page &&
-      !!searchResponse.total &&
+      searchParams.page &&
+      searchResponse.total &&
       getPagesCount(searchResponse.total) > searchParams.page
     ) {
       dispatch(decrementPage(searchParams.page + 1));
@@ -29,7 +33,7 @@ export const Search = () => {
   };
 
   const handlePrev = () => {
-    if (!!searchParams.page && searchParams.page > 1) {
+    if (searchParams.page && searchParams.page > 1) {
       dispatch(decrementPage(searchParams.page - 1));
     }
   };
@@ -54,6 +58,10 @@ export const Search = () => {
             searchParams.searchValue ? searchParams.searchValue : " "
           }' search results`}
         />
+        {width < 801 && 
+        <SearchContainer>
+          <Search />
+        </SearchContainer>}
         <BooksList
           books={searchResponse.books}
           isLoading={isLoading}
