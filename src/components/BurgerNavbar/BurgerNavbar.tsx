@@ -42,12 +42,7 @@ export const BurgerNavbar = () => {
             </Link>
             <Link to={ROUTE.CART}>
               <CartLogo cart={cart}>
-                {cart.length > 0 && (
-                  <>
-                    <Count>{cart.length}</Count>
-                  </>
-                )}
-
+                {cart.length > 0 && (<Count>{cart.length}</Count>)}
                 <CartHeader />
               </CartLogo>
             </Link>
