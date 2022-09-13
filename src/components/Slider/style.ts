@@ -12,7 +12,7 @@ export const StyledSlider = styled.div`
     color: ${Color.Black};
     @media (max-width: 576px) {
       margin-left: 20px;
-      z-index: 99999;
+      z-index: 1;
     }
   }
   .slick-next:before {
