@@ -67,7 +67,7 @@ export const Title = styled.h3`
   background: transparent;
   :hover {
     color: goldenrod;
-    transition: all .4s;
+    transition: all 0.4s;
   }
 `;
 export const Button = styled(StyledButton)`
@@ -80,10 +80,9 @@ export const Button = styled(StyledButton)`
   letter-spacing: 0.05em;
   color: ${Color.White};
   background-color: ${Color.Black};
-  
 `;
 export const ButtonForm = styled.form`
   display: flex;
   flex-direction: column;
   background: transparent;
-`
+`;

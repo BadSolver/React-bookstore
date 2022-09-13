@@ -1,18 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import {
-  BookDetails,
-  SliderCom,
-  Subscribe,
-  TabBar,
-  Title,
-} from "../../components";
-import {
-  fetchDetailsBook,
-  getBookDetails,
-  useAppDispatch,
-  useAppSelector,
-} from "../../store";
+import { BookDetails, SliderCom, Subscribe, TabBar, Title } from "../../components";
+import { fetchDetailsBook, getBookDetails, useAppDispatch, useAppSelector } from "../../store";
 
 export const BookDetailsPage = () => {
   const { isbn = "" } = useParams();
@@ -33,7 +22,7 @@ export const BookDetailsPage = () => {
   };
 
   return (
-    <div>
+    <>
       <BookDetails
         handleDetails={handleDetails}
         book={book}
@@ -45,6 +34,6 @@ export const BookDetailsPage = () => {
       <Subscribe />
       <Title text={"Similar Books"} />
       <SliderCom />
-    </div>
+    </>
   );
 };

@@ -27,7 +27,7 @@ export const Navbar = styled.nav`
 export const HeartLogo = styled.div<Ifavorites>`
   cursor: pointer;
 
-  stroke: ${({ item }) => (item.length > 0 ? `red` : `${Color.Black}`)};
+  stroke: ${({ item }) => (item.length > 0 ? "red" : `${Color.Black}`)};
 
   :hover {
     stroke: goldenrod;
@@ -37,7 +37,7 @@ export const HeartLogo = styled.div<Ifavorites>`
 export const CartLogo = styled.div<ICart>`
   width: 24px;
   height: 24px;
-  stroke: ${({ cart }) => (cart.length > 0 ? `red` : `${Color.Black}`)};
+  stroke: ${({ cart }) => (cart.length > 0 ? "red" : `${Color.Black}`)};
   cursor: pointer;
 
   :hover {
@@ -67,4 +67,4 @@ export const Count = styled.div`
   border-radius: 50%;
   text-align: center;
   font-size: 14px;
-`
+`;

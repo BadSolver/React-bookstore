@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import { Bookstore, CartHeader, HeartHeader, UserHeader } from "../../assets";
+import { BookstoreIcon, CartHeaderIcon, HeartHeaderIcon, UserHeaderIcon } from "../../assets";
 import { useWindowSize } from "../../hooks";
 import { ROUTE } from "../../router";
-import { getFavorites, useAppSelector } from "../../store";
-import { getCart } from "../../store/selectors/cartSelector";
+import { getCart, getFavorites, useAppSelector } from "../../store";
 import { BurgerMenu } from "../BurgerMenu";
 import { Search } from "../Search";
 import { TogglerTheme } from "../TogglerTheme";
@@ -27,7 +26,7 @@ export const BurgerNavbar = () => {
     <StyledBurgerNavbar>
       <Link to={ROUTE.HOME}>
         <Logo>
-          <Bookstore />
+          <BookstoreIcon />
         </Logo>
       </Link>
       {width > 800 && (
@@ -37,18 +36,18 @@ export const BurgerNavbar = () => {
           <Navbar>
             <Link to={ROUTE.FAVORITES}>
               <HeartLogo item={item}>
-                <HeartHeader />
+                <HeartHeaderIcon />
               </HeartLogo>
             </Link>
             <Link to={ROUTE.CART}>
               <CartLogo cart={cart}>
                 {cart.length > 0 && (<Count>{cart.length}</Count>)}
-                <CartHeader />
+                <CartHeaderIcon />
               </CartLogo>
             </Link>
             <Link to={ROUTE.ACCOUNT}>
               <UserLogo>
-                <UserHeader />
+                <UserHeaderIcon />
               </UserLogo>
             </Link>
           </Navbar>
