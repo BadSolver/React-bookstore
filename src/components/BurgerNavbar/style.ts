@@ -61,10 +61,10 @@ export const Count = styled.div`
   position: absolute;
   top: 24px;
   background-color: goldenrod;
+  color: white;
   width: 24px;
   height: 24px;
   border-radius: 50%;
   text-align: center;
   font-size: 14px;
-  opacity: .9;
 `
