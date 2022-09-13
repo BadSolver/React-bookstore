@@ -39,6 +39,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "lint": "eslint -c .eslintrc --ext .ts,.tsx .",
     "build-gh-pages": "gh-pages -d build"
   },
   "eslintConfig": {

@@ -3,9 +3,9 @@ import { CSSProperties, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { ClipLoader } from "react-spinners";
 import { getFirebaseMessageError } from "../../utils";
+import { setUser, useAppDispatch } from "../../store";
 import { ErrorMessage } from "../SignIn/style";
 import { StyledSignUp, Input, Title, Button } from "./style";
-import { setUser, useAppDispatch } from "../../store";
 
 type SignUpValues = {
   name: string;
@@ -49,7 +49,7 @@ export const SignUp = ({ handleModal }: Iprops) => {
             email: user.email,
             id: user.uid,
             userDate: user.metadata.creationTime,
-          })
+          }),
         );
         handleModal();
       })
@@ -100,15 +100,9 @@ export const SignUp = ({ handleModal }: Iprops) => {
           },
         })}
       />
-      {errors.password && (
-        <ErrorMessage> {errors.password.message}</ErrorMessage>
-      )}
+      {errors.password && <ErrorMessage> {errors.password.message}</ErrorMessage>}
       <Button type="submit">
-        {isLoading ? (
-          <ClipLoader cssOverride={override} size={25} color={"black"} />
-        ) : (
-          "Sign up"
-        )}
+        {isLoading ? <ClipLoader cssOverride={override} size={25} color={"black"} /> : "Sign up"}
       </Button>
     </StyledSignUp>
   );

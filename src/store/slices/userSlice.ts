@@ -11,7 +11,7 @@ const initialState: UserState = {
   email: null,
   userDate: null,
   id: null,
-  theme: 'light',
+  theme: "light",
 };
 
 const userSlice = createSlice({
@@ -30,15 +30,16 @@ const userSlice = createSlice({
     },
     setThemesDark() {
       const htmlteg = document.documentElement;
-      htmlteg.setAttribute('theme', 'dark')
+      htmlteg.setAttribute("theme", "dark");
     },
     setThemesLight() {
       const htmlteg = document.documentElement;
-      htmlteg.setAttribute('theme', 'light')
-    }
+      htmlteg.setAttribute("theme", "light");
+    },
   },
 });
 
-export const { setUser, removeUser, setThemesDark, setThemesLight } = userSlice.actions;
+export const { setUser, removeUser, setThemesDark, setThemesLight } =
+  userSlice.actions;
 
 export default userSlice.reducer;

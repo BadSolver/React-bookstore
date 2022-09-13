@@ -9,5 +9,4 @@ export const ButtonScroll = styled.button`
   border-radius: 50%;
   color: ${Color.White};
   padding: 10px 20px;
-
-`
+`;

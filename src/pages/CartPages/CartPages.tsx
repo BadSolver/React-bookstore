@@ -1,4 +1,4 @@
-import { EmptyCart } from "../../assets";
+import { EmptyCartIcon } from "../../assets";
 import { ArrowBack, Cart } from "../../components";
 import {
   clearCart,
@@ -36,7 +36,7 @@ export const CartPages = () => {
       {cart.length === 0 && (
         <StyledCartPages>
           <Title>Your cart is empty</Title>
-          <EmptyCart />
+          <EmptyCartIcon />
         </StyledCartPages>
       )}
     </>

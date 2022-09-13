@@ -1,11 +1,4 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import userReducer from "./slices/userSlice";
-import newBooksReducer from "./slices/newBooksSlice";
-import bookDetailsReducer from "./slices/bookDetailsSlice";
-import cartReducer from "./slices/cartSlice";
-import favoritesReducer from "./slices/favoritesSlice";
-import searchReducer from "./slices/searchSlice";
-import storage from "redux-persist/lib/storage";
 import {
   FLUSH,
   PAUSE,
@@ -16,6 +9,13 @@ import {
   REGISTER,
   REHYDRATE,
 } from "redux-persist";
+import storage from "redux-persist/lib/storage";
+import userReducer from "./slices/userSlice";
+import newBooksReducer from "./slices/newBooksSlice";
+import bookDetailsReducer from "./slices/bookDetailsSlice";
+import cartReducer from "./slices/cartSlice";
+import favoritesReducer from "./slices/favoritesSlice";
+import searchReducer from "./slices/searchSlice";
 
 const persistConfig = {
   key: "root",

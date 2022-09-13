@@ -43,4 +43,4 @@ export const SearchContainer = styled.form`
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
-`
+`;

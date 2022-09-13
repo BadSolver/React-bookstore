@@ -28,7 +28,6 @@ interface IProps {
 }
 
 export const Cart = memo(({ book }: IProps) => {
-  console.log('books',book)
   const { amount } = useAppSelector(getCart);
   const { width = 0 } = useWindowSize();
 

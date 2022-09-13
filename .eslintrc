@@ -1,0 +1,27 @@
+{
+    "extends": ["react-app", "react-app/jest"],
+    "rules": {
+        "no-console": "warn",
+        "prefer-const": "error",
+        "quotes": ["error", "double"],
+        "indent": ["warn", 2, { "SwitchCase": 1 }],
+        "max-len": ["error", { "code": 100 }],
+        "semi": ["warn", "always"],
+        "import/order": [
+            "error",
+            {
+                "groups": [
+                    "builtin",
+                    "external",
+                    "internal",
+                    "parent",
+                    "sibling",
+                    "index",
+                    "object",
+                    "type"
+                ]
+            }
+        ],
+        "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }]
+    }
+}

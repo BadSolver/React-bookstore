@@ -9,7 +9,7 @@ export const StyledFooter = styled.footer`
   max-width: 1200px;
   margin-top: ${Space.ExtraLarge};
   border-top: 1px solid ${Color.Gray};
-  
+
   @media (max-width: 800px) {
     margin-left: ${Space.Large};
     margin-right: ${Space.Large};
@@ -27,13 +27,13 @@ export const Description = styled.p`
   }
 `;
 export const Container = styled.div`
-display: flex;
-gap: 30px;
-align-items: center;
-`
+  display: flex;
+  gap: 30px;
+  align-items: center;
+`;
 export const Title = styled.p`
   color: ${Color.PrimaryDark};
-`
+`;
 export const Git = styled.div`
   margin-top: 10px;
-`
+`;

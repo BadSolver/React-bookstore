@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export const HelloPages = () => {
-  return (
-    <h1>HelloPages</h1>
-  )
-}
+  return <h1>HelloPages</h1>;
+};

@@ -97,4 +97,4 @@ export const ButtonDeleteBook = styled(StyledButton)`
 `;
 export const Images = styled.img`
   background: transparent;
-`
+`;
