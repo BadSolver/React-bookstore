@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-bookstrore/static/css/main.59589ada.css",
-    "main.js": "/React-bookstrore/static/js/main.454da606.js",
+    "main.js": "/React-bookstrore/static/js/main.1d3f7f58.js",
     "static/media/favor.png": "/React-bookstrore/static/media/favor.1ba9d623dd18f90798b2.png",
     "static/media/vector.svg": "/React-bookstrore/static/media/vector.118093d592171fd0e80c711744f3fceb.svg",
     "static/media/bookstore.svg": "/React-bookstrore/static/media/bookstore.8dd1a7ce2b1cd05e3fd1a561dd523ed2.svg",
@@ -17,10 +17,10 @@
     "static/media/search.svg": "/React-bookstrore/static/media/search.c024a3122f357146e09dc24458c23bdf.svg",
     "static/media/user-header.svg": "/React-bookstrore/static/media/user-header.875256114691e07e1903fdeffb337b45.svg",
     "main.59589ada.css.map": "/React-bookstrore/static/css/main.59589ada.css.map",
-    "main.454da606.js.map": "/React-bookstrore/static/js/main.454da606.js.map"
+    "main.1d3f7f58.js.map": "/React-bookstrore/static/js/main.1d3f7f58.js.map"
   },
   "entrypoints": [
     "static/css/main.59589ada.css",
-    "static/js/main.454da606.js"
+    "static/js/main.1d3f7f58.js"
   ]
 }
