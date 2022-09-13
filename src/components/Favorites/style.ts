@@ -81,7 +81,11 @@ export const Button = styled(StyledButton)`
     width: 80%;
   }
 `;
-export const SubTitle = styled.div``;
+export const SubTitle = styled.div`
+  @media (max-width: 1120px) {
+    margin-top: 20px;
+  }
+`;
 export const ButtonDeleteBook = styled(StyledButton)`
   display: block;
   margin: 0;
