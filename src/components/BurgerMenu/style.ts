@@ -6,8 +6,6 @@ interface IProps {
 }
 
 export const StyledBurger = styled.div<IProps>`
-  display: none;
-
   @media (max-width: 800px) {
     position: fixed;
     top: 28px;
@@ -16,6 +14,7 @@ export const StyledBurger = styled.div<IProps>`
     display: flex;
     justify-content: space-between;
     flex-flow: column nowrap;
+    background: transparent;
     width: ${Space.Medium};
     height: ${Space.Medium};
     margin-left: ${Space.Medium};
@@ -25,11 +24,11 @@ export const StyledBurger = styled.div<IProps>`
     display: flex;
     width: 33px;
     height: 2px;
-    background: ${({ open }) =>
-      open ? `${Color.Primary}` : `${Color.Primary}`};
+    background: ${({ open }) => (open ? `${Color.Black}` : `${Color.Black}`)};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.4s linear;
+    cursor: pointer;
 
     &:nth-child(1) {
       transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};

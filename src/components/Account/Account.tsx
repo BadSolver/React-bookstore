@@ -11,7 +11,7 @@ import {
 
 export const Account = () => {
   const { userDate, id, email } = useAuth();
- 
+
   return (
     <StyledAccount>
       <Container>

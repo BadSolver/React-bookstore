@@ -1,7 +1,12 @@
-import { EmptyCart } from "../../assets";
+import { EmptyCartIcon } from "../../assets";
 import { ArrowBack, Cart } from "../../components";
-import { getCart, useAppDispatch, useAppSelector } from "../../store";
-import { clearCart } from "../../store/slices/cartSlice";
+import {
+  clearCart,
+  getCart,
+  useAppDispatch,
+  useAppSelector,
+} from "../../store";
+import { IBookDetails } from "../../types";
 import { Button, ButtonContainer, StyledCartPages, Title } from "./style";
 
 export const CartPages = () => {
@@ -17,7 +22,7 @@ export const CartPages = () => {
       <ArrowBack />
       {cart && (
         <StyledCartPages>
-          {cart.map((book) => (
+          {cart.map((book: IBookDetails) => (
             <Cart book={book} key={book.isbn13}></Cart>
           ))}
           {cart.length > 0 && (
@@ -31,7 +36,7 @@ export const CartPages = () => {
       {cart.length === 0 && (
         <StyledCartPages>
           <Title>Your cart is empty</Title>
-          <EmptyCart />
+          <EmptyCartIcon />
         </StyledCartPages>
       )}
     </>

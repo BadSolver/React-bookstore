@@ -17,7 +17,7 @@ export interface IBookDetails {
   language: string;
   pages: string;
   pdf: IBookFormat;
-  price: any;
+  price: string;
   publisher: string;
   rating: string;
   subtitle: string;

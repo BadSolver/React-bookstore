@@ -1,9 +1,12 @@
 import { useEffect } from "react";
-import { ArrowBack, BooksList, Title } from "../../components";
-import { getSearch } from "../../store/selectors/searchSelector";
-import { fetchSearchedBooks } from "../../store/slices/searchSlice";
 import { GrLinkPrevious, GrLinkNext } from "react-icons/gr";
+import { ArrowBack, BooksList, Search, Title } from "../../components";
+import { fetchSearchedBooks } from "../../store/slices/searchSlice";
 import { decrementPage, useAppDispatch, useAppSelector } from "../../store";
+import { getPagesCount } from "../../utils";
+import { useWindowSize } from "../../hooks";
+import { getSearch } from "../../store/selectors";
+
 import {
   StyledSearch,
   Previous,
@@ -11,17 +14,18 @@ import {
   Next,
   NextText,
   Container,
+  SearchContainer,
 } from "./style";
-import { getPagesCount } from "../../utils";
 
-export const Search = () => {
+export const SearchPages = () => {
   const { searchParams, searchResponse, isLoading, error } = useAppSelector(getSearch);
+  const { width = 0 } = useWindowSize();
   const dispatch = useAppDispatch();
 
   const handleNext = () => {
     if (
-      !!searchParams.page &&
-      !!searchResponse.total &&
+      searchParams.page &&
+      searchResponse.total &&
       getPagesCount(searchResponse.total) > searchParams.page
     ) {
       dispatch(decrementPage(searchParams.page + 1));
@@ -29,7 +33,7 @@ export const Search = () => {
   };
 
   const handlePrev = () => {
-    if (!!searchParams.page && searchParams.page > 1) {
+    if (searchParams.page && searchParams.page > 1) {
       dispatch(decrementPage(searchParams.page - 1));
     }
   };
@@ -40,7 +44,7 @@ export const Search = () => {
         fetchSearchedBooks({
           searchValue: searchParams.searchValue,
           page: searchParams.page,
-        })
+        }),
       );
     }
   }, [dispatch, searchParams]);
@@ -50,15 +54,14 @@ export const Search = () => {
       <ArrowBack />
       <StyledSearch>
         <Title
-          text={`'${
-            searchParams.searchValue ? searchParams.searchValue : " "
-          }' search results`}
+          text={`'${searchParams.searchValue ? searchParams.searchValue : " "}' search results`}
         />
-        <BooksList
-          books={searchResponse.books}
-          isLoading={isLoading}
-          error={error}
-        />
+        {width < 801 && (
+          <SearchContainer>
+            <Search />
+          </SearchContainer>
+        )}
+        <BooksList books={searchResponse.books} isLoading={isLoading} error={error} />
         <Container>
           <Previous onClick={handlePrev}>
             <GrLinkPrevious

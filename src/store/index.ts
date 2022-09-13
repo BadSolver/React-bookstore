@@ -5,6 +5,7 @@ import {
   getFavorites,
   getNewBooks,
 } from "./selectors";
+import { getUserInfo } from "./selectors/getUserInfo";
 import {
   addItem,
   clearCart,
@@ -28,6 +29,7 @@ export {
   getBookDetails,
   useAppDispatch,
   useAppSelector,
+  getUserInfo,
   fetchDetailsBook,
   fetchNewBooks,
   addItem,

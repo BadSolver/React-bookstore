@@ -28,6 +28,7 @@ import { SliderCom } from "./Slider";
 import { Subscribe } from "./Subscribe/Subscribe";
 import { TabBar } from "./TabBar/TabBar";
 import { Title } from "./Title";
+import { TogglerTheme } from "./TogglerTheme";
 
 export {
   ErrorMessage,
@@ -60,4 +61,5 @@ export {
   Cart,
   FavoritesItem,
   ScrollUp,
+  TogglerTheme,
 };

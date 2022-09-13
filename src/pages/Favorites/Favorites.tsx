@@ -1,11 +1,11 @@
-import { Fave } from "../../assets";
+import { FavoritesImage } from "../../assets";
 import { ArrowBack, FavoritesItem, ScrollUp } from "../../components";
 import { getFavorites, useAppSelector } from "../../store";
 import { StyledFavorites, StyledTitleFavorites, Title } from "./style";
 
 export const Favorites = () => {
   const { item } = useAppSelector(getFavorites);
-
+  
   return (
     <>
       <ScrollUp />
@@ -20,7 +20,7 @@ export const Favorites = () => {
           <Title>
             You don't have favorite books, please add from the store
           </Title>
-          <img src={Fave} alt="" />
+          <img src={FavoritesImage} alt="" />
         </StyledTitleFavorites>
       )}
     </>

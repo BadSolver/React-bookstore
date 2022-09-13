@@ -4,7 +4,7 @@ import { CartState } from "../types";
 
 const initialState: CartState = {
   isLoading: true,
-  total: 0,
+  amount: {},
   cart: [],
 };
 
@@ -13,19 +13,39 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addItem: (state, { payload }: PayloadAction<IBookDetails>) => {
-      state.cart.push(payload);
+      const findItem = state.cart.find(
+        (cart) => cart.isbn13 === payload.isbn13
+      );
+      if (!findItem) {
+        state.cart.push(payload);
+      }
+      state.amount = {
+        ...state.amount,
+        [payload.isbn13]: (state.amount[payload.isbn13] || 0) + 1,
+      };
     },
     removeItem: (state, { payload }: PayloadAction<IBookDetails>) => {
       state.cart = state.cart.filter((book) => book.isbn13 !== payload.isbn13);
+      state.amount = {
+        ...state.amount,
+        [payload.isbn13]: (state.amount[payload.isbn13] || 1) - 1,
+      };
     },
     clearCart: (state) => {
       state.cart = [];
+      state.amount = {};
     },
     countPlus: (state, { payload }: PayloadAction<IBookDetails>) => {
-      state.total++;
+      state.amount = {
+        ...state.amount,
+        [payload.isbn13]: (state.amount[payload.isbn13] || 0) + 1,
+      };
     },
-    countMinus: (state) => {
-      state.total--;
+    countMinus: (state, { payload }) => {
+      state.amount = {
+        ...state.amount,
+        [payload.isbn13]: (state.amount[payload.isbn13] || 1) - 1,
+      };
     },
   },
 });

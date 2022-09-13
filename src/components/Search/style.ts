@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import cartHeader from "../../assets/search.svg";
 import { Color, fonts } from "../../ui";
 
 export const Input = styled.input`
@@ -24,21 +23,14 @@ export const Input = styled.input`
   &:focus {
     opacity: 80%;
   }
-
-  @media (max-width: 800px) {
-    display: none;
-  }
 `;
 export const Button = styled.div`
   align-self: center;
   width: 24px;
   height: 24px;
   margin-left: 10px;
-  color:${Color.Black};
+  color: ${Color.Black};
   cursor: pointer;
-  @media (max-width: 800px) {
-    display: none;
-  }
 `;
 export const StyledSearch = styled.div`
   display: flex;

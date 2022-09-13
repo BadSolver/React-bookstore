@@ -39,3 +39,8 @@ export const PrevText = styled.span`
 export const NextText = styled.span`
   margin-right: 30px;
 `;
+export const SearchContainer = styled.form`
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+`;

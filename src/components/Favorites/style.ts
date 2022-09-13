@@ -75,13 +75,17 @@ export const Button = styled(StyledButton)`
     margin: 0 auto;
     margin-top: 30px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     padding: 15px 10px;
     margin-top: 20px;
     width: 80%;
   }
 `;
-export const SubTitle = styled.div``;
+export const SubTitle = styled.div`
+  @media (max-width: 1120px) {
+    margin-top: 20px;
+  }
+`;
 export const ButtonDeleteBook = styled(StyledButton)`
   display: block;
   margin: 0;
@@ -97,4 +101,4 @@ export const ButtonDeleteBook = styled(StyledButton)`
 `;
 export const Images = styled.img`
   background: transparent;
-`
+`;

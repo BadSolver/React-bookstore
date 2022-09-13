@@ -10,6 +10,7 @@ type FirebaseMessageErrors =
 enum ErrorMessage {
   EMAIL_ALREADY_IN_USE = "This email is already in use, please try again",
   EMAIL_ALREADY_EXISTS = "This email already exists, please try again",
+  // eslint-disable-next-line max-len
   INTERNAL_ERROR = "The authentication server encountered an unexpected error while trying to process the request.",
   INVALID_EMAIL = "This email address is invalid",
   USER_NOT_FOUND = "This user is not found",
@@ -18,9 +19,7 @@ enum ErrorMessage {
   WRONG_PASSWORD = "This password is invalid",
 }
 
-export const getFirebaseMessageError = (
-  code: FirebaseMessageErrors
-): ErrorMessage => {
+export const getFirebaseMessageError = (code: FirebaseMessageErrors): ErrorMessage => {
   switch (code) {
     case "auth/email-already-exists":
       return ErrorMessage.EMAIL_ALREADY_EXISTS;

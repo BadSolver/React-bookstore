@@ -19,7 +19,7 @@ const H2 = css`
   font-size: 40px;
   line-height: 60px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     font-size: 28px;
     line-height: 40px;
   }

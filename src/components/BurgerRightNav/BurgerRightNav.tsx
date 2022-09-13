@@ -1,10 +1,18 @@
 import { Link } from "react-router-dom";
-import { useAuth } from "../../hooks";
+import { useAuth, useWindowSize } from "../../hooks";
 import { ROUTE } from "../../router";
 import { removeUser, useAppDispatch } from "../../store";
-import { Search } from "../Search";
+import { TogglerTheme } from "../TogglerTheme";
 
-import { Background, Button, Form, Hr, StyledList, Title } from "./style";
+import {
+  Background,
+  Button,
+  ButtonForm,
+  Form,
+  Hr,
+  StyledList,
+  Title,
+} from "./style";
 
 interface IProps {
   open?: boolean;
@@ -12,46 +20,76 @@ interface IProps {
 }
 
 export const RightNav = ({ open, close }: IProps) => {
-
-  const dispatch = useAppDispatch()
+  const { width = 0 } = useWindowSize();
+  const dispatch = useAppDispatch();
   const hadleLogOut = () => {
-    dispatch(removeUser())
-  }
+    dispatch(removeUser());
+  };
 
-  const {isAuth } = useAuth()
+  const { isAuth } = useAuth();
 
   if (isAuth) {
     return (
       <>
-        <Background open={open} onClick={close} />
-        <StyledList open={open}>
-          <Hr />
-          <Form>
-            <Search  />
-            <Link to={ROUTE.FAVORITES} onClick={close}>
-              <Title>FAVORITES</Title>
-            </Link>
-            <Link to={ROUTE.CART} onClick={close}>
-              <Title>CART</Title>
-            </Link>
-          </Form>
-          <Button onClick={hadleLogOut}>Log Out</Button>
-        </StyledList>
+        {width < 801 && (
+          <>
+            <Background open={open} onClick={close} />
+            <StyledList open={open}>
+              <TogglerTheme />
+              <Hr />
+              <Form>
+                <Link to={ROUTE.FAVORITES} onClick={close}>
+                  <Title>FAVORITES</Title>
+                </Link>
+                <Link to={ROUTE.ACCOUNT} onClick={close}>
+                  <Title>Account</Title>
+                </Link>
+                <Link to={ROUTE.SEARCH} onClick={close}>
+                  <Title>Search</Title>
+                </Link>
+                <Link to={ROUTE.HOME} onClick={close}>
+                  <Title>Home</Title>
+                </Link>
+                <Link to={ROUTE.CART} onClick={close}>
+                  <Title>Cart</Title>
+                </Link>
+              </Form>
+              <Link to={ROUTE.HOME} onClick={close}>
+                <Button onClick={hadleLogOut}>Log Out</Button>
+              </Link>
+            </StyledList>
+          </>
+        )}
       </>
     );
   } else {
     return (
       <>
-        <Background open={open} />
-        <StyledList open={open}>
-          <Hr />
-          <Form>
-            <Search   />
-          </Form>
-          <Link to={ROUTE.SIGNIN} onClick={close}>
-          <Button >Sign In</Button>
-          </Link>
-        </StyledList>
+        {width < 801 && (
+          <>
+            <Background open={open} />
+            <StyledList open={open}>
+              <TogglerTheme />
+              <Hr />
+              <Form>
+                <Link to={ROUTE.HOME} onClick={close}>
+                  <Title>Home</Title>
+                </Link>
+                <Link to={ROUTE.SEARCH} onClick={close}>
+                  <Title>Search</Title>
+                </Link>
+              </Form>
+              <ButtonForm>
+                <Link to={ROUTE.SIGNIN} onClick={close}>
+                  <Button>Sign In</Button>
+                </Link>
+                <Link to={ROUTE.REGISTRATION} onClick={close}>
+                  <Button>Sign up</Button>
+                </Link>
+              </ButtonForm>
+            </StyledList>
+          </>
+        )}
       </>
     );
   }

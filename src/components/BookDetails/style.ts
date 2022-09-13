@@ -29,6 +29,12 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  @media (max-width: 800px) {
+    :last-child {
+      flex-wrap: wrap;
+    }
+  }
 `;
 
 export const Description = styled.div`
@@ -71,12 +77,17 @@ export const BackGround = styled.div`
   }
 `;
 
-export const LabelText = styled.p`
-  flex: 0 1 70%;
+export const LabelText = styled.div`
+  flex: 0 1 50%;
   padding-top: 6px;
   ${fonts.Subline}
   color: ${Color.PrimaryDark};
   text-align: right;
+
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
+  
 `;
 export const ValueText = styled.p`
   padding-top: 6px;
@@ -104,7 +115,7 @@ export const Button = styled(StyledButton)`
   width: 40%;
   padding: 15px 15px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     padding: 15px 10px;
     margin-top: 20px;
     width: 80%;

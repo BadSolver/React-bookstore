@@ -7,7 +7,7 @@ import { Home } from "./Home";
 import { NotFound } from "./NotFound";
 import { Registration } from "./Registration";
 import { ResetPasswordPages } from "./ResetPasswordPages";
-import { Search } from "./Search";
+import { SearchPages } from "./Search";
 
 export {
   AccountPage,
@@ -16,7 +16,7 @@ export {
   Favorites,
   Home,
   NotFound,
-  Search,
+  SearchPages,
   Registration,
   HelloPages,
   ResetPasswordPages,

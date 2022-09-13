@@ -2,7 +2,14 @@ import { createGlobalStyle } from "styled-components";
 import { Color } from "./color";
 
 export const GlobalStyles = createGlobalStyle`
-    html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+    html, body, body div, span, 
+    object, iframe, h1, h2, h3, h4, h5, h6, p,
+    blockquote, pre, abbr, address, cite, code,
+    del, dfn, em, img, ins, kbd, q, samp, small, strong,
+    sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset,
+    form, label, legend, table, caption, tbody, tfoot, thead,
+    tr, th, td, article, aside, figure, footer, header,
+    menu, nav, section, time, mark, audio, video, details, summary {
         margin: 0;
         padding: 0;
         border: 0;
@@ -40,13 +47,15 @@ export const GlobalStyles = createGlobalStyle`
     q:before,
     q:after {content: ''; content: none;}
     a {
-        margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;text-decoration:none;
+        margin: 0; padding: 0; font-size: 100%; 
+        vertical-align: baseline; background: transparent;text-decoration:none;
     }
     del {
         text-decoration: line-through;
     }
     hr {
-        display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;
+        display: block; height: 1px; border: 0; 
+        border-top: 1px solid #ccc; margin: 1em 0; padding: 0;
     }
     input, select {
         vertical-align: middle;
