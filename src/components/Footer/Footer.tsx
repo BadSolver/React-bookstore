@@ -7,10 +7,13 @@ export const Footer = () => {
       <Description>©2022 Bookstore</Description>
       <Container>
         <Title> Alex Kurov</Title>
-        <Git><a href="https://github.com/BadSolver" target='blank'><GithubIcon/></a></Git>
+        <Git>
+          <a href="https://github.com/BadSolver" target="blank">
+            <GithubIcon />
+          </a>
+        </Git>
       </Container>
       <Description>All rights reserved</Description>
-      
     </StyledFooter>
   );
 };

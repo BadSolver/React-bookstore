@@ -87,7 +87,6 @@ export const LabelText = styled.div`
   @media (max-width: 800px) {
     font-size: 16px;
   }
-  
 `;
 export const ValueText = styled.p`
   padding-top: 6px;

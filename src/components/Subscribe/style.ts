@@ -57,7 +57,6 @@ export const Button = styled(StyledButton)`
   cursor: pointer;
 
   @media (max-width: 568px) {
-    
     padding: 5px 0;
   }
 `;

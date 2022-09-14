@@ -8,6 +8,7 @@ import { NotFound } from "./NotFound";
 import { Registration } from "./Registration";
 import { ResetPasswordPages } from "./ResetPasswordPages";
 import { SearchPages } from "./Search";
+import { SignInPages } from "./SignIn";
 
 export {
   AccountPage,
@@ -20,4 +21,5 @@ export {
   Registration,
   HelloPages,
   ResetPasswordPages,
+  SignInPages
 };

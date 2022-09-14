@@ -31,7 +31,7 @@ export const Sign = styled.button<Iprops>`
   cursor: pointer;
   :hover {
     color: ${Color.Black};
-    transition: all .5s;
+    transition: all 0.5s;
   }
 
   ${({ signIn }) => (signIn ? "text-decoration: underline;" : "none")}

@@ -17,7 +17,6 @@ const override: CSSProperties = {
 };
 
 export const BooksList = ({ isLoading, error, books }: IProps) => {
-
   return (
     <>
       {isLoading && <ClipLoader cssOverride={override} size={50} />}

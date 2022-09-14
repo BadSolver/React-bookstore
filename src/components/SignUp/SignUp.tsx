@@ -49,7 +49,7 @@ export const SignUp = ({ handleModal }: Iprops) => {
             email: user.email,
             id: user.uid,
             userDate: user.metadata.creationTime,
-          }),
+          })
         );
         handleModal();
       })
@@ -100,9 +100,15 @@ export const SignUp = ({ handleModal }: Iprops) => {
           },
         })}
       />
-      {errors.password && <ErrorMessage> {errors.password.message}</ErrorMessage>}
+      {errors.password && (
+        <ErrorMessage> {errors.password.message}</ErrorMessage>
+      )}
       <Button type="submit">
-        {isLoading ? <ClipLoader cssOverride={override} size={25} color={"black"} /> : "Sign up"}
+        {isLoading ? (
+          <ClipLoader cssOverride={override} size={25} color={"black"} />
+        ) : (
+          "Sign up"
+        )}
       </Button>
     </StyledSignUp>
   );

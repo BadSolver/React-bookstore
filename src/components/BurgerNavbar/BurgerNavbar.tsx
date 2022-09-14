@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
-import { BookstoreIcon, CartHeaderIcon, HeartHeaderIcon, UserHeaderIcon } from "../../assets";
+import {
+  BookstoreIcon,
+  CartHeaderIcon,
+  HeartHeaderIcon,
+  UserHeaderIcon,
+} from "../../assets";
 import { useWindowSize } from "../../hooks";
 import { ROUTE } from "../../router";
 import { getCart, getFavorites, useAppSelector } from "../../store";
@@ -41,7 +46,7 @@ export const BurgerNavbar = () => {
             </Link>
             <Link to={ROUTE.CART}>
               <CartLogo cart={cart}>
-                {cart.length > 0 && (<Count>{cart.length}</Count>)}
+                {cart.length > 0 && <Count>{cart.length}</Count>}
                 <CartHeaderIcon />
               </CartLogo>
             </Link>

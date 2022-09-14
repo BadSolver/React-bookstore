@@ -11,5 +11,5 @@ export enum Color {
   Orange = "var(--color-orange)",
   Purple = "var(--color-purple)",
   Black = "var(--color-black)",
-  Backround = "var(--color-dark)"
+  Backround = "var(--color-dark)",
 }

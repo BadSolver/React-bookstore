@@ -28,8 +28,7 @@ export const Search = () => {
         setSearchValue({
           searchValue: debouncedValue,
           page: 1,
-          
-        }),
+        })
       );
     } else {
       dispatch(removeSearchValue());
@@ -44,7 +43,7 @@ export const Search = () => {
         name="search"
         {...searchValue}
       />
-      <Button onClick={handleSearch} >
+      <Button onClick={handleSearch}>
         <SearchLogoIcon />
       </Button>
     </StyledSearch>

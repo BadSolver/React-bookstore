@@ -20,13 +20,14 @@ export const TabItem = styled.button<Iprops>`
   cursor: pointer;
   :hover {
     color: ${Color.Black};
-    transition: all .5s;
+    transition: all 0.5s;
   }
   &:focus {
     color: ${Color.PrimaryDark};
   }
 
-  ${(props) => (props.isActive ? `color: ${Color.PrimaryDark}` : `${Color.White}`)}
+  ${(props) =>
+    props.isActive ? `color: ${Color.PrimaryDark}` : `${Color.White}`}
 `;
 
 export const Container = styled.div`

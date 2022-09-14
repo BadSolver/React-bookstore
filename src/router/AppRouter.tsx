@@ -11,8 +11,8 @@ import {
   Registration,
   ResetPasswordPages,
   SearchPages,
+  SignInPages,
 } from "../pages";
-import { SignInPages } from "../pages/SignIn/SignInPages";
 import { ROUTE } from "./routes";
 
 export const AppRouter = () => {
@@ -33,7 +33,7 @@ export const AppRouter = () => {
 
         <Route path={ROUTE.REGISTRATION} element={<Registration />} />
         <Route path={ROUTE.SIGNIN} element={<SignInPages />} />
-        <Route path={ROUTE.RESET_PASSWORD} element={<ResetPasswordPages />}/>
+        <Route path={ROUTE.RESET_PASSWORD} element={<ResetPasswordPages />} />
 
         <Route path={ROUTE.NOT_FOUND} element={<NotFound />} />
       </Route>
