@@ -1,14 +1,13 @@
 import React, { memo, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { BookItem } from "../BookItem";
 import {
   fetchNewBooks,
   getNewBooks,
   useAppDispatch,
   useAppSelector,
-} from "../../store";
+} from "store";
+import { BookItem } from "../BookItem";
 import { StyledSlider } from "./style";
 
 export const SliderCom = memo(() => {

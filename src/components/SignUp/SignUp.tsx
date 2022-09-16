@@ -100,7 +100,7 @@ export const SignUp = ({ handleModal }: Iprops) => {
         <ErrorMessage> {errors.password.message}</ErrorMessage>
       )}
       <Button type="submit">
-        {isLoading ? <Loader size={"25"} /> : "Sign up"}
+        {isLoading ? <Loader size={"25px"} /> : "Sign up"}
       </Button>
     </StyledSignUp>
   );

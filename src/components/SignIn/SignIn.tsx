@@ -99,7 +99,7 @@ export const SignIn = () => {
         <ErrorMessage> {errors.password.message}</ErrorMessage>
       )}
       <Button type="submit">
-        {isLoading ? <Loader size={"25"} /> : "Sign In"}
+        {isLoading ? <Loader size={"25px"} /> : "Sign In"}
       </Button>
     </StyledSignIn>
   );

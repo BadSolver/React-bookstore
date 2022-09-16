@@ -13,7 +13,7 @@ interface IProps {
 export const BooksList = ({ isLoading, error, books }: IProps) => {
   return (
     <>
-      {isLoading && <Loader size={"50"} />}
+      {isLoading && <Loader size={"50px"} />}
       <StyledBooksList>
         {error && <ErrorMessage text={error} />}
         {books.map((book) => {

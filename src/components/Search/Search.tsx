@@ -8,8 +8,8 @@ import { useAppDispatch } from "store";
 import {
   removeSearchValue,
   setSearchValue,
-} from "../../store/slices/searchSlice";
-import { trimSearchValue } from "../../utils";
+} from "store/slices/searchSlice";
+import { trimSearchValue } from "utils";
 import { StyledSearch, Input, Button } from "./style";
 
 export const Search = () => {

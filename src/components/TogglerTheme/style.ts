@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Color } from "ui";
 
 interface IButtonTheme {
-  title: any;
+  title: string;
 }
 
 export const StyledToggler = styled.div`

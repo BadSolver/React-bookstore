@@ -52,7 +52,7 @@ export const ResetPassword = () => {
       {errors.email && <ErrorMessage> {errors.email.message}</ErrorMessage>}
       {message && <ErrorMessage> {message}</ErrorMessage>}
       <Button type="submit">
-        {isLoading ? <Loader size={"25"} /> : "Reset Password"}
+        {isLoading ? <Loader size={"25px"} /> : "Reset Password"}
       </Button>
     </Form>
   );
