@@ -1,12 +1,12 @@
-import { EmptyCartIcon } from "../../assets";
-import { ArrowBack, Cart } from "../../components";
+import { EmptyCartIcon } from "assets";
+import { ArrowBack, Cart } from "components";
 import {
   clearCart,
   getCart,
   useAppDispatch,
   useAppSelector,
-} from "../../store";
-import { IBookDetails } from "../../types";
+} from "store";
+import { IBookDetails } from "types";
 import { Button, ButtonContainer, StyledCartPages, Title } from "./style";
 
 export const CartPages = () => {

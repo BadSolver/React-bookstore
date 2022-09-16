@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color, fonts } from "../../ui";
+import { Color, fonts } from "ui";
 import { StyledButton } from "../Button/style";
 
 export const StyledCart = styled.div`

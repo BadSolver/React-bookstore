@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fonts, Space } from "../../ui";
+import { fonts, Space } from "ui";
 
 export const StyledTitleH1 = styled.h1`
   margin-bottom: ${Space.SuperLarge};

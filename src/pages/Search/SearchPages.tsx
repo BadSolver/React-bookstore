@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { GrLinkPrevious, GrLinkNext } from "react-icons/gr";
-import { ArrowBack, BooksList, Search, Title } from "../../components";
-import { fetchSearchedBooks } from "../../store/slices/searchSlice";
-import { decrementPage, useAppDispatch, useAppSelector } from "../../store";
-import { getPagesCount } from "../../utils";
-import { useWindowSize } from "../../hooks";
-import { getSearch } from "../../store/selectors";
+import { ArrowBack, BooksList, Search, Title } from "components";
+import { fetchSearchedBooks } from "store/slices/searchSlice";
+import { decrementPage, useAppDispatch, useAppSelector } from "store";
+import { getPagesCount } from "utils";
+import { useWindowSize } from "hooks";
+import { getSearch } from "store/selectors";
 
 import {
   StyledSearch,

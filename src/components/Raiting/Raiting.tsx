@@ -18,7 +18,7 @@ export const Raiting = ({ rating }: IProps) => {
           return (
             <FaStar
               key={index}
-              style={{ fontSize: "18px", color: "#ffd700" }}
+              style={{ fontSize: "18px", color: "goldenrod" }}
             />
           );
         } else return <BsStar key={index} style={{ fontSize: "18px" }} />;

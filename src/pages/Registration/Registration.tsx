@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { ArrowBack, ModalWindow, SignIn, SignUp } from "../../components";
-import { useToggle } from "../../hooks";
+import { ArrowBack, ModalWindow, SignIn, SignUp } from "components";
+import { useToggle } from "hooks";
 import { Container, Form, Sign, StyledRegistrtation } from "./style";
 
 export const Registration = () => {

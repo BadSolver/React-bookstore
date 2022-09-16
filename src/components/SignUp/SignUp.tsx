@@ -1,11 +1,12 @@
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { CSSProperties, useState } from "react";
+import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { ClipLoader } from "react-spinners";
-import { getFirebaseMessageError } from "../../utils";
-import { setUser, useAppDispatch } from "../../store";
+import { Loader } from "components";
+import { getFirebaseMessageError } from "utils";
+import { setUser, useAppDispatch } from "store";
 import { ErrorMessage } from "../SignIn/style";
 import { StyledSignUp, Input, Title, Button } from "./style";
+
 
 type SignUpValues = {
   name: string;
@@ -16,11 +17,6 @@ type SignUpValues = {
 interface Iprops {
   handleModal: () => void;
 }
-
-const override: CSSProperties = {
-  display: "block",
-  margin: "0 auto",
-};
 
 export const SignUp = ({ handleModal }: Iprops) => {
   const dispatch = useAppDispatch();
@@ -104,11 +100,7 @@ export const SignUp = ({ handleModal }: Iprops) => {
         <ErrorMessage> {errors.password.message}</ErrorMessage>
       )}
       <Button type="submit">
-        {isLoading ? (
-          <ClipLoader cssOverride={override} size={25} color={"black"} />
-        ) : (
-          "Sign up"
-        )}
+        {isLoading ? <Loader size={"25px"} /> : "Sign up"}
       </Button>
     </StyledSignUp>
   );

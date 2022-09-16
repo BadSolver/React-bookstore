@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import { Color, Space, fonts } from "../../ui";
+import { Color, Space, fonts } from "ui";
 
 export const StyledBookItem = styled.div`
   width: 280px;
   margin: 0 auto;
+  
 `;
 export const ItemBackground = styled.div`
   display: flex;
@@ -14,6 +15,7 @@ export const ItemBackground = styled.div`
   background-color: white;
   border-radius: 10px;
   box-shadow: 1px 4px 17px rgba(0, 0, 0, 0.5);
+  
 `;
 
 export const Image = styled.img`

@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { AxiosError } from "axios";
-import { bookStoreAPI } from "../../services/bookStoreApi/bookStoreApi";
-import { SearchedBooksResponse, SearchParams } from "../../types";
+import { bookStoreAPI } from "services/bookStoreApi/bookStoreApi";
+import { SearchedBooksResponse, SearchParams } from "types";
 import { isPendingAction, isRejectedAction } from "../utils";
 
 type SearchState = {

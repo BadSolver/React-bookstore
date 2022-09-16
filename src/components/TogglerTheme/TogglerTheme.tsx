@@ -1,21 +1,33 @@
-import React from "react";
-import { useAppDispatch } from "../../store";
-import { setThemesDark, setThemesLight } from "../../store/slices/userSlice";
+import React, { memo, useState } from "react";
+import { useAppDispatch } from "store";
+import { setThemesDark, setThemesLight } from "store/slices/userSlice";
 import { ButtonTheme, StyledToggler } from "./style";
 
-export const TogglerTheme = () => {
+export const TogglerTheme = memo(() => {
+  const [title, setTitle] = useState<boolean>(false);
+
   const dispatch = useAppDispatch();
   const handleThemeLight = () => {
+    setTitle((title) => !title);
     dispatch(setThemesLight());
   };
   const handleThemeDark = () => {
+    setTitle((title) => !title);
     dispatch(setThemesDark());
   };
 
   return (
     <StyledToggler>
-      <ButtonTheme onClick={handleThemeLight}>light</ButtonTheme>
-      <ButtonTheme onClick={handleThemeDark}> dark</ButtonTheme>
+      {title && (
+        <ButtonTheme onClick={handleThemeLight} title={title.toString()}>
+          {title && "Light"}
+        </ButtonTheme>
+      )}
+      {!title && (
+        <ButtonTheme onClick={handleThemeDark} title={title.toString()}>
+          {!title && "Dark"}
+        </ButtonTheme>
+      )}
     </StyledToggler>
   );
-};
+});

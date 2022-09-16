@@ -1,6 +1,6 @@
-import { FavoritesImage } from "../../assets";
-import { ArrowBack, FavoritesItem, ScrollUp } from "../../components";
-import { getFavorites, useAppSelector } from "../../store";
+import { FavoritesImage } from "assets";
+import { ArrowBack, FavoritesItem, ScrollUp } from "components";
+import { getFavorites, useAppSelector } from "store";
 import { StyledFavorites, StyledTitleFavorites, Title } from "./style";
 
 export const Favorites = () => {

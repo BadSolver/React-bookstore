@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { StyledButton } from "../../components/Button/style";
-import { Color, fonts, Space } from "../../ui";
+import { StyledButton } from "components/Button/style";
+import { Color, fonts, Space } from "ui";
 
 export const StyledBookDetails = styled.div`
   margin-top: 10px;

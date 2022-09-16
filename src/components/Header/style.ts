@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Space, Color } from "../../ui";
+import { Space, Color } from "ui";
 
 export const StyledHeader = styled.header`
   margin-top: ${Space.Medium};

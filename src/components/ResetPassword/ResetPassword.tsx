@@ -1,22 +1,15 @@
+import { Loader } from "components";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
-import React, { CSSProperties, useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { ClipLoader } from "react-spinners";
+import { getFirebaseMessageError } from "utils";
 import { app } from "../../firebase";
-import { getFirebaseMessageError } from "../../utils";
 import { ErrorMessage } from "../SignIn/style";
 import { Button, Form, Input, Title } from "./style";
 
 interface InputType {
   email: string;
 }
-
-const override: CSSProperties = {
-  display: "block",
-  color: "white",
-  margin: "0 auto",
-};
-
 export const ResetPassword = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [message, setMessage] = useState<string>("");
@@ -59,11 +52,7 @@ export const ResetPassword = () => {
       {errors.email && <ErrorMessage> {errors.email.message}</ErrorMessage>}
       {message && <ErrorMessage> {message}</ErrorMessage>}
       <Button type="submit">
-        {isLoading ? (
-          <ClipLoader cssOverride={override} size={30} color={"white"} />
-        ) : (
-          "Reset Password"
-        )}
+        {isLoading ? <Loader size={"25px"} /> : "Reset Password"}
       </Button>
     </Form>
   );

@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import { BooksList, Subscribe, Title } from "../../components";
+import { BooksList, Subscribe, Title } from "components";
 import {
   fetchNewBooks,
   getNewBooks,
   useAppDispatch,
   useAppSelector,
-} from "../../store";
+} from "store";
 import { StyledHome } from "./style";
 
 export const Home = () => {
