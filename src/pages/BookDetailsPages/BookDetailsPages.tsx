@@ -6,13 +6,13 @@ import {
   Subscribe,
   TabBar,
   Title,
-} from "../../components";
+} from "components";
 import {
   fetchDetailsBook,
   getBookDetails,
   useAppDispatch,
   useAppSelector,
-} from "../../store";
+} from "store";
 
 export const BookDetailsPage = () => {
   const { isbn = "" } = useParams();

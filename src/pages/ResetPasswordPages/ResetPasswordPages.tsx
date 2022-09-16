@@ -1,4 +1,4 @@
-import { ArrowBack, ResetPassword } from "../../components";
+import { ArrowBack, ResetPassword } from "components";
 import { StyledReset } from "./style";
 
 export const ResetPasswordPages = () => {

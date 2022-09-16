@@ -1,11 +1,11 @@
+import { Loader } from "components";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import React, { CSSProperties, useState } from "react";
+import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { ClipLoader } from "react-spinners";
-import { ROUTE } from "../../router";
-import { setUser, useAppDispatch } from "../../store";
-import { getFirebaseMessageError } from "../../utils";
+import { ROUTE } from "router";
+import { setUser, useAppDispatch } from "store";
+import { getFirebaseMessageError } from "utils";
 import {
   Button,
   ErrorMessage,
@@ -19,10 +19,6 @@ type SignInValues = {
   name: string;
   email: string;
   password: string;
-};
-const override: CSSProperties = {
-  display: "block",
-  margin: "0 auto",
 };
 
 export const SignIn = () => {
@@ -103,11 +99,7 @@ export const SignIn = () => {
         <ErrorMessage> {errors.password.message}</ErrorMessage>
       )}
       <Button type="submit">
-        {isLoading ? (
-          <ClipLoader cssOverride={override} size={25} color={"black"} />
-        ) : (
-          "Sign In"
-        )}
+        {isLoading ? <Loader size={"25"} /> : "Sign In"}
       </Button>
     </StyledSignIn>
   );

@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useAppDispatch } from "../../store";
-import { addItem } from "../../store/slices/cartSlice";
-import { removeItemFavorites } from "../../store/slices/favoritesSlice";
-import { IBookDetails } from "../../types";
+import { useAppDispatch } from "store";
+import { addItem } from "store/slices/cartSlice";
+import { removeItemFavorites } from "store/slices/favoritesSlice";
+import { IBookDetails } from "types";
 import { Raiting } from "../Raiting";
 import {
   StyledBookItem,

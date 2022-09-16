@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color, fonts, Space } from "../../ui";
+import { Color, fonts, Space } from "ui";
 import { StyledButton } from "../Button/style";
 
 export const StyledBookItem = styled.div`

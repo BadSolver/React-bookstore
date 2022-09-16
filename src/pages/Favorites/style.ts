@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fonts } from "../../ui";
+import { fonts } from "ui";
 
 export const StyledTitleFavorites = styled.div`
   display: flex;

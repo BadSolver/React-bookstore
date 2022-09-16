@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useAppDispatch } from "../../store";
-import { setThemesDark, setThemesLight } from "../../store/slices/userSlice";
+import { useAppDispatch } from "store";
+import { setThemesDark, setThemesLight } from "store/slices/userSlice";
 import { ButtonTheme, StyledToggler } from "./style";
 
 export const TogglerTheme = () => {

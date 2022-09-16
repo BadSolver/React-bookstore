@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color } from "../../ui";
+import { Color } from "ui";
 
 export const StyledReset = styled.div`
   margin: 0 auto;

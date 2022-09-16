@@ -1,13 +1,13 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
-import { useWindowSize } from "../../hooks";
-import { getCart, useAppDispatch, useAppSelector } from "../../store";
+import { useWindowSize } from "hooks";
+import { getCart, useAppDispatch, useAppSelector } from "store";
 import {
   countPlus,
   countMinus,
   removeItem,
-} from "../../store/slices/cartSlice";
-import { IBookDetails } from "../../types";
+} from "store/slices/cartSlice";
+import { IBookDetails } from "types";
 import {
   Button,
   ButtonCount,

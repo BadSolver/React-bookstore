@@ -1,5 +1,5 @@
 import React from "react";
-import { removeUser, useAppDispatch } from "../../store";
+import { removeUser, useAppDispatch } from "store";
 import { Button, StyledLogOut } from "./style";
 
 export const LogOut = () => {

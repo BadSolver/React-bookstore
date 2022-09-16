@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { IBookDetails } from "../../types";
-import { Color } from "../../ui";
+import { IBookDetails } from "types";
+import { Color } from "ui";
 
 interface ICart {
   cart: IBookDetails[];

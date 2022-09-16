@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color } from "../../ui";
+import { Color } from "ui";
 
 export const NotFoundStyled = styled.div`
   width: 1120px;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Space, Color, fonts } from "../../ui";
+import { Space, Color, fonts } from "ui";
 
 export const StyledFooter = styled.footer`
   display: flex;

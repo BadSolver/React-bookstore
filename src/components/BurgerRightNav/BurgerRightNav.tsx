@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { useAuth, useWindowSize } from "../../hooks";
-import { ROUTE } from "../../router";
-import { removeUser, useAppDispatch } from "../../store";
+import { useAuth, useWindowSize } from "hooks";
+import { ROUTE } from "router";
+import { removeUser, useAppDispatch } from "store";
 import { TogglerTheme } from "../TogglerTheme";
 
 import {

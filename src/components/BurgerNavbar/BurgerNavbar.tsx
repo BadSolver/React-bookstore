@@ -4,10 +4,10 @@ import {
   CartHeaderIcon,
   HeartHeaderIcon,
   UserHeaderIcon,
-} from "../../assets";
-import { useWindowSize } from "../../hooks";
-import { ROUTE } from "../../router";
-import { getCart, getFavorites, useAppSelector } from "../../store";
+} from "assets";
+import { useWindowSize } from "hooks";
+import { ROUTE } from "router";
+import { getCart, getFavorites, useAppSelector } from "store";
 import { BurgerMenu } from "../BurgerMenu";
 import { Search } from "../Search";
 import { TogglerTheme } from "../TogglerTheme";

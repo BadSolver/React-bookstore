@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Space } from "../../ui";
+import { Space } from "ui";
 
 export const StyledHome = styled.div`
   margin-top: ${Space.ExtraLarge};

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { StyledButton } from "../../components/Button/style";
-import { fonts } from "../../ui";
+import { StyledButton } from "components/Button/style";
+import { fonts } from "ui";
 
 export const StyledCartPages = styled.div`
   display: flex;

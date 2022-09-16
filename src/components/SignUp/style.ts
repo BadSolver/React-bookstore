@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fonts, Color } from "../../ui";
+import { fonts, Color } from "ui";
 import { StyledButton } from "../Button/style";
 
 export const StyledSignUp = styled.form`

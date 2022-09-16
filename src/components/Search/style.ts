@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color, fonts } from "../../ui";
+import { Color, fonts } from "ui";
 
 export const Input = styled.input`
   width: 90%;

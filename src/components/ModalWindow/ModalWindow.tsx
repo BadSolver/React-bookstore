@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ROUTE } from "../../router";
+import { ROUTE } from "router";
 import { Portal, PortalTarget } from "../Portal";
 import { Button, Container, StyledModalWindow, Title, Wrapper } from "./style";
 
