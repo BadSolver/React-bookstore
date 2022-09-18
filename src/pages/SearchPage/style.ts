@@ -39,7 +39,7 @@ export const PrevText = styled.span`
 export const NextText = styled.span`
   margin-right: 30px;
 `;
-export const SearchContainer = styled.form`
+export const SearchContainer = styled.div`
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
