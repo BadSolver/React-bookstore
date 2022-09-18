@@ -6,5 +6,5 @@ interface IProps {
 }
 
 export const Button = ({ text }: IProps) => {
-  return <StyledButton>{text}</StyledButton>;
+  return <StyledButton whileHover={{scale: 1.1}}>{text}</StyledButton>;
 };

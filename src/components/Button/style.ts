@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Color, fonts } from "ui";
 
-export const StyledButton = styled.button`
+export const StyledButton = styled(motion.button)`
   box-sizing: border-box;
   display: block;
   margin: 0 auto;
