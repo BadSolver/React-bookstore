@@ -21,6 +21,7 @@ export const TabItem = styled.button<Iprops>`
   :hover {
     color: ${Color.Black};
     transition: all 0.5s;
+    scale: 1.2;
   }
   &:focus {
     color: ${Color.PrimaryDark};
