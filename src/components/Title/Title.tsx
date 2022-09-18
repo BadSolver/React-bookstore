@@ -2,7 +2,7 @@ import React from "react";
 import { StyledTitleH1 } from "./style";
 
 interface IProps {
-  text: string;
+  text: string | null;
 }
 
 export const Title = ({ text }: IProps) => {
