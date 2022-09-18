@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
-import { Space, Color } from "../../ui";
+import { Space, Color } from "ui";
 
-export const StyledHeader = styled.header`
+export const StyledHeader = styled(motion.header)`
   margin-top: ${Space.Medium};
   padding-bottom: 33px;
   border-bottom: 1px solid ${Color.Gray};

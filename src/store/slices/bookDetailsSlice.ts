@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { bookStoreAPI } from "../../services/bookStoreApi";
-import { IBookDetails } from "../../types";
+import { bookStoreAPI } from "services/bookStoreApi";
+import { IBookDetails } from "types";
 import { BookDetails } from "../types";
 import { isPendingAction, isRejectedAction } from "../utils";
 
@@ -25,7 +25,7 @@ const initialState: BookDetails = {
   },
   error: null,
   isLoading: false,
-  amount: 0
+  amount: 0,
 };
 
 export const fetchDetailsBook = createAsyncThunk<

@@ -19,7 +19,9 @@ enum ErrorMessage {
   WRONG_PASSWORD = "This password is invalid",
 }
 
-export const getFirebaseMessageError = (code: FirebaseMessageErrors): ErrorMessage => {
+export const getFirebaseMessageError = (
+  code: FirebaseMessageErrors
+): ErrorMessage => {
   switch (code) {
     case "auth/email-already-exists":
       return ErrorMessage.EMAIL_ALREADY_EXISTS;

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useWindowSize } from "../../hooks";
+import { useWindowSize } from "hooks";
 import { RightNav } from "../BurgerRightNav";
 import { StyledBurger } from "./style";
 

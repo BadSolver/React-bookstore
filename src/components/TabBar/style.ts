@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color, fonts } from "../../ui";
+import { Color, fonts } from "ui";
 
 interface Iprops {
   isActive?: boolean;
@@ -20,13 +20,15 @@ export const TabItem = styled.button<Iprops>`
   cursor: pointer;
   :hover {
     color: ${Color.Black};
-    transition: all .5s;
+    transition: all 0.5s;
+    scale: 1.2;
   }
   &:focus {
     color: ${Color.PrimaryDark};
   }
 
-  ${(props) => (props.isActive ? `color: ${Color.PrimaryDark}` : `${Color.White}`)}
+  ${(props) =>
+    props.isActive ? `color: ${Color.PrimaryDark}` : `${Color.White}`}
 `;
 
 export const Container = styled.div`

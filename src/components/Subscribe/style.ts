@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fonts, Color } from "../../ui";
+import { fonts, Color } from "ui";
 import { StyledButton } from "../Button/style";
 
 export const StyledSubscribe = styled.div`
@@ -57,7 +57,6 @@ export const Button = styled(StyledButton)`
   cursor: pointer;
 
   @media (max-width: 568px) {
-    
     padding: 5px 0;
   }
 `;

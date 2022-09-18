@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { bookStoreAPI } from "../../services/bookStoreApi";
-import { INewBooksApi } from "../../types";
+import { bookStoreAPI } from "services/bookStoreApi";
+import { INewBooksApi } from "types";
 import { NewBooks } from "../types";
 import { isPendingAction, isRejectedAction } from "../utils";
 

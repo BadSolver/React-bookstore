@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useAppDispatch } from "../../store";
-import { addItem } from "../../store/slices/cartSlice";
-import { removeItemFavorites } from "../../store/slices/favoritesSlice";
-import { IBookDetails } from "../../types";
+import { useAppDispatch } from "store";
+import { addItem } from "store/slices/cartSlice";
+import { removeItemFavorites } from "store/slices/favoritesSlice";
+import { IBookDetails } from "types";
 import { Raiting } from "../Raiting";
 import {
   StyledBookItem,
@@ -59,7 +59,9 @@ export const FavoritesItem = ({ book }: IProps) => {
         </SubTitle>
         <RateWithBuy>
           <Raiting rating={book.rating} />
-          <Button onClick={handleAddToCart}>Add to Cart</Button>
+          <Button onClick={handleAddToCart} whileTap={{ scale: 1.4 }}>
+            Add to Cart
+          </Button>
         </RateWithBuy>
       </StyledBookItem>
     </>

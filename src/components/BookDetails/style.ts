@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import { StyledButton } from "../../components/Button/style";
-import { Color, fonts, Space } from "../../ui";
+import { StyledButton } from "components/Button/style";
+import { Color, fonts, Space } from "ui";
+import { motion } from "framer-motion";
 
-export const StyledBookDetails = styled.div`
+export const StyledBookDetails = styled(motion.div)`
   margin-top: 10px;
 `;
 
@@ -87,7 +88,6 @@ export const LabelText = styled.div`
   @media (max-width: 800px) {
     font-size: 16px;
   }
-  
 `;
 export const ValueText = styled.p`
   padding-top: 6px;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IBookDetails } from "../../types";
+import { IBookDetails } from "types";
 import {
   Container,
   ContainerDescription,

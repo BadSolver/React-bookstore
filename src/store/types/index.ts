@@ -1,4 +1,4 @@
-import { IBookDetails, INewBooksApi } from "../../types";
+import { IBookDetails, INewBooksApi } from "types";
 
 export type BookDetails = {
   book: IBookDetails;

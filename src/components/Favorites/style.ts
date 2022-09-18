@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color, fonts, Space } from "../../ui";
+import { Color, fonts, Space } from "ui";
 import { StyledButton } from "../Button/style";
 
 export const StyledBookItem = styled.div`
@@ -38,6 +38,7 @@ export const Cost = styled.div`
   padding-left: 10px;
   background: transparent;
   color: black;
+  ${fonts.BodyBold}
 `;
 export const Link = styled.div``;
 export const Description = styled.div`

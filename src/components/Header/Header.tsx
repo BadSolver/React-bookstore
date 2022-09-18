@@ -3,7 +3,13 @@ import { StyledHeader } from "./style";
 
 export const Header = () => {
   return (
-    <StyledHeader>
+    <StyledHeader
+      animate={{ x: 0 }}
+      initial={{ x: 2500 }}
+      transition={{
+        duration: 1.5,
+      }}
+    >
       <BurgerNavbar />
     </StyledHeader>
   );

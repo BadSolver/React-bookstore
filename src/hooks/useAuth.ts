@@ -5,7 +5,7 @@ export const useAuth = () => {
   const { email, userDate, id } = useAppSelector(getUserInfo);
 
   return {
-    isAuth: email,
+    isAuth: !!email,
     email,
     userDate,
     id,

@@ -1,8 +1,9 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
-import { Color, fonts } from "../../ui";
+import { Color, fonts } from "ui";
 import { StyledButton } from "../Button/style";
 
-export const StyledModalWindow = styled.div`
+export const StyledModalWindow = styled(motion.div)`
   position: absolute;
   display: flex;
   justify-content: center;
@@ -10,7 +11,7 @@ export const StyledModalWindow = styled.div`
   top: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
 `;
 
 export const Wrapper = styled.div`
@@ -18,23 +19,25 @@ export const Wrapper = styled.div`
   max-width: 500px;
   margin-top: 20px;
   border: 1px solid ${Color.Secondary};
-  border-radius: 10px;
   background: ${Color.White};
+  border-radius: 10px;
 `;
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
 `;
 
 export const Title = styled.h2`
   ${fonts.H3}
-  padding: 10px;
+  padding: 30px;
   padding-top: 30px;
+  margin-top: 20px;
 `;
 
-export const Button = styled(StyledButton)`
-  display: block;
+export const Button = styled(motion(StyledButton))`
   margin: 0;
   padding: 10px 10px;
   width: 60%;

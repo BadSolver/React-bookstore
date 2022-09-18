@@ -1,11 +1,10 @@
-import React, { CSSProperties } from "react";
-import { ClipLoader } from "react-spinners";
-import { ArrowBack, ErrorMessage, Raiting, Title } from "../../components";
-import { useToggle } from "../../hooks";
-import { useAppDispatch } from "../../store";
-import { addItem } from "../../store/slices/cartSlice";
-import { addItemFavorites } from "../../store/slices/favoritesSlice";
-import { IBookDetails } from "../../types";
+import React from "react";
+import { ArrowBack, ErrorMessage, Loader, Raiting, Title } from "components";
+import { useToggle } from "hooks";
+import { useAppDispatch } from "store";
+import { addItem } from "store/slices/cartSlice";
+import { addItemFavorites } from "store/slices/favoritesSlice";
+import { IBookDetails } from "types";
 import {
   BackGround,
   Button,
@@ -22,11 +21,6 @@ import {
   Image,
   ButtonContainer,
 } from "./style";
-
-const override: CSSProperties = {
-  display: "block",
-  margin: "100px auto 0 auto",
-};
 
 interface IProps {
   isLoading: boolean;
@@ -56,10 +50,16 @@ export const BookDetails = ({
   return (
     <>
       <ArrowBack />
-      {isLoading && <ClipLoader cssOverride={override} size={50} />}
+      {isLoading && <Loader size={"50px"} />}
       {error && <ErrorMessage text={error} />}
       {book && (
-        <StyledBookDetails>
+        <StyledBookDetails
+          animate={{ x: 0 }}
+          initial={{ x: 2500 }}
+          transition={{
+            duration: 1.5,
+          }}
+        >
           <Title text={book.title}></Title>
           <DetailsContainer>
             <BackGround>
@@ -111,8 +111,12 @@ export const BookDetails = ({
                 )}
               </Options>
               <ButtonContainer>
-                <Button onClick={handleAddToCart}>Add to Cart</Button>
-                <Button onClick={hadleAddToFavorites}>Add to favorites</Button>
+                <Button onClick={handleAddToCart} whileTap={{ scale: 1.4 }}>
+                  Add to Cart
+                </Button>
+                <Button onClick={hadleAddToFavorites} whileTap={{ scale: 1.4 }}>
+                  Add to favorites
+                </Button>
               </ButtonContainer>
             </Description>
           </DetailsContainer>

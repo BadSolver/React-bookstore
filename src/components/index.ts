@@ -12,6 +12,7 @@ import { ErrorMessage } from "./ErrorMessage";
 import { FavoritesItem } from "./Favorites";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import { Loader } from "./Loader";
 import { LogOut } from "./LogOut";
 import { MainTemplate } from "./MainTemplate";
 import { ModalWindow } from "./ModalWindow";
@@ -62,4 +63,6 @@ export {
   FavoritesItem,
   ScrollUp,
   TogglerTheme,
+  Loader,
+  
 };
