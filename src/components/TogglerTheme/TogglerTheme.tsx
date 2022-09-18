@@ -19,12 +19,20 @@ export const TogglerTheme = memo(() => {
   return (
     <StyledToggler>
       {title && (
-        <ButtonTheme onClick={handleThemeLight} title={title.toString()}>
+        <ButtonTheme
+          onClick={handleThemeLight}
+          title={title.toString()}
+          whileTap={{ scale: 1.15 }}
+        >
           {title && "Light"}
         </ButtonTheme>
       )}
       {!title && (
-        <ButtonTheme onClick={handleThemeDark} title={title.toString()}>
+        <ButtonTheme
+          onClick={handleThemeDark}
+          title={title.toString()}
+          whileTap={{ scale: 1.15 }}
+        >
           {!title && "Dark"}
         </ButtonTheme>
       )}
