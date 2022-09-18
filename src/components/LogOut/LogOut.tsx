@@ -11,7 +11,7 @@ export const LogOut = () => {
 
   return (
     <StyledLogOut>
-      <Button onClick={handleRemove}> Log out </Button>
+      <Button onClick={handleRemove} whileTap={{ scale: 1.15 }}> Log out </Button>
     </StyledLogOut>
   );
 };
