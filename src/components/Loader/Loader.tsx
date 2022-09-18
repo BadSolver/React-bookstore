@@ -7,7 +7,9 @@ interface Iprops {
 
 export const Loader = ({ size }: Iprops) => {
   const override: CSSProperties = {
-    display: "block",
+    display: "grid",
+    alignSelf: "center",
+    justifySelf: "center",
     margin: "0 auto",
     background: "transparent",
   };

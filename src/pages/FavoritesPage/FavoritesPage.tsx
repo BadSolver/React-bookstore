@@ -1,16 +1,21 @@
 import { FavoritesImage } from "assets";
-import { ArrowBack, FavoritesItem, ScrollUp } from "components";
+import { ArrowBack, FavoritesItem } from "components";
 import { getFavorites, useAppSelector } from "store";
 import { StyledFavorites, StyledTitleFavorites, Title } from "./style";
 
-export const Favorites = () => {
+export const FavoritesPage = () => {
   const { item } = useAppSelector(getFavorites);
 
   return (
     <>
-      <ScrollUp />
       <ArrowBack />
-      <StyledFavorites>
+      <StyledFavorites
+        animate={{ x: 0 }}
+        initial={{ x: 2500 }}
+        transition={{
+          duration: 1.5,
+        }}
+      >
         {item.map((book) => (
           <FavoritesItem book={book} key={book.isbn13} />
         ))}

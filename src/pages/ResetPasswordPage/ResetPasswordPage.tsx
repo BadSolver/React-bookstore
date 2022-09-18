@@ -1,7 +1,7 @@
 import { ArrowBack, ResetPassword } from "components";
 import { StyledReset } from "./style";
 
-export const ResetPasswordPages = () => {
+export const ResetPasswordPage = () => {
   return (
     <>
       <ArrowBack />

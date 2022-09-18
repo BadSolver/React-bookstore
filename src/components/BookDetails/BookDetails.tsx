@@ -53,7 +53,13 @@ export const BookDetails = ({
       {isLoading && <Loader size={"50px"} />}
       {error && <ErrorMessage text={error} />}
       {book && (
-        <StyledBookDetails>
+        <StyledBookDetails
+          animate={{ x: 0 }}
+          initial={{ x: 2500 }}
+          transition={{
+            duration: 1.5,
+          }}
+        >
           <Title text={book.title}></Title>
           <DetailsContainer>
             <BackGround>
@@ -105,8 +111,12 @@ export const BookDetails = ({
                 )}
               </Options>
               <ButtonContainer>
-                <Button onClick={handleAddToCart}>Add to Cart</Button>
-                <Button onClick={hadleAddToFavorites}>Add to favorites</Button>
+                <Button onClick={handleAddToCart} whileTap={{ scale: 1.4 }}>
+                  Add to Cart
+                </Button>
+                <Button onClick={hadleAddToFavorites} whileTap={{ scale: 1.4 }}>
+                  Add to favorites
+                </Button>
               </ButtonContainer>
             </Description>
           </DetailsContainer>

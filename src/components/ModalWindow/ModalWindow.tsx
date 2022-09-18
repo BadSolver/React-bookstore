@@ -1,6 +1,5 @@
+import { AnimatePresence } from "framer-motion";
 import React from "react";
-import { Link } from "react-router-dom";
-import { ROUTE } from "router";
 import { Portal, PortalTarget } from "../Portal";
 import { Button, Container, StyledModalWindow, Title, Wrapper } from "./style";
 
@@ -10,18 +9,28 @@ interface IProps {
 }
 
 export const ModalWindow = ({ isOpen, handleModal }: IProps) => {
-  return isOpen ? (
-    <Portal target={PortalTarget.MODAL}>
-      <StyledModalWindow onClick={handleModal}>
-        <Wrapper>
-          <Container>
-            <Title>Congratulations, registration was successful</Title>
-            <Link to={ROUTE.SIGNIN}>
-              <Button>Go to Sign In</Button>
-            </Link>
-          </Container>
-        </Wrapper>
-      </StyledModalWindow>
-    </Portal>
-  ) : null;
+  return (
+    <AnimatePresence>
+      {isOpen ? (
+        <Portal target={PortalTarget.MODAL}>
+          <StyledModalWindow
+            onClick={handleModal}
+            animate={{ x: 0 }}
+            initial={{ x: 2000 }}
+            exit={{ x: 2000 }}
+            transition={{
+              duration: 1,
+            }}
+          >
+            <Wrapper>
+              <Container>
+                <Title>Congratulations, registration was successful</Title>
+                <Button>Go to Sign In</Button>
+              </Container>
+            </Wrapper>
+          </StyledModalWindow>
+        </Portal>
+      ) : null}
+    </AnimatePresence>
+  );
 };

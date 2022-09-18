@@ -1,4 +1,3 @@
-import { Loader } from "components";
 import { INewBooksApi } from "types";
 import { BookItem } from "../BookItem";
 import { ErrorMessage } from "../ErrorMessage";
@@ -13,11 +12,11 @@ interface IProps {
 export const BooksList = ({ isLoading, error, books }: IProps) => {
   return (
     <>
-      {isLoading && <Loader size={"50px"} />}
+      
       <StyledBooksList>
         {error && <ErrorMessage text={error} />}
-        {books.map((book) => {
-          return <BookItem book={book} key={book.isbn13} />;
+        {books.map((book, index) => {
+          return <BookItem book={book} key={book.isbn13} index={index} />;
         })}
       </StyledBooksList>
     </>

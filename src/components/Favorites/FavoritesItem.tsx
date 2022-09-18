@@ -59,7 +59,9 @@ export const FavoritesItem = ({ book }: IProps) => {
         </SubTitle>
         <RateWithBuy>
           <Raiting rating={book.rating} />
-          <Button onClick={handleAddToCart}>Add to Cart</Button>
+          <Button onClick={handleAddToCart} whileTap={{ scale: 1.4 }}>
+            Add to Cart
+          </Button>
         </RateWithBuy>
       </StyledBookItem>
     </>

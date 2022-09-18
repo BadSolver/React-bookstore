@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { Color } from "ui";
 
 export const StyledSlider = styled.div`
+  .slick-track {
+    margin-top: 20px;
+  }
   .slick-arrow.slick-prev {
     z-index: 100;
   }

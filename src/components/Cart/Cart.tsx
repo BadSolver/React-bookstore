@@ -102,7 +102,7 @@ export const Cart = memo(({ book }: IProps) => {
                       "$"}
                 </Cost>
               </CostContainer>
-              <Button onClick={handleDeleteBook}>✖</Button>
+              <Button onClick={handleDeleteBook} whileHover={{ scale: 1.4 }}>✖</Button>
             </CountContainer>
           </>
         )}

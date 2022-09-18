@@ -3,10 +3,8 @@ import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Loader } from "components";
 import { getFirebaseMessageError } from "utils";
-import { setUser, useAppDispatch } from "store";
 import { ErrorMessage } from "../SignIn/style";
 import { StyledSignUp, Input, Title, Button } from "./style";
-
 
 type SignUpValues = {
   name: string;
@@ -19,8 +17,6 @@ interface Iprops {
 }
 
 export const SignUp = ({ handleModal }: Iprops) => {
-  const dispatch = useAppDispatch();
-
   const {
     register,
     handleSubmit,
@@ -39,14 +35,7 @@ export const SignUp = ({ handleModal }: Iprops) => {
     setIsLoading(true);
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
-      .then(({ user }) => {
-        dispatch(
-          setUser({
-            email: user.email,
-            id: user.uid,
-            userDate: user.metadata.creationTime,
-          })
-        );
+      .then(() => {
         handleModal();
       })
       .catch((error) => {
@@ -99,7 +88,7 @@ export const SignUp = ({ handleModal }: Iprops) => {
       {errors.password && (
         <ErrorMessage> {errors.password.message}</ErrorMessage>
       )}
-      <Button type="submit">
+      <Button type="submit" whileTap={{ scale: 1.15 }}>
         {isLoading ? <Loader size={"25px"} /> : "Sign up"}
       </Button>
     </StyledSignUp>

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Color } from "ui";
 
@@ -16,11 +17,13 @@ export const StyledToggler = styled.div`
   }
 `;
 
-export const ButtonTheme = styled.button<IButtonTheme>`
+export const ButtonTheme = styled(motion.button)<IButtonTheme>`
   background: black;
   color: white;
   border-color: white;
   padding: 10px 20px;
+  margin-right: 20px;
+  margin-left: 10px;
   background: transparent;
   border: 1px solid ${({ title }) => (title ? `${Color.Black} ` : "white")};
   border-radius: 10px;
