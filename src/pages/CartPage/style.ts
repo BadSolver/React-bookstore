@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { StyledButton } from "components/Button/style";
 import { fonts } from "ui";
+import { motion } from "framer-motion";
 
-export const StyledCartPages = styled.div`
+export const StyledCartPages = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;

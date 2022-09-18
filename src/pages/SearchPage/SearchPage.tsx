@@ -17,7 +17,7 @@ import {
   SearchContainer,
 } from "./style";
 
-export const SearchPages = () => {
+export const SearchPage = () => {
   const { searchParams, searchResponse, isLoading, error } =
     useAppSelector(getSearch);
   const { width = 0 } = useWindowSize();

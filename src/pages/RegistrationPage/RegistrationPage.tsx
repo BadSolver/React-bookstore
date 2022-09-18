@@ -3,7 +3,7 @@ import { ArrowBack, ModalWindow, SignIn, SignUp } from "components";
 import { useToggle } from "hooks";
 import { Container, Form, Sign, StyledRegistrtation } from "./style";
 
-export const Registration = () => {
+export const RegistrationPage = () => {
   const [signIn, setSignIn] = useState(false);
   const [signUp, setSignUp] = useState(true);
   const [isOpen, setIsOpen] = useToggle();
