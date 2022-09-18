@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { StyledButton } from "components/Button/style";
 import { Color, fonts, Space } from "ui";
+import { motion } from "framer-motion";
 
-export const StyledBookDetails = styled.div`
+export const StyledBookDetails = styled(motion.div)`
   margin-top: 10px;
 `;
 
