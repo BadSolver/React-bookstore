@@ -55,9 +55,9 @@ export const SearchPage = () => {
       <ArrowBack />
       <StyledSearch>
         <Title
-          // eslint-disable-next-line no-useless-concat
           text={
             searchParams.searchValue &&
+            // eslint-disable-next-line no-useless-concat
             searchParams.searchValue + " " + "search result"
           }
         />
