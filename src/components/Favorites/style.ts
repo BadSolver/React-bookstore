@@ -38,6 +38,7 @@ export const Cost = styled.div`
   padding-left: 10px;
   background: transparent;
   color: black;
+  ${fonts.BodyBold}
 `;
 export const Link = styled.div``;
 export const Description = styled.div`
