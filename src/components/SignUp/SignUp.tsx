@@ -1,5 +1,5 @@
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Loader } from "components";
 import { getFirebaseMessageError } from "utils";
@@ -10,6 +10,7 @@ type SignUpValues = {
   name: string;
   email: string;
   password: string;
+  passwordConfirm: string;
 };
 
 interface Iprops {
@@ -22,15 +23,18 @@ export const SignUp = ({ handleModal }: Iprops) => {
     handleSubmit,
     reset,
     formState: { errors },
+    watch,
   } = useForm<SignUpValues>({
     mode: "onSubmit",
     reValidateMode: "onSubmit",
   });
 
+  const password = useRef({});
+  password.current = watch("password", "");
   const [isLoading, setIsLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  const onSubmit: SubmitHandler<SignUpValues> = ({ email, password, name }) => {
+  const onSubmit: SubmitHandler<SignUpValues> = ({ email, password }) => {
     setErrorMsg(null);
     setIsLoading(true);
     const auth = getAuth();
@@ -66,10 +70,17 @@ export const SignUp = ({ handleModal }: Iprops) => {
         type="password"
         placeholder="Enter your password..."
         {...register("password", {
-          required: "Password is required",
+          required: {
+            value: true,
+            message: "Enter your password",
+          },
           minLength: {
             value: 6,
             message: "Password must be at least 6 characters",
+          },
+          maxLength: {
+            value: 20,
+            message: "Password cannot be more than 20 symbols",
           },
         })}
       />
@@ -77,16 +88,17 @@ export const SignUp = ({ handleModal }: Iprops) => {
       <Input
         type="password"
         placeholder="Confirm your password..."
-        {...register("password", {
-          required: "Password is required",
-          minLength: {
-            value: 6,
-            message: "Password must be at least 6 characters",
+        {...register("passwordConfirm", {
+          required: {
+            value: true,
+            message: "Confirm your password",
           },
+          validate: (value: string) =>
+            value === password.current || "Your password does not match. Please try again",
         })}
       />
-      {errors.password && (
-        <ErrorMessage> {errors.password.message}</ErrorMessage>
+      {errors.passwordConfirm && (
+        <ErrorMessage> {errors.passwordConfirm.message}</ErrorMessage>
       )}
       <Button type="submit" whileTap={{ scale: 1.15 }}>
         {isLoading ? <Loader size={"25px"} /> : "Sign up"}

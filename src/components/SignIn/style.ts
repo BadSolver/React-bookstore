@@ -16,7 +16,7 @@ export const Title = styled.p`
 
 export const Input = styled.input`
   width: 90%;
-  padding: 8px 10px;
+  padding: 14px 10px;
   border: 1px solid ${Color.Secondary};
   border-radius: 8px;
 `;

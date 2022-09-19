@@ -22,11 +22,11 @@ export const AppRouter = () => {
 
         <Route path={ROUTE.SEARCH} element={<SearchPage />} />
         <Route path={ROUTE.BOOK_DETAILS} element={<BookDetailsPage />} />
-        <Route path={ROUTE.CART} element={<CartPages />} />
-        <Route path={ROUTE.FAVORITES} element={<FavoritesPage />} />
 
         <Route element={<RequareAuth />}>
           <Route path={ROUTE.ACCOUNT} element={<AccountPage />} />
+          <Route path={ROUTE.CART} element={<CartPages />} />
+          <Route path={ROUTE.FAVORITES} element={<FavoritesPage />} />
         </Route>
 
         <Route path={ROUTE.REGISTRATION} element={<RegistrationPage />} />

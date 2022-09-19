@@ -5,7 +5,9 @@ import { Color, Space, fonts } from "ui";
 export const StyledBookItem = styled(motion.li)`
   width: 280px;
   margin: 0 auto;
+  margin-bottom: 20px;
   list-style-type: none;
+ 
 `;
 export const ItemBackground = styled(motion.div)`
   display: flex;

@@ -72,11 +72,17 @@ export const RightNav = ({ open, close }: IProps) => {
               <TogglerTheme />
               <Hr />
               <Form>
-                <Link to={ROUTE.HOME} onClick={close}>
-                  <Title>Home</Title>
+                <Link to={ROUTE.FAVORITES} onClick={close}>
+                  <Title>FAVORITES</Title>
                 </Link>
                 <Link to={ROUTE.SEARCH} onClick={close}>
                   <Title>Search</Title>
+                </Link>
+                <Link to={ROUTE.HOME} onClick={close}>
+                  <Title>Home</Title>
+                </Link>
+                <Link to={ROUTE.CART} onClick={close}>
+                  <Title>Cart</Title>
                 </Link>
               </Form>
               <ButtonForm>

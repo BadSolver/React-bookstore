@@ -55,38 +55,44 @@ export const SearchPage = () => {
       <ArrowBack />
       <StyledSearch>
         <Title
-          text={`'${
-            searchParams.searchValue ? searchParams.searchValue : " "
-          }' search results`}
+          text={
+            searchParams.searchValue &&
+            // eslint-disable-next-line no-useless-concat
+            searchParams.searchValue + " " + "search result"
+          }
         />
         {width < 801 && (
           <SearchContainer>
             <Search />
           </SearchContainer>
         )}
-        <BooksList
-          books={searchResponse.books}
-          isLoading={isLoading}
-          error={error}
-        />
-        <Container>
-          <Previous onClick={handlePrev}>
-            <GrLinkPrevious
-              style={{
-                paddingTop: "5px",
-              }}
+        {searchParams.searchValue && (
+          <>
+            <BooksList
+              books={searchResponse.books}
+              isLoading={isLoading}
+              error={error}
             />
-            <PrevText>Prev</PrevText>
-          </Previous>
-          <Next onClick={handleNext}>
-            <NextText>Next</NextText>
-            <GrLinkNext
-              style={{
-                paddingTop: "5px",
-              }}
-            />
-          </Next>
-        </Container>
+            <Container>
+              <Previous onClick={handlePrev}>
+                <GrLinkPrevious
+                  style={{
+                    paddingTop: "5px",
+                  }}
+                />
+                <PrevText>Prev</PrevText>
+              </Previous>
+              <Next onClick={handleNext}>
+                <NextText>Next</NextText>
+                <GrLinkNext
+                  style={{
+                    paddingTop: "5px",
+                  }}
+                />
+              </Next>
+            </Container>
+          </>
+        )}
       </StyledSearch>
     </>
   );

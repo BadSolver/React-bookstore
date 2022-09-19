@@ -51,8 +51,6 @@ export const FavoritesItem = ({ book }: IProps) => {
             <p>{book.desc}</p>
             <p>{book.language}</p>
             <p>{book.subtitle}</p>
-            <p>{book.pages}</p>
-            <p>{book.url}</p>
             <p>{book.authors}</p>
             <p>{book.year}</p>
           </Description>

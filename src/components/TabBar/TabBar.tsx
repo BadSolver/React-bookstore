@@ -60,7 +60,11 @@ export const TabBar = ({ book }: IProps) => {
       )}
       {reviews && (
         <ContainerDescription>
-          <TabDescription>{book?.url}</TabDescription>
+          <TabDescription>
+            <a href={book?.url} target="blank">
+              Ebook
+            </a>
+          </TabDescription>
         </ContainerDescription>
       )}
     </StyledTabBar>

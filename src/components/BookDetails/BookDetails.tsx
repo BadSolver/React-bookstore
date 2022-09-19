@@ -1,4 +1,5 @@
 import React from "react";
+import { HiArrowSmDown, HiArrowSmUp } from "react-icons/hi";
 import { ArrowBack, ErrorMessage, Loader, Raiting, Title } from "components";
 import { useToggle } from "hooks";
 import { useAppDispatch } from "store";
@@ -20,6 +21,7 @@ import {
   ValueText,
   Image,
   ButtonContainer,
+  ContainerArrow,
 } from "./style";
 
 interface IProps {
@@ -89,7 +91,15 @@ export const BookDetails = ({
                 </Container>
                 <div onClick={setIsActive}>
                   <MoreDetails onClick={handleDetails}>
-                    {isActive ? "More Details 🠕" : "More Details  🠗"}
+                    {isActive ? (
+                      <ContainerArrow>
+                        More details <HiArrowSmUp /> 
+                      </ContainerArrow>
+                    ) : (
+                      <ContainerArrow>
+                        More details <HiArrowSmDown />
+                      </ContainerArrow>
+                    )}
                   </MoreDetails>
                 </div>
 
@@ -105,7 +115,11 @@ export const BookDetails = ({
                     </Container>
                     <Container>
                       <ValueText>Link</ValueText>
-                      <LabelText>{book.url}</LabelText>
+                      <LabelText>
+                        <a href={book.url} target="blank">
+                          See more
+                        </a>
+                      </LabelText>
                     </Container>
                   </>
                 )}

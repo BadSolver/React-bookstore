@@ -49,6 +49,7 @@ export const GlobalStyles = createGlobalStyle`
     a {
         margin: 0; padding: 0; font-size: 100%; 
         vertical-align: baseline; background: transparent;text-decoration:none;
+        color: ${Color.Black}
     }
     del {
         text-decoration: line-through;
