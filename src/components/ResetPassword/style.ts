@@ -9,6 +9,7 @@ export const Form = styled.form`
   justify-content: center;
   gap: 10px;
   padding-left: 40px;
+  background: transparent;
 `;
 export const Input = styled.input`
   width: 90%;
