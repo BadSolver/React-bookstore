@@ -30,7 +30,7 @@ export const SignUp = ({ handleModal }: Iprops) => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  const onSubmit: SubmitHandler<SignUpValues> = ({ email, password, name }) => {
+  const onSubmit: SubmitHandler<SignUpValues> = ({ email, password }) => {
     setErrorMsg(null);
     setIsLoading(true);
     const auth = getAuth();
