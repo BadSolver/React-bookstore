@@ -51,6 +51,9 @@ export const Description = styled.div`
     padding-bottom: 30px;
     margin: 0 auto;
   }
+  p {
+    padding-top: 10px;
+  }
 `;
 export const Title = styled.h1`
   ${fonts.H1}
