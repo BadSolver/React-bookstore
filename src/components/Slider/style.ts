@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Color } from "ui";
 
 export const StyledSlider = styled.div`
+  padding: 0 30px;
   .slick-track {
     margin-top: 20px;
   }
@@ -11,7 +12,6 @@ export const StyledSlider = styled.div`
   .slick-prev:before {
     color: ${Color.Black};
     @media (max-width: 800px) {
-      margin-left: 20px;
       z-index: 1;
     }
   }
