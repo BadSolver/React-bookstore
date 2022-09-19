@@ -93,11 +93,11 @@ export const BookDetails = ({
                   <MoreDetails onClick={handleDetails}>
                     {isActive ? (
                       <ContainerArrow>
-                        More details <HiArrowSmDown />
+                        More details <HiArrowSmUp /> 
                       </ContainerArrow>
                     ) : (
                       <ContainerArrow>
-                        More details <HiArrowSmUp />
+                        More details <HiArrowSmDown />
                       </ContainerArrow>
                     )}
                   </MoreDetails>
