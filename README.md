@@ -112,12 +112,7 @@ Project Link: [https://github.com/BadSolver/React-bookstore](https://github.com/
 
 <!--Links-->
 
-[home-screenshot]:![image](https://user-images.githubusercontent.com/95409553/191101462-47706052-858b-40cf-9003-2dc62d3e8aa4.png)
-[favorites-screenshot]: ![image](https://user-images.githubusercontent.com/95409553/191101652-6c2fea7f-3ef2-4d26-b84e-10c276d30b8b.png)
-[cart-screenshot]: ![image](https://user-images.githubusercontent.com/95409553/191101683-0d170066-2b38-4be5-b4d4-a959dbe3d662.png)
-[book-details-screenshot]: ![image](https://user-images.githubusercontent.com/95409553/191101721-36b7d499-2525-4413-bf70-4930f743e0c0.png)
-[authentication-screenshot]: ![image](https://user-images.githubusercontent.com/95409553/191101783-0dc3399f-d6e2-4997-9765-d8709d2560f5.png)
-[search-screenshot]: ![image](https://user-images.githubusercontent.com/95409553/191101824-b7e9d51b-4c20-4091-af8a-d27c577c9756.png)
+
 [typescriptlang.org]: https://img.shields.io/badge/-Typescript-blue?style=for-the-badge&logo=typescript&logoColor=white
 [typescript-url]: https://www.typescriptlang.org/
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
