@@ -43,7 +43,7 @@ export const Description = styled.div`
   flex-direction: column;
   width: 100%;
   max-width: 548px;
-  margin-left: 120px;
+  margin-left: 20px;
   border-top: 1px solid ${Color.PrimaryDark};
 
   @media (max-width: 800px) {
@@ -128,4 +128,9 @@ export const ButtonContainer = styled.div`
   @media (max-width: 800px) {
     flex-direction: column;
   }
+`;
+export const ContainerArrow = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
