@@ -38,6 +38,9 @@ export const CountContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media (max-width: 800px) {
+    background: transparent;
+  }
 `;
 export const Count = styled.div`
   padding: 30px;
