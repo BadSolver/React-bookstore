@@ -34,7 +34,7 @@
 
 ## About
 
-[![Home Screenshot][home-screenshot]](https://github.com/BadSolver/React-bookstore)
+![image](https://user-images.githubusercontent.com/95409553/191101462-47706052-858b-40cf-9003-2dc62d3e8aa4.png)
 
 This project is a graduate work at the front-end developer course, in which I tried to apply all the knowledge and skills I received
 
@@ -80,23 +80,23 @@ Just install the project to see how it works.
 
 This is a simple app to find the book you need. Books can be found in search by title.
 
-[![Search Screen Shot][search-screenshot]](https://github.com/BadSolver/React-bookstore)
+![image](https://user-images.githubusercontent.com/95409553/191101824-b7e9d51b-4c20-4091-af8a-d27c577c9756.png)
 
 Also you can veiw the full info about book.
 
-[![Book Details Screen Shot][book-details-screenshot]](https://github.com/BadSolver/React-bookstore)
+![image](https://user-images.githubusercontent.com/95409553/191106149-dc3065d0-74c6-42b1-814b-e0c4d1b6cd55.png)
 
 There is authentication block where you can sign up or sign in.
 
-[![Authentication Screen Shot][authentication-screenshot]](https://github.com/BadSolver/React-bookstore)
+![image](https://user-images.githubusercontent.com/95409553/191101783-0dc3399f-d6e2-4997-9765-d8709d2560f5.png)
 
-You can add book to your cart in book details page.
+You can add book to your cart.
 
-[![Cart Screen Shot][cart-screenshot]](https://github.com/BadSolver/React-bookstore)
+![image](https://user-images.githubusercontent.com/95409553/191101683-0d170066-2b38-4be5-b4d4-a959dbe3d662.png)
 
 Also you can add book in favorites in book details page.
 
-[![Cart Screen Shot][favorites-screenshot]](https://github.com/TkachenokPavel/book-storium/)
+![image](https://user-images.githubusercontent.com/95409553/191101652-6c2fea7f-3ef2-4d26-b84e-10c276d30b8b.png)
 
 ## Roadmap
 
@@ -106,9 +106,9 @@ Also you can add book in favorites in book details page.
 
 ## Contact
 
-Pavel Tkachenok - (https://github.com/BadSolver) - twistter8@gmail.com
+Alex Kurov - (https://github.com/BadSolver) - twistter8@gmail.com
 
-Project Link: [https://github.com/TkachenokPavel/book-storium](https://github.com/BadSolver/React-bookstore)
+Project Link: [https://github.com/BadSolver/React-bookstore](https://github.com/BadSolver/React-bookstore)
 
 <!--Links-->
 
