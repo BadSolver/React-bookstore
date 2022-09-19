@@ -1,46 +1,146 @@
-# Getting Started with Create React App
+<h1 align="center">
+  <a href="https://github.com/BadSolver/React-bookstore">
+    <img src="src/assets/icons/bookstore.svg" alt="Logo" width="200" height="125">
+  </a>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  BookStore - the best bookstore for IT professionals
+  <br />
+  <br />
+  <a href="https://badsolver.github.io/React-bookstore/">View Demo</a>
+</div>
 
-## Available Scripts
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about">About</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-In the project directory, you can run:
+## About
 
-### `npm start`
+[![Home Screenshot][home-screenshot]](https://github.com/BadSolver/React-bookstore)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project is a graduate work at the front-end developer course, in which I tried to apply all the knowledge and skills I received
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+In that project:
 
-### `npm test`
+- I've got a good practice in working with API
+- I've learned how to work with firebase authentication
+- I've learned how to work with different libraries such as Redux Toolkit, React Router, Axios and many others
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is just a training project, but thanks to it, I learned in practice many of the intricacies of working with ReactJS.
 
-### `npm run build`
+### Built With
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [![Typescript][typescriptlang.org]][typescript-url]
+- [![React][react.js]][react-url]
+- [![Axios][axios-http.com]][axios-url]
+- [![Firebase][firebase.google.com]][firebase-url]
+- [![Redux Toolkit][redux-toolkit.js.org]][redux-url]
+- [![React Hook Form][react-hook-form.com]][react-hook-form-url]
+- [![styled-components][styled-components]][styled-components-url]
+- [![React Router][reactrouter.com]][react-router-url]
+- [![Framer Motion][framer.com]][framer-url]
+- [![React Spinners][react-spinners]][react-spinners-url]
+- [![React Tabs][react-tabs]][react-tabs-url]
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Just install the project to see how it works.
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clone the repo
+   ```sh
+   git clone https://github.com/BadSolver/React-bookstore
+   ```
+2. Install NPM packages
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```sh
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Usage
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This is a simple app to find the book you need. Books can be found in search by title.
 
-## Learn More
+[![Search Screen Shot][search-screenshot]](https://github.com/BadSolver/React-bookstore)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Also you can veiw the full info about book.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[![Book Details Screen Shot][book-details-screenshot]](https://github.com/BadSolver/React-bookstore)
+
+There is authentication block where you can sign up or sign in.
+
+[![Authentication Screen Shot][authentication-screenshot]](https://github.com/BadSolver/React-bookstore)
+
+You can add book to your cart in book details page.
+
+[![Cart Screen Shot][cart-screenshot]](https://github.com/BadSolver/React-bookstore)
+
+Also you can add book in favorites in book details page.
+
+[![Cart Screen Shot][favorites-screenshot]](https://github.com/TkachenokPavel/book-storium/)
+
+## Roadmap
+
+- [ ] Add drag'n'drop to cart and favorites items
+- [ ] Add firebase database for users data
+- [ ] Add editing user data on account page
+
+## Contact
+
+Pavel Tkachenok - (https://github.com/BadSolver) - twistter8@gmail.com
+
+Project Link: [https://github.com/TkachenokPavel/book-storium](https://github.com/BadSolver/React-bookstore)
+
+<!--Links-->
+
+[home-screenshot]:![image](https://user-images.githubusercontent.com/95409553/191101462-47706052-858b-40cf-9003-2dc62d3e8aa4.png)
+[favorites-screenshot]: ![image](https://user-images.githubusercontent.com/95409553/191101652-6c2fea7f-3ef2-4d26-b84e-10c276d30b8b.png)
+[cart-screenshot]: ![image](https://user-images.githubusercontent.com/95409553/191101683-0d170066-2b38-4be5-b4d4-a959dbe3d662.png)
+[book-details-screenshot]: ![image](https://user-images.githubusercontent.com/95409553/191101721-36b7d499-2525-4413-bf70-4930f743e0c0.png)
+[authentication-screenshot]: ![image](https://user-images.githubusercontent.com/95409553/191101783-0dc3399f-d6e2-4997-9765-d8709d2560f5.png)
+[search-screenshot]: ![image](https://user-images.githubusercontent.com/95409553/191101824-b7e9d51b-4c20-4091-af8a-d27c577c9756.png)
+[typescriptlang.org]: https://img.shields.io/badge/-Typescript-blue?style=for-the-badge&logo=typescript&logoColor=white
+[typescript-url]: https://www.typescriptlang.org/
+[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-url]: https://reactjs.org/
+[axios-http.com]: https://img.shields.io/badge/-axios-671ddf?style=for-the-badge&logo=axios&logoColor=white
+[axios-url]: https://axios-http.com/ru/docs/intro
+[firebase.google.com]: https://img.shields.io/badge/-firebase-5f6368?style=for-the-badge&logo=firebase&logoColor=orange
+[firebase-url]: https://firebase.google.com/docs/
+[redux-toolkit.js.org]: https://img.shields.io/badge/-redux--toolkit-764abc?style=for-the-badge&logo=redux&logoColor=white
+[redux-url]: https://redux-toolkit.js.org/
+[react-hook-form.com]: https://img.shields.io/badge/-react--hook--form-1e2a4a?style=for-the-badge&logo=react-hook-form&logoColor=ec5990
+[react-hook-form-url]: https://react-hook-form.com/
+[github.com/rt2zz/redux-persist]: https://img.shields.io/badge/-redux--persist-persist?style=for-the-badge
+[persist-url]: https://github.com/rt2zz/redux-persist#readme
+[styled-components]: https://img.shields.io/badge/-styled--components-35495E?style=for-the-badge&logo=styled-components&logoColor=pink
+[styled-components-url]: https://styled-components.com/
+[framer.com]: https://img.shields.io/badge/-framer--motion-DD0031?style=for-the-badge&logo=framer&logoColor=black
+[framer-url]: https://www.framer.com/
+[react-select.com]: https://img.shields.io/badge/-react--select-FF3E00?style=for-the-badge
+[react-select-url]: https://react-select.com/home
+[reactrouter.com]: https://img.shields.io/badge/-react--router-563D7C?style=for-the-badge&logo=react-router&logoColor=white
+[react-router-url]: https://reactrouter.com/
+[react-spinners]: https://img.shields.io/badge/react--spinners-yellow?style=for-the-badge
+[react-spinners-url]: https://www.davidhu.io/react-spinners/
+[react-tabs]: https://img.shields.io/badge/react--tabs-black?style=for-the-badge
+[react-tabs-url]: https://reactcommunity.org/react-tabs/
