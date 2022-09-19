@@ -29,6 +29,7 @@ export const Button = styled.button`
   width: 24px;
   height: 24px;
   margin-left: 10px;
+  margin-right: 10px;
   background: transparent;
   border: none;
   color: ${Color.Black};
