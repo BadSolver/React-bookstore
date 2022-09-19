@@ -1,5 +1,6 @@
 import React, { CSSProperties } from "react";
 import { ClipLoader } from "react-spinners";
+import { StyledLoader } from "./style";
 
 interface Iprops {
   size: string;
@@ -7,12 +8,12 @@ interface Iprops {
 
 export const Loader = ({ size }: Iprops) => {
   const override: CSSProperties = {
-    display: "grid",
-    alignSelf: "center",
-    justifySelf: "center",
-    margin: "0 auto",
     background: "transparent",
   };
 
-  return <ClipLoader cssOverride={override} size={size} color="goldenrod" />;
+  return (
+    <StyledLoader>
+      <ClipLoader cssOverride={override} size={size} color="goldenrod" />
+    </StyledLoader>
+  );
 };
