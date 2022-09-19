@@ -24,6 +24,7 @@ export const Title = styled.h2`
 `;
 export const Description = styled.div`
   padding-left: 30px;
+  margin-left: 10px;
 `;
 
 export const SubTitle = styled.div`
