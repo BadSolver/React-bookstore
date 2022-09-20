@@ -52,7 +52,7 @@ export const BookDetails = ({
   return (
     <>
       <ArrowBack />
-      {isLoading && <Loader size={"50px"} />}
+      {isLoading && <Loader size="50px" margin="200px"/>}
       {error && <ErrorMessage text={error} />}
       {book && (
         <StyledBookDetails
