@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-bookstore/static/css/main.aab8087f.css",
-    "main.js": "/React-bookstore/static/js/main.a70111f3.js",
+    "main.js": "/React-bookstore/static/js/main.efa07afc.js",
     "static/media/favor.png": "/React-bookstore/static/media/favor.1ba9d623dd18f90798b2.png",
     "static/media/vector.svg": "/React-bookstore/static/media/vector.118093d592171fd0e80c711744f3fceb.svg",
     "static/media/bookstore.svg": "/React-bookstore/static/media/bookstore.8dd1a7ce2b1cd05e3fd1a561dd523ed2.svg",
@@ -17,10 +17,10 @@
     "static/media/search.svg": "/React-bookstore/static/media/search.c024a3122f357146e09dc24458c23bdf.svg",
     "static/media/user-header.svg": "/React-bookstore/static/media/user-header.875256114691e07e1903fdeffb337b45.svg",
     "main.aab8087f.css.map": "/React-bookstore/static/css/main.aab8087f.css.map",
-    "main.a70111f3.js.map": "/React-bookstore/static/js/main.a70111f3.js.map"
+    "main.efa07afc.js.map": "/React-bookstore/static/js/main.efa07afc.js.map"
   },
   "entrypoints": [
     "static/css/main.aab8087f.css",
-    "static/js/main.a70111f3.js"
+    "static/js/main.efa07afc.js"
   ]
 }
