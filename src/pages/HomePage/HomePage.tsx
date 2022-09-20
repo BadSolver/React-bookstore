@@ -18,7 +18,7 @@ export const HomePage = () => {
 
   return (
     <>
-      {isLoading && <Loader size={"50px"} />}
+      {isLoading && <Loader size={"50px"} margin="250px"/>}
       <StyledHome
         animate={{ x: 0 }}
         initial={{ x: -2000 }}

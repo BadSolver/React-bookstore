@@ -4,11 +4,13 @@ import { StyledLoader } from "./style";
 
 interface Iprops {
   size: string;
+  margin: string | number;
 }
 
-export const Loader = ({ size }: Iprops) => {
+export const Loader = ({ size, margin }: Iprops) => {
   const override: CSSProperties = {
     background: "transparent",
+    marginTop: margin,
   };
 
   return (

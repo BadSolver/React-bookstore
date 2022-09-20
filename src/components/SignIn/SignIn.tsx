@@ -99,7 +99,7 @@ export const SignIn = () => {
         <ErrorMessage> {errors.password.message}</ErrorMessage>
       )}
       <Button type="submit" whileTap={{ scale: 1.15 }}>
-        {isLoading ? <Loader size={"25px"} /> : "Sign In"}
+        {isLoading ? <Loader size={"25px"} margin="0px"/> : "Sign In"}
       </Button>
     </StyledSignIn>
   );
