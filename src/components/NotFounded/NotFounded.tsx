@@ -4,8 +4,8 @@ import { Description, NotFoundStyled, Title } from "./style";
 export const NotFounded = () => {
   return (
     <NotFoundStyled>
-      <Title>Oooooops🙈</Title>
-      <Description>Такой страницы не существует</Description>
+      <Title>404</Title>
+      <Description>This page does not exist</Description>
     </NotFoundStyled>
   );
 };
