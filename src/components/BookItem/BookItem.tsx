@@ -5,7 +5,6 @@ import {
   Cost,
   ItemBackground,
   StyledBookItem,
-  SubTitle,
   Title,
   Image,
 } from "./style";
@@ -15,7 +14,7 @@ interface IProps {
   index?: number;
 }
 
-export const BookItem = memo(({ book, index }: IProps) => {
+export const BookItem = memo(({ book }: IProps) => {
   return (
     <StyledBookItem
       initial={{ opacity: 0 }}
